@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Country reterived successfully!",
+    "data":[{
+        "primaryId":"group1",
+        "primaryDisplay":"Group A"
+    },{
+        "primaryId":"group2",
+        "primaryDisplay":"Group B"
+    }]
+}

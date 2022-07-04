@@ -1,0 +1,222 @@
+.singleDeviceContainer{
+    height: 90vh;
+}
+
+
+.deviceDescriptionTab{
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-color: #d8fafa;
+    border-radius: 8px;
+}
+
+
+.gConfigBox{
+    flex-direction: column;
+    height: 100px;
+}
+.devicePanel{
+    margin-top: 10px;
+}
+.interfaceConfigBox{
+    flex-direction: column;
+}
+.deviceDescItem{
+    height: 75px;
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+}
+
+.deviceListSearch{
+    margin-top: 15px;
+    margin-left:15px;
+    
+}
+
+
+
+.deviceListBarStyle{
+    display: flex;
+    height: 100vh;
+}
+
+// #deviceSearchBtn{
+//     width: 220px;
+// }
+
+.singleDeviceNameList{
+    width: 250px;
+    height: 700px;
+    margin-left: 5px;
+    margin-top: 50px;
+}
+
+.p-listbox-list{
+    width: 70vw;
+}
+
+.singleDeviceItem{
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid wheat;
+    height: 50px;
+    width: -webkit-fill-available;
+}
+
+#singleDevicePaginator{
+    // margin-top: 12px;
+    margin-left: 24px;
+    position: absolute;
+}
+
+#deviceListNameId{
+    position: absolute;
+    width: 195px;
+    margin-top: 4px;
+}
+
+
+// Device Description Box
+
+#deviceName,#deviceModelNumber{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#assesmentStatus{
+    font-size: 1rem;
+}
+#assessmentValue{
+    font-size: 1rem;
+
+}
+// Device Template Label 
+.fetchTemplate{
+    margin-top: 12px;
+    font-size: small;
+}
+
+#fetchTempCheckbox{
+    display: inline-block;
+    margin-top: 12px;
+}
+
+// Global Configuration Box
+.gConfigBox{
+    margin: 5px;
+    font-size: 1.5rem;
+
+}
+
+#confStatus{
+    font-size: 1rem;
+}
+
+#serviceTamplate{
+    font-size: 14px;
+}
+
+// interface Config Title of Box 
+.intConfigTitleOfBox{
+    margin: 5px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.inConf{
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+.searchDeviceTabs{
+    justify-content: space-between;
+    margin-top: 7px;
+    align-items: center;
+
+}
+
+
+.labelTitles{
+    font-size: 21px;
+}
+
+.assignBtn{
+    padding: 4px;
+}
+
+.p-paginator{
+    flex-wrap: nowrap;
+}
+
+
+
+#confStatusValue{
+    font-size: 14px;
+}
+
+.interfaceConfigResult{
+    margin-top: 30px;    
+    border: 1px solid gray;
+}
+
+.intrfaceConfigResult-Table{
+    margin-top: 0px;
+    height: 47vh;
+}
+
+.servTemp{
+    margin-top: 12px;
+    justify-content: flex-start;
+}
+
+// Interface Device List Configuration
+.intDeviceConfigList{
+    align-items: center;
+    justify-content: center;
+}
+
+#intDeviceConfigList{
+    height: fit-content;
+    width: -webkit-fill-available;
+    grid-template-columns: 2fr 2fr 2fr;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.listOfDeviceConf{
+    margin: 14px;
+    height: -webkit-fill-available;
+    width: 250px;
+    justify-content: start;
+}
+
+.listOfDeviceConf{
+    flex-direction: column;
+}
+
+#devNameDesc{
+    flex-grow: 1;
+}
+#devListDesc{
+    flex-grow: 1;
+}
+#devListConfigStat{
+    flex-grow: 1;
+}
+
+// footer Buttons bar
+
+.footerBtnList{
+    margin: 2px;
+}
+
+.footerBtn{
+    margin: 2px;
+}

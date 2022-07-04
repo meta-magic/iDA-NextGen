@@ -1,0 +1,71 @@
+{
+    "success":true,
+    "message":"Network Device Compliance Report data Fetched Successfully",
+    "data":[
+        {
+            "devName": "FastEthernet1/0/1",
+
+            "mode": "Access",
+
+            "status": "Connected",
+
+            "idaTemplate": "cr1_26Jun22_0336PM_I2",
+
+            "desc": "...",
+
+            "compliant": "0% Compliant"
+        },
+        {
+            "devName": "FastEthernet1/0/1",
+
+            "mode": "Access",
+
+            "status": "Connected",
+
+            "idaTemplate": "cr1_26Jun22_0336PM_I2",
+
+            "desc": "...",
+
+            "compliant": "0% Compliant"
+        },
+        {
+            "devName": "FastEthernet1/0/1",
+
+            "mode": "Access",
+
+            "status": "Connected",
+
+            "idaTemplate": "cr1_26Jun22_0336PM_I2",
+
+            "desc": "...",
+
+            "compliant": "0% Compliant"
+        },
+        {
+            "devName": "FastEthernet1/0/1",
+
+            "mode": "Access",
+
+            "status": "Connected",
+
+            "idaTemplate": "cr1_26Jun22_0336PM_I2",
+
+            "desc": "...",
+
+            "compliant": "0% Compliant"
+        },
+        {
+            "devName": "FastEthernet1/0/1",
+
+            "mode": "Access",
+
+            "status": "Connected",
+
+            "idaTemplate": "cr1_26Jun22_0336PM_I2",
+
+            "desc": "...",
+
+            "compliant": "0% Compliant"
+        }
+    ]
+}

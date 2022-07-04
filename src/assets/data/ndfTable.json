@@ -1,0 +1,36 @@
+{
+    "success":true,
+    "message":"Network Device Profiles data Fetched Successfully",
+    "data":[
+        {
+            "dName":"Device_6(10.254.4.6)",
+            "dSpec":"Wired WS-C3560CG-8PC-S",
+            
+            "pType" : "Catalyst 3560-C"
+        },
+        {
+            "dName":"26(10.254.4.26)",
+            "dSpec":"Wired WS-C2560CG-2PDC-S",
+           
+            "pType" : "IOS"
+        },
+        {
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-P2560CG-2PC-S",
+
+            "pType" : "IOS"
+        },
+        {
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-K2560CG-8PDA-S",
+            
+            "pType" : "IOS"
+        },
+        {
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-C2560CG-10CPA-SA",
+            
+            "pType" : "IOS"
+        }
+    ]
+}

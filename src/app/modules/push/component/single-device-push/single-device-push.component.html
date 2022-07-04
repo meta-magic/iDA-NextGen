@@ -1,0 +1,219 @@
+<div class="grid singleDeviceContainer">
+    <div class="col-3 singleDev deviceListBar md:col-3">
+        <p-card class="grid m-0 deviceListBarStyle">
+<!-- 
+            <div class="devListItem">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <div class="deviceListSearch">
+                            <span class="p-input-icon-left">
+                                <i class="pi pi-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="devListItem">
+                <p-paginator [rows]="5" [totalRecords]="10" [rowsPerPageOptions]="[5,10,15]" [style]=""></p-paginator>
+            </div> -->
+
+            <!-- <div class="flex">
+
+                <div class="singleDeviceNameList">
+
+                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-1</div>
+                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-2</div>
+                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-3</div>
+                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-4</div>
+                </div>
+
+            </div> -->
+
+            <!-- <div class="devicePanel">
+                <p-panel class="devListItem listOfDevices" header="&nbsp;&nbsp;Device List" [toggleable]="true" >
+    
+                    <div class="grid p-fluid">
+                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-1</div>
+                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-2</div>
+                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-3</div>
+                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-4</div>
+                    </div>
+    
+                </p-panel>
+            </div> -->
+
+
+            <app-single-device-list-column></app-single-device-list-column>
+
+        </p-card>
+    </div>
+
+    <div class="col-9 singleDev deviceDescriptionBar">
+
+        <p-card>
+            <div class="flex deviceDescriptionTab">
+                <div class="deviceDescItem col-2"><i class="pi pi-bars"></i>
+                    <span id="deviceName">&nbsp;&nbsp;Device Name</span><br>
+                    <span id="deviceModelNumber">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Device Model</span>
+
+                </div>
+                <div class="deviceDescItem col-4">
+                    <span id="assesmentStatus">Assessment Status :
+                        <span id="assessmentValue">Assessment Value</span>
+                    </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span id="osInAssessment">OS :
+                        <span id="osInAssessmentValue">14.4.(5)E4</span>
+                    </span><br>
+                    <a id="allLocation">All Locations</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span id="owner">Owner : <span id="ownerValue">Admin</span></span>
+                </div>
+                <div class="deviceDescItem col-4">
+                    <span id="lastRefreshed">Last Refresh :
+                        <span id="lastRefreshedValue"> last Refreshed Value</span>
+                    </span><br>
+                    <p-checkbox name="chkEndPointBox" value=""></p-checkbox>&nbsp;&nbsp;<span id="endPointAnalysys">End
+                        Point
+                        Analysis</span>
+                </div>
+
+                <div class="deviceDescItem col-2"><p-splitButton label="Configuration Menu" (onClick)="config('info')" [model]="items"></p-splitButton>
+                </div>
+
+            </div>
+        </p-card>
+
+        <p-divider></p-divider>
+
+        <p-card>
+            <ng-template pTemplate="header">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left p-card-title">
+                        Global Configuration
+                    </div>
+                </p-toolbar>
+            </ng-template>
+            <ng-template pTemplate="body">
+
+                    <p-checkbox name="gConfigCheckBox" value=""></p-checkbox>
+
+                <span id="confStatus"> Config Status :
+                    <span id="confStatusValue">Assigned</span></span>
+
+                <span id="serviceTamplate" class="ml-4">Service Template : <span
+                        id="serviceTamplateValue"><a class="servTempVal">asd:(G)</a></span></span>
+
+            </ng-template>
+        </p-card>
+
+        <p-divider></p-divider>
+        <p-card>
+
+
+            <ng-template pTemplate="header">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left p-card-title">
+                        Interface Configuration
+                    </div>
+                    <button pButton type="button" label="" class="p-button assignBtn">Assignment Info</button>
+                </p-toolbar>
+            </ng-template>
+
+            <ng-template pTemplate="body">
+                <div class="flex interfaceConfigBox">
+
+                    <div class="flex col searchDeviceTabs">
+
+                        <div class="searchDevTabs" id="searchDevTabs_btn">
+                            <!-- <span class="p-input-icon-left">
+                                <i class="pi pi-search"></i>
+                                <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
+                            </span> -->
+                            <button class="pi-button-text" icon="pi pi-search" pButton type="button" label="Search"></button>
+                        </div>
+
+                        <div class="searchDevTabs">
+                            <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All Interfaces</a></span>
+                        </div>
+
+                        <div class="searchDevTabs">
+                            <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Selected Interfaces : <span
+                                    class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
+                        </div>
+
+                        <!-- <div class="searchDevTabs">
+                            <p-paginator [rows]="10" [totalRecords]="120" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
+                        </div> -->
+
+                    </div>
+
+
+                    <!-- <div class="col intrfaceConfigResult-Table">
+
+
+                        <div class="intDeviceConfig">
+
+
+                            <p-listbox [options]="configDesc" [multiple]="true" optionLabel="name"
+                                [listStyle]="{'max-height':'250px'}">
+
+                                <ng-template let-configDesc pTemplate="item">
+                                    <div class="country-item">
+
+                                        <div class="flex intDeviceConfigList" id="intDeviceConfigList">
+
+                                            <div #devlistCheckBox class="ml-2">
+                                                <p-checkbox name="groupname" label="" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
+                                            </div>
+
+                                            <div id="devListName" class="ml-4" >
+                                                <div class="devSearchItemValue">Name : {{configDesc.devName}}</div>
+                                                <div class="devSearchItemValue">Mode : {{configDesc.devMode}}</div>
+                                                <div class="devSearchItemValue">Status : {{configDesc.devStatus}}</div>
+                                                <div class="devSearchItemValue">Data/Voice Vlan : {{configDesc.dvVlan}}
+                                                </div>
+                                            </div>
+
+                                            <div id="devListDesc" class="ml-8">
+                                                <div class="devSearchItemValue">Description : </div>
+                                                <div class="devSearchItemValue">Endpoints (Vlan) : </div>
+                                                <div class="devSearchItemValue">CDP Platform : </div>
+                                                <div class="devSearchItemValue">Data/Voice Vlan : </div>
+                                            </div>
+
+                                            <div id="devListConfigStat">
+                                                <div class="devSearchItemValue">Coding Status : </div>
+                                                <div class="devSearchItemValue">Service Template : </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </ng-template>
+
+                            </p-listbox>
+
+
+                        </div>
+
+                    </div> -->
+
+                    <app-singleDevicePushTable></app-singleDevicePushTable>
+                    
+                    <div class="footerBtnList">
+                        <button class="footerBtn" pButton type="button" label="Push Configuration"></button>
+                        <button class="footerBtn" pButton type="button" label="Manual Update"></button>
+                        <button class="footerBtn" pButton type="button" label="Mark Manually Update"></button>
+                        <button class="footerBtn" pButton type="button" label="Validate"></button>
+                        <button class="footerBtn" pButton type="button" label="Commit"></button>
+
+                    </div>
+
+                </div>
+            </ng-template>
+
+        </p-card>
+    </div>
+
+</div>

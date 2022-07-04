@@ -1,0 +1,64 @@
+{
+    "success":true,
+    "message":" data Fetched Successfully",
+    "data":[
+        {
+            "DevName": "Device103(10.20.228.103)",
+            "pType": "Catalyst 2960-X (Wired)",
+            "osType": "IOS",
+
+            "iAssessed": "443 out of 443",
+            "osVersion": "15.2(4)E6",
+
+            "location": "All Locations",
+
+            "complaint":"0"
+
+        },
+        {
+            "DevName": "Device103(10.20.228.103)",
+            "pType": "Catalyst 2960-X (Wired)",
+            "osType": "IOS",
+
+            "iAssessed": "443 out of 443",
+            "osVersion": "15.2(4)E6",
+
+            "location": "All Locations",
+
+            "complaint":"0"
+        },{
+            "DevName": "Device103(10.20.228.103)",
+            "pType": "Catalyst 2960-X (Wired)",
+            "osType": "IOS",
+
+            "iAssessed": "443 out of 443",
+            "osVersion": "15.2(4)E6",
+
+            "location": "All Locations",
+
+            "complaint":"0"
+        },{
+            "DevName": "Device103(10.20.228.103)",
+            "pType": "Catalyst 2960-X (Wired)",
+            "osType": "IOS",
+
+            "iAssessed": "443 out of 443",
+            "osVersion": "15.2(4)E6",
+
+            "location": "All Locations",
+
+            "complaint":"0"
+        },{
+            "DevName": "Device103(10.20.228.103)",
+            "pType": "Catalyst 2960-X (Wired)",
+            "osType": "IOS",
+
+            "iAssessed": "443 out of 443",
+            "osVersion": "15.2(4)E6",
+
+            "location": "All Locations",
+
+            "complaint":"0"
+        }
+    ]
+}

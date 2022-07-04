@@ -1,0 +1,115 @@
+{
+    "success": true,
+    "message": "Location data Fetched Successfully",
+    "data": [
+        {
+            "label": "India",
+            "data": "India",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "expanded":false,
+            "children": [
+                {
+                    "label": "Maharashtra",
+                    "data": "Maharashtra",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder",
+                    "expanded":false,
+                    "children": [
+                        {
+                            "label": "Pune",
+                            "icon": "fa fa-map-marker",
+                            "data": "Pune"
+                        },
+                        {
+                            "label": "Mumbai",
+                            "icon": "fa fa-map-marker",
+                            "data": "Mumbai"
+                        }
+                    ]
+                },
+                {
+                    "label": "Karnataka",
+                    "data": "Karnataka",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder",
+                    "expanded":false,
+                    "children": [
+                        {
+                            "label": "Bangalore",
+                            "icon": "fa fa-map-marker",
+                            "data": "Bangalore"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Germany",
+            "data": "Germany",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "expanded":false,
+            "children": [
+                {
+                    "label": "Berlin",
+                    "icon": "fa fa-map-marker",
+                    "data": "Berlin"
+                },
+                {
+                    "label": "Munich",
+                    "icon": "fa fa-map-marker",
+                    "data": "Munich"
+                },
+                {
+                    "label": "Frankfurt",
+                    "icon": "fa fa-map-marker",
+                    "data": "Frankfurt"
+                }
+            ]
+        },
+        {
+            "label": "Australia",
+            "data": "Australia",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "expanded":false,
+            "children": [
+                {
+                    "label": "West Australia",
+                    "data": "West Australia",
+                    "expanded":false,
+                    "children": [
+                        {
+                            "label": "Perth",
+                            "icon": "pi pi-video",
+                            "data": "Scarface Movie"
+                        },
+                        {
+                            "label": "Broome",
+                            "icon": "pi pi-video",
+                            "data": "Serpico Movie"
+                        }
+                    ]
+                },
+                {
+                    "label": "South Australia",
+                    "data": "South Australia",
+                    "expanded":false,
+                    "children": [
+                        {
+                            "label": "Adelaide",
+                            "icon": "pi pi-video",
+                            "data": "Goodfellas Movie"
+                        },
+                        {
+                            "label": "Whyalla",
+                            "icon": "pi pi-video",
+                            "data": "Untouchables Movie"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

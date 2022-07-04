@@ -1,0 +1,18 @@
+{
+    "success":true,
+    "message":"Network Device Compliance Report List page data Fetched Successfully",
+    "data":[
+        {
+            "dName":"cr1"
+        },
+        {
+            "dName":"cr2"
+        },
+        {
+            "dName":"cr3"
+        },
+        {
+            "dName":"cr4"
+        }
+    ]
+}

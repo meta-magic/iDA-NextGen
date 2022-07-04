@@ -1,0 +1,131 @@
+{
+    "success": true,
+    "message": "Customer data Fetched Successfully",
+    "data": [
+        {
+            "label": "All Location",
+            "data": "Documents Folder",
+            "expandedIcon": "fa fa-minus-circle",
+            "Key":"1",
+            "collapsedIcon": "fa fa-plus-circle",
+            "children": [
+                {
+                    "label": "India",
+                    "data": "Country",
+                    "Key":"India",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder",
+                    "children": [
+                        {
+                            "label": "Maharashtra",
+                            "Key":"Maharashtra",
+                            "data": "Home Folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder",
+                            "children": [
+                                {
+                                    "label": "Pune",
+                                    "Key":"Pune",
+                                    "data": "Home Folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "collapsedIcon": "pi pi-folder",
+                                    "children": [
+                                        {
+                                            "label": "Baner",
+                                            "Key":"Baner",
+                                            "icon": "fa fa-map-marker",
+                                            "data": "Invoices for this month"
+                                        },
+                                        {
+                                            "label": "Koregoan Park",
+                                            "Key":"Koregoan Park",
+                                            "icon": "fa fa-map-marker",
+                                            "data": "Invoices for this month"
+                                        },{
+                                            "label": "Aundh",
+                                            "Key":"Aundh",
+                                            "icon": "fa fa-map-marker",
+                                            "data": "Invoices for this month"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "Mumbai",
+                                    "Key":"Mumbai",
+                                    "data": "Home Folder",
+                                    "expandedIcon": "pi pi-folder-open",
+                                    "collapsedIcon": "pi pi-folder",
+                                    "children": [
+                                        {
+                                            "label": "Vasai",
+                                            "Key":"Vasai",
+                                            "icon": "fa fa-map-marker",
+                                            "data": "Invoices for this month"
+                                        },
+                                        {
+                                            "label": "Koregoan Park",
+                                            "Key":"Koregoan Park",
+                                            "icon": "fa fa-map-marker",
+                                            "data": "Invoices for this month"
+                                        },{
+                                            "label": "Dadar",
+                                            "key":"Dadar",
+                                            "icon": "fa fa-map-marker",
+                                            "data": "Invoices for this month"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "label": "Home",
+                            "Key":"12",
+                            "data": "Home Folder",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder",
+                            "children": [
+                                {
+                                    "label": "Invoices.txt",
+                                    "Key":"12",
+                                    "icon": "fa fa-map-marker",
+                                    "data": "Invoices for this month"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "U.S.A",
+                    "data": "Home Folder",
+                    "Key":"USA",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder",
+                    "children": [
+                        {
+                            "label": "Florida",
+                            "Key":"Florida",
+                            "icon": "fa fa-map-marker",
+                            "data": "Invoices for this month"
+                        }
+                    ]
+                },
+                {
+                    "label": "Germany",
+                    "Key":"Germany",
+                    "data": "Home Folder",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder",
+                    "children": [
+                        {
+                            "label": "Berlin",
+                            "Key":"Berlin",
+                            "icon": "fa fa-map-marker",
+                            "data": "Invoices for this month"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

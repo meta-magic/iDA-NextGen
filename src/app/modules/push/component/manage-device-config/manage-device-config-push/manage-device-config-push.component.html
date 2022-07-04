@@ -1,0 +1,275 @@
+<p-tabView>
+
+    <p-tabPanel header="Assign Template">
+
+        <div class="templateSelectContainer">
+            <div class="flex templateSel m-3">
+
+                <div #tTypeName class="grid">
+
+                    <div class="templateSearchBox">
+                        <div class="input-wrapper">
+                            <div class="field mr-2">
+                                <label for="tTypeLabel">Template Type</label><br>
+
+                                <!-- <p-dropdown class="tTypeOptions" optionLabel="tTypeOption" [style]="{'width':'250px'}">
+                                </p-dropdown> -->
+
+                                <p-dropdown [options]="templateType" [(ngModel)]="selectedTemplateType" optionLabel="name" optionValue="code" [style]="{'width':'250px'}"></p-dropdown>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="templateSearchBox">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label for="tNameLabel" class="">Template Name</label><br>
+                                <p-dropdown class="tNameOptions" optionLabel="tTypeOption" [style]="{'width':'250px'}">
+                                </p-dropdown>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div #osTrailLbl class="">
+                    <label for="osTrail">OS Trail : -- </label>
+                </div>
+
+                <div #tItemselAssign class="ml-8">
+                    <button pButton type="button" label="Assign" class="p-button-outlined m-1"></button>
+                    <button pButton type="button" label="Unassign" class="p-button-outlined m-1"></button>
+                </div>
+
+
+                <div id="templateGeneralSel" class="">
+                    <button pButton #tItemRefresh type="button" icon="pi pi-exclamation-triangle" label="Refresh Info"
+                        class="p-button-outlined p-button-warning" style="height: 25px;"></button>
+
+                    <p-checkbox #tAnalysisChkBox class="ml-4" name="tAnalysisChkBox" value="tAnalysisChkBox"
+                        label="Endpoint Analysis"></p-checkbox>
+
+                    <button #tRefresh pButton pRipple type="button" icon="pi pi-refresh"
+                        class="p-button-rounded ml-4"></button>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="templateDeviceSelectionContainer">
+            <p-tabView>
+                <p-tabPanel header="Devices">
+
+                    <ng-template pTemplate="body">
+                        <div class="interfaceConfigBox">
+
+                            <div class="flex mb-2" style="
+                            justify-content: space-between;
+                        ">
+
+                                <div class="searchDevTabs" id="searchDevTabs_btn">
+                                    <span class="p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                        <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText
+                                            placeholder="Search">
+                                    </span>
+                                </div>
+
+                                <div class="searchDevTabs">
+                                    <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All
+                                        </a></span>
+                                </div>
+
+                                <div class="searchDevTabs">
+                                    <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Devices :
+                                        <span class="seletedInterfaces"> 2 </span> </span>
+                                </div>
+
+
+                                <button pButton pRipple type="button" label="Assignment Info" class="p-button-outlined"
+                                    style="
+                                padding: 3px; height: 30px;
+                            "></button>
+
+                                <!-- <div class="searchDevTabs">
+                                    <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+                                    </p-paginator>
+                                </div> -->
+                            </div>
+
+                            <app-dTable></app-dTable>
+
+                        </div>
+                    </ng-template>
+
+                </p-tabPanel>
+            </p-tabView>
+
+        </div>
+
+
+
+    </p-tabPanel>
+
+    <p-tabPanel header="Configuration Push">
+
+        <div class="flex deviceListBtn justify-content-end">
+            <p-button label="List All Devices"></p-button>
+        </div>
+
+        <div class="interfaceConfigBox">
+
+            <div class="flex searchDeviceTabs mb-2">
+
+                <div class="searchDevTabs" id="searchDevTabs_btn">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
+                    </span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All
+                        </a></span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Devices :
+                        <span class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
+                </div>
+
+
+                <div class="switchBtn">
+                    <button pButton pRipple type="button" label="Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>&nbsp;
+                    <button pButton pRipple type="button" label="Non Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>
+                </div>
+                <!-- <div class="searchDevTabs">
+                    <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+                    </p-paginator>
+                </div> -->
+
+            </div>
+
+
+            <app-cPushTable></app-cPushTable>
+
+
+        </div>
+
+    </p-tabPanel>
+
+    <p-tabPanel header="Validate">
+
+        <div class="flex deviceListBtn justify-content-end">
+            <p-button label="Recently Configured Devices" class="mr-2"></p-button>
+            <p-button label="Last 24Hrs Devices" class="mr-2"></p-button>
+            <p-button label="List All Devices" class="mr-2"></p-button>
+        </div>
+
+        <div class="interfaceConfigBox">
+
+            <div class="flex searchDeviceTabs mb-2">
+
+                <div class="searchDevTabs" id="searchDevTabs_btn">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
+                    </span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="selInterfacesLink"><a>Select All
+                        </a></span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="totalSelInterfaces">Total Devices :
+                        <span class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
+                </div>
+
+
+                <div class="switchBtn">
+                    <button pButton pRipple type="button" label="Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>&nbsp;
+                    <button pButton pRipple type="button" label="Non Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>
+                </div>
+                <!-- <div class="searchDevTabs">
+                    <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+                    </p-paginator>
+                </div> -->
+
+
+            </div>
+
+
+            <app-validate></app-validate>
+
+
+        </div>
+        
+    </p-tabPanel>
+
+    <p-tabPanel header="Commit">
+        <div class="flex deviceListBtn justify-content-end">
+            <p-button label="Recently Configured Devices" class="mr-2"></p-button>
+            <p-button label="Last 24Hrs Devices" class="mr-2"></p-button>
+            <p-button label="List All Devices" class="mr-2"></p-button>
+        </div>
+
+        <div class="interfaceConfigBox">
+
+            <div class="flex searchDeviceTabs mb-2">
+
+                <div class="searchDevTabs" id="searchDevTabs_btn">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
+                    </span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All
+                        </a></span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Devices :
+                        <span class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
+                </div>
+
+
+                <div class="switchBtn">
+                    <button pButton pRipple type="button" label="Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>&nbsp;
+                    <button pButton pRipple type="button" label="Non Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>
+                </div>
+                <!-- <div class="searchDevTabs">
+                    <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+                    </p-paginator>
+                </div> -->
+
+
+            </div>
+
+
+            <app-commitTable></app-commitTable>
+
+
+        </div>
+        
+    </p-tabPanel>
+
+</p-tabView>

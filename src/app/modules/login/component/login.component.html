@@ -1,0 +1,63 @@
+<div style="display: flex; flex-direction: column;align-items: center;">
+    <img src="../../../../assets/images/IDA_4_C_LOGIN.svg" style="width: 135px; height: 135px;" />
+    <p-card header="Sign In" subheader="To ISE DEPLOYMENT ASSISTANT" styleClass="p-card-shadow">
+
+        <form [formGroup]="loginForm">
+            <div class="login-panel p-fluid">
+                <div class="grid">
+                    <div class="col-12 lg:col-12 md:col-12">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Login Id</label>
+                                <input type="text" autocomplete="off" pInputText id="userName" name="userName"
+                                    formControlName="userName">
+                                <ng-container
+                                    *ngIf="!loginForm.get('userName')?.valid && loginForm.get('userName')?.touched">
+                                    <small *ngIf="loginForm.get('userName')?.errors?.['required']" id="userName-help"
+                                        class="p-error block">
+                                        Please enter valid login id.
+                                    </small>
+                                </ng-container>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 lg:col-12 md:col-12">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                
+                                <label>Password</label>
+                                <input type="password" autocomplete="off" pInputText name="password"
+                                    formControlName="password">
+                                <ng-container
+                                    *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+                                    <small *ngIf="loginForm.get('password')?.errors?.['required']" id="password-help"
+                                        class="p-error block">
+                                        Please enter valid password.
+                                    </small>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+        <ng-template pTemplate="footer">
+            <div class="col-12 lg:col-12 md:col-12 flex-inline-center">
+                <button [disabled]="loader" type="button" pButton pRipple label="Sign In" icon="pi pi pi-sign-in"
+                    (click)="onSubmit()"></button>
+
+            </div>
+            <div class="col-12 lg:col-12 md:col-12 flex-inline-center">
+                ACCELERATE ISE DEPLOYMENT WITH
+            </div>
+            <div class="col-12 lg:col-12 md:col-12 flex-inline-center">
+                <img src="../../../../assets/images/SecurView_original_logo.svg" style="width: 135px; " />
+            </div>
+            <p-progressBar *ngIf="loader" mode="indeterminate" [style]="{'height': '3px'}"></p-progressBar>
+        </ng-template>
+
+    </p-card>
+
+</div>

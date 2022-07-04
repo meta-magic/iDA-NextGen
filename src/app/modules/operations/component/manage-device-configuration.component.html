@@ -1,0 +1,317 @@
+<p-tabView>
+
+    <p-tabPanel header="Assign Template">
+
+        <div class="templateSelectContainer">
+            <div class="flex templateSel m-3">
+
+                <div #tTypeName class="grid">
+
+                    <div class="templateSearchBox">
+                        <div class="input-wrapper">
+                            <div class="field mr-2">
+                                <label for="tTypeLabel">Template Type</label><br>
+
+                                <p-dropdown class="tTypeOptions" optionLabel="tTypeOption" [style]="{'width':'150px'}">
+                                </p-dropdown>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="templateSearchBox">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label for="tNameLabel" class="">Template Name</label><br>
+                                <p-dropdown class="tNameOptions" optionLabel="tTypeOption" [style]="{'width':'150px'}">
+                                </p-dropdown>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div #osTrailLbl class="">
+                    <label for="osTrail">OS Trail : -- </label>
+                </div>
+
+                <div #tItemselAssign class="ml-8">
+                    <button pButton type="button" label="Assign" class="p-button-outlined m-1"></button>
+                    <button pButton type="button" label="Unassign" class="p-button-outlined m-1"></button>
+                </div>
+
+
+                <div id="templateGeneralSel" class="">
+                    <button pButton #tItemRefresh type="button" icon="pi pi-exclamation-triangle" label="Refresh Info"
+                        class="p-button-outlined p-button-warning" style="height: 25px;"></button>
+
+                    <p-checkbox #tAnalysisChkBox class="ml-4" name="tAnalysisChkBox" value="tAnalysisChkBox"
+                        label="Endpoint Analysis"></p-checkbox>
+
+                    <button #tRefresh pButton pRipple type="button" icon="pi pi-refresh"
+                        class="p-button-rounded ml-4"></button>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="templateDeviceSelectionContainer">
+            <p-tabView>
+                <p-tabPanel header="Devices">
+
+                    <ng-template pTemplate="body">
+                        <div class="interfaceConfigBox">
+
+                            <div class="flex" style="
+                            justify-content: space-between;
+                        ">
+
+                                <div class="searchDevTabs" id="searchDevTabs_btn">
+                                    <span class="p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                        <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText
+                                            placeholder="Search">
+                                    </span>
+                                </div>
+
+                                <div class="searchDevTabs">
+                                    <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All
+                                        </a></span>
+                                </div>
+
+                                <div class="searchDevTabs">
+                                    <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Devices :
+                                        <span class="seletedInterfaces"> 2 </span> </span>
+                                </div>
+
+
+                                <button pButton pRipple type="button" label="Assignment Info" class="p-button-outlined"
+                                    style="
+                                padding: 3px; height: 30px;
+                            "></button>
+
+                                <div class="searchDevTabs">
+                                    <!-- <p-paginator id="intConfPaginator"></p-paginator> -->
+                                    <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+                                    </p-paginator>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="col intrfaceConfigResult-Table"> -->
+
+                            <!-- <div class="intDeviceConfig"> -->
+
+                            <p-listbox [options]="configDesc" [multiple]="true" optionLabel="name"
+                                [listStyle]="{'max-height':'100vh'}">
+
+                                <ng-template let-configDesc pTemplate="item">
+
+
+                                    <div class="flex intDeviceConfigList">
+
+                                        <div #devlistCheckBox>
+                                            <p-checkbox name="groupname" label="" value="val1"
+                                                [(ngModel)]="selectedValues"></p-checkbox>
+                                        </div>
+
+                                        <div id="devListName">
+                                            <div class="devSearchItemValue"><i class="pi pi-cog"></i>
+                                                {{configDesc.devID}}</div>
+                                            <div class="devSearchItemValue">Product : {{configDesc.prodID}}
+                                            </div>
+                                            <div class="devSearchItemValue">Location :
+                                                <a>{{configDesc.location}}</a>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="devListDesc">
+                                            <div class="devSearchItemValue">Profile Name: {{configDesc.pName}}
+                                            </div>
+                                            <div class="devSearchItemValue">OS Type: {{configDesc.osType}}</div>
+                                            <div class="devSearchItemValue">OS Version: {{configDesc.osVersion}}
+                                            </div>
+                                        </div>
+
+                                        <div id="devListConfigStat">
+                                            <div class="devSearchItemValue">Config Status:
+                                                {{configDesc.cStatus}}</div>
+                                            <div class="devSearchItemValue">Template Name: {{configDesc.tName}}
+                                            </div>
+                                        </div>
+
+                                        <div id="selInterface">
+                                            <div class="devSearchItemValue">Selected Interface:
+                                                {{configDesc.selInterface}}</div>
+                                            <div class="devSearchItemValue">Interface Assignment:
+                                                {{configDesc.intAssign}}</div>
+                                        </div>
+
+                                        <div id="lastRefresh">
+
+                                            <div class="devSearchItemValue"><i
+                                                    class="pi pi-exclamation-triangle"></i>&nbsp; Last
+                                                Refreshed: {{configDesc.lastRefresh}}</div>
+
+                                            <div class="devSearchItemValue">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh Logs:
+                                                {{configDesc.refreshLogs}}<i class="pi pi-download"></i></div>
+                                        </div>
+
+                                        <div id="historyBtn">
+                                            <button pButton pRipple type="button" label="History"
+                                                class="p-button-outlined p-button-secondary"></button>
+                                        </div>
+
+                                    </div>
+
+                                </ng-template>
+
+                            </p-listbox>
+
+
+                            <!-- </div> -->
+
+                            <!-- </div> -->
+
+                        </div>
+                    </ng-template>
+
+                </p-tabPanel>
+            </p-tabView>
+
+        </div>
+
+
+
+    </p-tabPanel>
+
+    <p-tabPanel header="Configuration Push">
+
+        <div class="flex deviceListBtn justify-content-end">
+            <p-button label="List All Devices"></p-button>
+        </div>
+
+        <div class="interfaceConfigBox">
+
+            <div class="flex searchDeviceTabs">
+
+                <div class="searchDevTabs" id="searchDevTabs_btn">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
+                    </span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All
+                        </a></span>
+                </div>
+
+                <div class="searchDevTabs">
+                    <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Devices :
+                        <span class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
+                </div>
+
+
+                <div class="switchBtn">
+                    <button pButton pRipple type="button" label="Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>&nbsp;
+                    <button pButton pRipple type="button" label="Non Cisco Switch" class="p-button-outlined" style="
+                padding: 3px;"></button>
+                </div>
+                <div class="searchDevTabs">
+                    <!-- <p-paginator id="intConfPaginator"></p-paginator> -->
+                    <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+                    </p-paginator>
+                </div>
+
+
+            </div>
+
+
+            <!-- <div class="col intrfaceConfigResult-Table"> -->
+
+            <!-- <div class="intDeviceConfig"> -->
+
+            <p-listbox [options]="deviceConfig" [multiple]="true" optionLabel="name"
+                [listStyle]="{'max-height':'100vh'}">
+
+                <ng-template let-deviceConfig pTemplate="item">
+
+                    <div #devlistCheckBox>
+                        <p-checkbox name="groupname" label="" value="val1" [(ngModel)]="selectedValues">
+                        </p-checkbox>
+                    </div>
+
+                    <div class="flex intDeviceConfigPushList ml-4" style="
+                            width: 100vw;
+                        ">
+
+
+                        <div id="devListName" style="width: 320px;">
+                            <div class="devSearchItemValue"><i class="pi pi-align-justify"></i>
+                                {{deviceConfig.dName}}</div>
+                            <div class="devSearchItemValue">&nbsp;&nbsp;&nbsp;&nbsp; {{deviceConfig.dSpec}}
+                            </div>
+                            <div class="devSearchItemValue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OS version:
+                                {{deviceConfig.osVersion}}</div>
+
+                        </div>
+
+                        <div id="dProfile" style="width: 320px;">
+                            <div class="devSearchItemValue">Profile Name: {{deviceConfig.pName}}
+                            </div>
+                            <div class="devSearchItemValue">Product Type: {{deviceConfig.pType}}</div>
+                        </div>
+
+                        <div id="dOwner" style="width: 320px;">
+                            <div class="devSearchItemValue">Owner:
+                                {{deviceConfig.owner}}</div>
+                            <div class="devSearchItemValue">Location: {{deviceConfig.location}}
+                            </div>
+                        </div>
+
+                        <div id="dInterface" style="width: 320px;">
+                            <div class="devSearchItemValue">Selected Interface:
+                                {{deviceConfig.globalId}}</div>
+                            <div class="devSearchItemValue">Interface Assignment:
+                                {{deviceConfig.noOfInterfaces}}</div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </ng-template>
+
+            </p-listbox>
+
+
+            <!-- </div> -->
+
+            <!-- </div> -->
+
+        </div>
+
+    </p-tabPanel>
+
+    <p-tabPanel header="Validate">
+
+    </p-tabPanel>
+
+    <p-tabPanel header="Commit">
+    </p-tabPanel>
+
+</p-tabView>

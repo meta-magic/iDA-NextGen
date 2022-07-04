@@ -1,0 +1,181 @@
+<div class="card p-fluid">
+    <div class="grid">
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="deviceName">Device Name</label>
+                        <input pInputText id="deviceName" type="text" [(ngModel)]="device.deviceName"/>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="iphostname">IP/HostName</label>
+                        <input pInputText id="iphostname" type="text" [(ngModel)]="device.ipHostName"/>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="deviceType">Device Type</label>
+                        <input pInputText id="deviceType" type="text" [(ngModel)]="device.deviceType"/>
+                    </div>
+                </div>
+            </div>
+    
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="deviceProfile">Device Profile</label>
+                        <input pInputText id="deviceProfile" type="text" [(ngModel)]="device.deviceProfile"/>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="productType">Product Type</label>
+                        <input pInputText id="productType" type="text" [(ngModel)]="device.deviceType" />
+                    </div>
+                </div>
+            </div>
+        
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="productType">Product Type</label>
+                        <input pInputText id="productType" type="text" [(ngModel)]="device.deviceType" />
+                    </div>
+                </div>
+            </div>
+    
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck !='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="location">Location</label>
+                        <!-- <input pInputText id="location" type="text" [(ngModel)]="device.location" /> -->
+                        <p-treeSelect [(ngModel)]="selectedNode" [options]="nodes1"
+                         placeholder="Select Location"
+                        
+                         ></p-treeSelect>                    
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template [ngIf]="(modelCheck !='settingConfig' ||modelCheck =='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="userName">User Name</label>
+                            <input pInputText id="userName" type="text" [(ngModel)]="device.userName" />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="password">Password</label>
+                        <input pInputText id="password" type="text" [(ngModel)]="device.password"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="enablepassword">Enable Password</label>
+                        <input pInputText id="enablepassword" type="text" [(ngModel)]="device.enablepassword"/>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="owner">Owner</label>
+                        <input pInputText id="owner" type="text"  />
+                    </div>
+                </div>
+            </div>
+            
+        <ng-template [ngIf]="(modelCheck =='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="productType">Product Type</label>
+                        <input pInputText id="productType" type="text" [(ngModel)]="device.deviceType" />
+                    </div>
+                </div>
+            </div>
+        
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck =='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="deviceProfile">Device Profile</label>
+                        <input pInputText id="deviceProfile" type="text" [(ngModel)]="device.deviceProfile"/>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template [ngIf]="(modelCheck =='settingConfig')">
+            <div class="col-4 md:col-3">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <label htmlFor="location">Location</label>
+                        <!-- <input pInputText id="location" type="text" [(ngModel)]="device.location" /> -->
+                        <p-treeSelect [(ngModel)]="selectedNode" [options]="nodes1"
+                         placeholder="Select Location"
+                        
+                         ></p-treeSelect>                    
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        </ng-template>
+<!-- 
+        <div class="col-12">
+            <div class="input-wrapper">
+                <div class="field">
+                    <p-tree [value]="locations" layout="vertical" selectionMode="single" [(selection)]="selectedFile"></p-tree>
+                </div>
+            </div>
+        </div> -->
+        <div class="col-12">
+            <p-toolbar class="p-card-footer-toolbar" [style]="{'justify-content':'right'}" >
+                <div class="p-toolbar-group-right">
+                    <button pButton pRipple label="Test" icon="pi pi-refresh" class="p-button-secondary p-mr-2"
+                        (click)="reset()"></button>
+                    <span>&nbsp;</span>
+
+                    <button pButton pRipple label="Reset" icon="pi pi-refresh" class="p-button-secondary p-mr-2"
+                        (click)="reset()"></button>
+                    <span>&nbsp;</span>
+                    <button pButton pRipple label="{{btntype}}" icon="pi pi-save" class="p-button-primary p-mr-2"
+                        (click)="reset()"></button>
+
+                </div>
+            </p-toolbar>
+
+        </div>
+    </div>
+</div>

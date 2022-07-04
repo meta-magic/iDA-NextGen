@@ -1,0 +1,188 @@
+{
+    "success": true,
+    "message": "Device Profile data Fetched Successfully",
+    "data": [
+        {
+            "HP": {
+                "wired": [
+                    {
+                        "pName": "Cisco A"
+                    },
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ],
+                "wireless": [
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ]
+            },
+            "Arista": {
+                "wired": [
+                    {
+                        "pName": "Cisco B"
+                    },
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ],
+                "wireless": [
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ]
+            },
+            "Paloalto": {
+                "wired": [
+                    {
+                        "pName": "Cisco C"
+                    },
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ],
+                "wireless": [
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ]
+            },
+            "Cisco": {
+                "wired": [
+                    {
+                        "pName": "Cisco D"
+                    },
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ],
+                "wireless": [
+                    {
+                        "dwCond": ">.#"
+                    },
+                    {
+                        "enCommand": "enable"
+                    },
+                    {
+                        "rcCommand": "show running config"
+                    },
+                    {
+                        "wmCommand": "write memory"
+                    },
+                    {
+                        "tlCommand": "terminal length 0"
+                    },
+                    {
+                        "ctCommand": "configure terminal"
+                    }
+                ]
+            }
+        }
+    ]
+}

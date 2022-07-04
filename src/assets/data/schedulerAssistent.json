@@ -1,0 +1,48 @@
+{
+    "success":true,
+    "message":"Scheduler Assistent Report data Fetched Successfully",
+    "data":[
+        {
+            "tName":"cr1",
+            "desc":"Wired WS-C3560CG-8PC-S",
+
+
+            "rType" : "Compliance", "freq" : "DAILY", 
+            
+            "location" : "Local", "createdBy" : "admin1",
+
+            "nextRun" : "18 Jun 2022, 06:06:00 AM EDT",
+            "lastRun" : "17 Jun 2022, 06:06:00 AM EDT",
+             
+            "jobStatus" : "Scheduled", "lastRunStatus" : "Completed"
+        },
+        {
+            "tName":"pr1",
+            "desc":"Wired WS-C3560CG-8PC-S",
+
+
+            "rType" : "Compliance", "freq" : "DAILY", 
+            
+            "location" : "Local", "createdBy" : "admin1",
+
+            "nextRun" : "18 Jun 2022, 06:06:00 AM EDT",
+            "lastRun" : "17 Jun 2022, 06:06:00 AM EDT",
+             
+            "jobStatus" : "Scheduled", "lastRunStatus" : "Completed"
+        },
+        {
+            "tName":"vr1",
+            "desc":"Wired WS-C3560CG-8PC-S",
+
+
+            "rType" : "Compliance", "freq" : "DAILY", 
+            
+            "location" : "Local", "createdBy" : "admin1",
+
+            "nextRun" : "18 Jun 2022, 06:06:00 AM EDT",
+            "lastRun" : "17 Jun 2022, 06:06:00 AM EDT",
+             
+            "jobStatus" : "Scheduled", "lastRunStatus" : "Completed"
+        }
+    ]
+}

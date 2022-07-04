@@ -1,0 +1,237 @@
+<div class="grid p-fluid">
+  <!-- <div class="md:col-2">
+      <p-card>
+          <div class="p-card-content" style="height: 100vh;">
+              <div class="flex leftSidePortCol mb-3">
+                  <span class="p-input-icon-left">
+                      <i class="pi pi-search"></i>
+                      <input type="text" pInputText placeholder="Search" />
+                  </span>
+                  <span>
+
+                      <i class="pi pi-book m-2" style="cursor: pointer;"></i>
+
+                  </span>
+              </div>
+
+              <p-accordion>
+                  <p-accordionTab header="Active Templates">
+                      <app-manage-serv-template-list-column></app-manage-serv-template-list-column>
+                  </p-accordionTab>
+                  <p-accordionTab header="Archieved Templates">
+                      Work In progrss
+                  </p-accordionTab>
+                  <p-accordionTab header="Auto Created Templates">
+                      Work In Progress..
+                  </p-accordionTab>
+              </p-accordion>
+
+
+
+
+          </div>
+
+      </p-card>
+
+  </div> -->
+
+
+  <div class="md:col-12">
+
+      <!-- Active Template's Device List Details Page -->
+      <p-card>
+          <ng-template pTemplate="header">
+              <p-toolbar>
+                  <div class="p-toolbar-group-left p-card-title" style="width: 76%;">
+                      <i class="pi pi-book" style="cursor: pointer;font-weight: bold;"></i>&nbsp; test2
+                  </div>
+                  <div>
+                      <b>Last modified on:</b>
+                  </div><br>
+                  <div style="width: 80%;">
+                      <label for="templateName" style="font-weight: bold;">Wired Interface Template</label>&nbsp;(IBNS
+                      2.0)
+                      <label for="ownerName" style="font-weight: bold;">Owner</label>&nbsp;admin1 (m n)
+                  </div>
+                  <div>
+                      <b>Mar 22 2022 2:12:12 AM EDT</b>
+                  </div>
+
+              </p-toolbar>
+              <div class="osTrailBox flex m-4" style="justify-content: space-between;">
+
+                  <div>
+                      <label for="" style="font-weight: bold; font-size: large;">OS Trail</label>
+                  </div>
+           
+                      <div *ngFor="let category of osCategories" class="p-field-checkbox flex ml-1">
+                        <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="osTrailCategory"></p-radioButton>
+                       <label [for]="category.key">{{category.name}}</label>
+                    </div>
+
+           
+                  <div>
+                      <b>12 out of 12</b> devices belong to this category
+                  </div>
+                  <div>
+                      <i class="pi pi-pencil" style="cursor: pointer;">&nbsp;Edit</i>
+                      <i class="pi pi-chevron-circle-down ml-4" style="cursor: pointer;">&nbsp;Achieve</i>
+                  </div>
+              </div>
+
+              <div class="iseServBox flex m-4" style="justify-content: space-between;">
+                  <div>
+                      <label for="" style="font-weight: bold; font-size: large;">ISE Services</label>
+                  </div>
+                  <div>
+                      <p-checkbox name="groupname" value="val1" label="Authentication/802.1x"></p-checkbox>
+                  </div>
+                  <div>
+                      <p-checkbox name="groupname" value="val1" label="Endpoint Posture"></p-checkbox>
+                  </div>
+                  <div>
+                      <p-checkbox name="groupname" value="val1" label="Profiling With Device Sensor"></p-checkbox>
+                  </div>
+                  <div>
+                      <p-checkbox name="groupname" value="val1" label="Profiling Without Device Sensor"></p-checkbox>
+                  </div>
+
+              </div>
+
+              <p-accordion>
+                <p-accordionTab header="Template Parameters">
+                    <div class="m-2"><b>Inbuilt Parameters:</b></div>
+                    <div class="">
+                    <div class="inbuiltParamBox grid m-2"
+                        style="padding: 4px; align-items: center; justify-content: space-between; border: 1px solid #f8f9fa; border-radius: 5px;">
+                        <div class="nameBox m-1">
+                            <label for="name" class="mr-1" style="font-weight: bold;">Name:</label>DATA_VLAN
+                        </div>
+
+                        <div class="descBox m-1">
+                            <label for="desc" class="mr-1"
+                                style="font-weight: bold;">Description:</label>Substituted by actualy value of data
+                            vlan, while
+                            processing
+                        </div>
+
+                        <div class="descBox flex m-1">
+                            <label for="search" class="mr-1" style="font-weight: bold;">Search Scope:</label>
+                       
+
+                                <div *ngFor="let category of categories" class="p-field-checkbox flex ml-1">
+                                    <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"></p-radioButton>
+                                   <label [for]="category.key">{{category.name}}</label>
+                                </div>
+
+                            
+                        </div>
+                    </div>
+                        <div class="descBox m-1">
+                            <div class="flex" style="align-items: center;">
+                                <label for="value" class="mr-1 flex" style="font-weight: bold;">Where can the value
+                                    be found?</label>
+                                <div class="forvlan"
+                                    style="align-items: center;border: 1px solid #acacac;border-radius: 3px;margin-left: 5px;padding: 4px;cursor: pointer;">
+                                    switchport access vlan?
+                                </div>
+                                <div style="margin-left: 5px;padding: 4px;">
+                                    OR
+                                </div>
+                                <div class="selection"
+                                    style="align-items: center;border: 1px solid #acacac;border-radius: 3px;margin-left: 5px;padding: 4px;cursor: pointer;">
+                                    <div class="forvlan">
+                                        source template *
+                                    </div>
+
+                                    <div class="forvlan">
+                                        switchport access vlan?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <p-divider></p-divider>
+                    
+                    <div class="inbuiltParamBox grid m-2"
+                        style="padding: 4px; align-items: center; justify-content: space-between; border: 1px solid #f8f9fa; border-radius: 5px;">
+                        <div class="nameBox m-1">
+                            <label for="name" class="mr-1" style="font-weight: bold;">Name:</label>DATA_VLAN
+                        </div>
+
+                        <div class="descBox m-1">
+                            <label for="desc" class="mr-1"
+                                style="font-weight: bold;">Description:</label>Substituted by actualy value of data
+                            vlan, while
+                            processing
+                        </div>
+
+                        <div class="descBox flex m-1">
+                            <label for="search" class="mr-1" style="font-weight: bold;">Search Scope:</label>
+                       
+
+                                <div *ngFor="let category of categories" class="p-field-checkbox flex ml-1">
+                                    <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"></p-radioButton>
+                                   <label [for]="category.key">{{category.name}}</label>
+                                </div>
+
+                            
+                        </div>
+                    </div>
+
+
+                </p-accordionTab>
+              </p-accordion>
+
+              <div class="mt-3 ml-4"><b>Custom Parameters:</b></div>
+              <p-toolbar>&nbsp;&nbsp;Custom parameters are not defined for this template</p-toolbar>
+              <div class="noteBox m-4" style="border: 1px solid #FBC02D;border-radius: 5px;padding: 5px;">
+                  <p>
+                      <b>Note:</b> By default, the generated config template has shutdown and no shutdown commands to
+                      restart the
+                      interface after config push. If you do not wish to restart the interface, please consider
+                      editing
+                      the template and removing these commands.
+                  </p>
+              </div>
+
+              <div class="col-8" >
+                  <div class="titleBox flex justify-content-between ml-4">
+                      <div>
+                          <b>Template Details</b>
+                      </div>
+                      <div>
+                          <i class="pi pi-download" style="cursor: pointer;"><b>&nbsp;Download</b></i>
+                      </div>
+                  </div>
+                  <div class="grid">
+                      <div class="col ml-4" style="margin-top: 7px;">
+                          <p-scrollPanel [style]="{width: '100%', height: '200px'}">
+                              <div>aaa new-model</div>
+                              <div><br></div>
+                              <div>radius server dsa</div>
+                              <div>address ipv4 114.143.102.162 auth-port 1812 acct-port 1813</div>
+                              <div>key add</div>
+                              <div><br></div>
+                              <div>aaa group server radius asd</div>
+                              <div>server name dsa</div>
+                              <div><br></div>
+                              <div>aaa session-id common</div>
+                              <div>aaa authentication dow1x default group asd</div>
+                              <div>aaa authorization network detault group asd</div>
+                              <div>aaa accounting identity default start-stop group asd</div>
+                              <div>aaa accounting udpate newinfo periodic 2880</div>
+                              <div>radius-server dead-criteria time 10 tries 3</div>
+                          </p-scrollPanel>
+                      </div>
+                  </div>
+              </div>
+
+          </ng-template>
+      </p-card> 
+
+  </div>
+</div>

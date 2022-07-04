@@ -1,0 +1,55 @@
+<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped mt-2" [value]="lbData" [rows]="5"
+  [globalFilterFields]="['name']" [rowHover]="true" [showCurrentPageReport]="true" dataKey="id">
+
+  <ng-template pTemplate="header">
+
+    <tr>
+      <th>
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+
+      <th pSortableColumn="virtualIP">Virtual IP <p-sortIcon field="virtualIP"></p-sortIcon>
+      </th>
+
+      <th pSortableColumn="location">Location <p-sortIcon field="location"></p-sortIcon>
+      </th>
+
+      <th pSortableColumn="shortName">Short Name<p-sortIcon field="shortName"></p-sortIcon>
+      </th>
+
+      <th pSortableColumn="action"><p-sortIcon field="action"></p-sortIcon>
+      </th>
+
+    </tr>
+
+  </ng-template>
+
+  <ng-template pTemplate="body" let-entity>
+
+    <tr>
+      <td>
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </td>
+
+      <td>
+        <div class="devSearchItemValue"><a>{{entity.virtualIP}}</a></div>
+      </td>
+
+      <td>
+       <div>{{entity.location}}</div>
+      </td>
+
+      <td>
+       <div>{{entity.shortName}}
+        </div>
+      </td>
+
+      <td>
+        <button pButton pRipple icon="pi pi-pencil" class="p-button-text p-button-success"></button>
+      </td>
+
+    </tr>
+
+  </ng-template>
+
+</p-table>

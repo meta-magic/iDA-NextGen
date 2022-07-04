@@ -1,0 +1,74 @@
+{
+    "success":true,
+    "message":"Single Device data Fetched Successfully",
+    "data":[
+        {
+            "singleDevName": "GigabitEthernet0/1",
+            "singleDevMode": "Routed",
+            "singleDevStatus": "Connected",
+            "singleDVlan": "--/--",
+
+            "singleDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "singleDevEndPoint": "--",
+            "singlecdpPlatform": "--",
+            "singleLldp": "--",
+
+            "singleConfigStatus": "Initial",
+            "singleServiceTemplate": "--"
+
+        },
+        {
+            "singleDevName": "GigabitEthernet0/2",
+            "singleDevMode": "Access",
+            "singleDevStatus": "Connected",
+            "singleDVlan": "10/--",
+
+            "singleDevDesc": "Description Test",
+            "singleDevEndPoint": "--",
+            "singlecdpPlatform": "--",
+            "singleLldp": "--",
+
+            "singleConfigStatus": "Assigned",
+            "singleServiceTemplate": "Test"
+        },{
+            "singleDevName": "GigabitEthernet0/3",
+            "singleDevMode": "Routed",
+            "singleDevStatus": "Connected",
+            "singleDVlan": "--/--",
+
+            "singleDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "singleDevEndPoint": "--",
+            "singlecdpPlatform": "--",
+            "singleLldp": "--",
+
+            "singleConfigStatus": "Initial",
+            "singleServiceTemplate": "--"
+        },{
+            "singleDevName": "GigabitEthernet0/4",
+            "singleDevMode": "Access",
+            "singleDevStatus": "Connected",
+            "singleDVlan": "11/--",
+
+            "singleDevDesc": "Description Test",
+            "singleDevEndPoint": "--",
+            "singlecdpPlatform": "--",
+            "singleLldp": "Test",
+
+            "singleConfigStatus": "Assigned",
+            "singleServiceTemplate": "--"
+        },{
+            "singleDevName": "GigabitEthernet0/5",
+            "singleDevMode": "Routed",
+            "singleDevStatus": "Connected",
+            "singleDVlan": "--/--",
+
+            "singleDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "singleDevEndPoint": "--",
+            "singlecdpPlatform": "--",
+            "singleLldp": "--",
+
+            "singleConfigStatus": "Initial",
+            "singleServiceTemplate": "--"
+        }
+    ]
+}

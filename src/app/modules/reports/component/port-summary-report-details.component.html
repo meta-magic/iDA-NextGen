@@ -1,0 +1,176 @@
+<p-card [style]="{width: 'width'}" styleClass="styleClass">
+    <p-header>
+        <p-toolbar>
+            <div class="p-toolbar-group-left">
+                <span class="mr-2">{{'Report name  16 June 2022 '}}</span>
+                <i class="pi pi-tags mr-2"></i>
+                <p-button label="Scheduled" class="mr-2" styleClass="p-button-success p-button-sm"></p-button>   
+                <span>Jun 15 2022 05:59:00 AM EDT</span>                 
+            </div>
+            <div class="p-toolbar-group-right">
+                <p-button label="Back" icon="fa fa-arrow-left" class="mr-2" (click)="back()" styleClass="p-button-sm"></p-button>
+                <p-button label="Other Details" icon="pi pi-angle-double-{{show?'up':'down'}}" styleClass="p-button-success 
+                p-button-sm" (click)="otheDshow();show=!show">
+                
+                </p-button>
+                
+
+            </div>
+        </p-toolbar>
+    </p-header>
+    <div class="grid p-fluid " >
+        <ng-template [ngIf]="otherDetailsShow">
+            <div class="col-12 otherDetailsBorder">
+                <div class="grid">
+                
+                    <div class="col-2">
+                        <div class="field-checkbox">
+                            <p-checkbox name="group1" value="New York"  inputId="ny"></p-checkbox>
+                            <label for="ny">MAC & OUI</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="field-checkbox">
+                        <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
+                        <label for="ny">CDP & LLDP</label>
+                    </div>
+  
+                    </div>
+
+                    <div class="col-3">
+                        <strong>Execution Type: {{'Sequential'}}</strong>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="grid">
+                        <div class="col-2">
+                            <Strong>
+                            Device Selection Filter:
+                            </Strong>
+                            
+                        </div>
+                        <div class="col-12">
+                            Network Device Filter: --
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        
+        <div class="col-3">
+            <span>
+                {{'Interactive Port Summary Chart'}}
+            </span>
+            <hr>
+            <div>
+                Total Ports (Access):1329(1215) <br>
+                Closed Ports:96 <br>
+                Low Impact Ports:00 <br>
+                Monitor Ports:06 <br>
+                Unsecured Ports:1113 <br>
+            </div>
+        </div>
+        <div class="col-9">
+            <div id="chart"></div>
+        </div>
+    </div>
+    <div class="grid p-fluid">
+        <div class="col-12">
+            <p-tabView id="closableTabView">
+                <p-tabPanel header="Device Summary" [selected]="true">
+                    <p-table [value]="products" responsiveLayout="scroll"
+                    [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+                        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                        [rowsPerPageOptions]="[10,25,50]" paginatorPosition="top"
+                        [resizableColumns]="true"
+                        
+                                    >
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <a (click)="showDetails('right')"> {{'Device103(10.20.228.103)'}} </a> <br>
+                                        {{'Location'}}: {{'Default'}} <br>
+                                        {{'Product Type'}}: {{'Catlyst 2960-x(Wired'}} <br>
+                                    </div>                                    
+                                </td>
+                                <td>
+                                    <div>
+                                        {{'Total Ports'}}:{{'23'}} <br>
+                                        {{'Unsecured Assess Port '}}: {{'213'}} <br>
+                                        {{'MAB'}}: {{'2'}} <br>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        {{'Monitor Ports'}}{{'2'}} <br>
+                                        {{'Low Impact Ports'}}: {{'Default'}} <br>
+                                        {{'Closed Ports'}}: {{'2'}} <br>
+                                    </div>
+                                </td>
+                                <td> Complete </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                       <a  (click)="showDetails('right')"> {{'Device103(10.20.228.103)'}}</a>  <br>
+                                        {{'Location'}}: {{'Default'}} <br>
+                                        {{'Product Type'}}: {{'Catlyst 2960-x(Wired'}} <br>
+                                    </div>                                    
+                                </td>
+                                <td>
+                                    <div>
+                                        {{'Total Ports'}}:{{'23'}} <br>
+                                        {{'Unsecured Assess Port '}}: {{'213'}} <br>
+                                        {{'MAB'}}: {{'2'}} <br>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        {{'Monitor Ports'}}{{'2'}} <br>
+                                        {{'Low Impact Ports'}}: {{'Default'}} <br>
+                                        {{'Closed Ports'}}: {{'2'}} <br>
+                                    </div>
+                                </td>
+                                <td> Complete </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="summary">
+                            <div class="flex align-items-center justify-content-between">
+                                In total there are {{products ? products.length : 0 }} products.
+                            </div>
+                        </ng-template>
+                    </p-table>
+
+
+
+                
+                 </p-tabPanel>
+                <!-- <p-tabPanel header="Header II" [closable]="true">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                </p-tabPanel>
+                <p-tabPanel header="Header III" [closable]="true">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+                </p-tabPanel> -->
+            </p-tabView>
+        </div>
+    </div>
+</p-card>
+
+
+<div class="grid">
+    <div class="col-6">
+        <p-dialog header="" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+        [draggable]="true" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
+        [transitionOptions]="'1000ms'"
+        >
+        <ng-template pTemplate>
+            <app-port-summary-device-details></app-port-summary-device-details>
+        </ng-template>
+        </p-dialog>    
+    </div>
+</div>

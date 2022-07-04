@@ -1,0 +1,313 @@
+<div class="grid ">
+    <div class="col-12">
+        <p-accordion>
+            <p-accordionTab header="Service Selection" [selected]="true">
+
+                <div class="grid">
+                    <div class="col-4">
+
+                        <div class="input-wrapper">
+                            <div class="field">
+
+
+                                <!-- <label class="grid subMenuIseItem" for="cGuideLabel">Select the compatibility guide
+                                    for your assessment</label>
+                                    <br>
+                                <p-dropdown class="subMenuIseItem" [options]="cGuideItems" optionLabel="name">
+                                </p-dropdown> -->
+
+
+                                <label>Select the compatibility guide </label>
+                                <select type="text">
+                                    <option *ngFor="let node of cGuideItems" [value]="node.name">{{node.name}}
+                                    </option>
+                                </select>
+                                <br>
+                                <div class="subMenuBtn" style="margin-top: 16px;">
+                                    <p-button class="subMenuIseBtnItem" label="Collect Device Info"></p-button>
+                                    <p-button class="subMenuIseBtnItem" label="Reassess Devices"></p-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label for="">Select the ISE services you want to implement</label>
+                                <p-checkbox class="ml-2" label="Select All" name="groupnameISE" value="val1"
+                                    p-chkbox-label=""></p-checkbox>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <div class="grid">
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="AAA" name="groupnameISE" value="val1"
+                                            p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="BYOD" name="groupnameISE" value="val2"
+                                            p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="Guest (with Web Auth)" name="groupnameISE"
+                                            value="val3" p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="Guest Originating URL" name="groupnameISE"
+                                            value="val4" p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="MDM" name="groupnameISE" value="val5"
+                                            p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="Posture" name="groupnameISE" value="val6"
+                                            p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="Profiling" name="groupnameISE" value="val7"
+                                            p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+
+                                    <div class="servIseChkBoxItem">
+                                        <p-checkbox class="servIse" label="TrustSec" name="groupnameISE" value="val8"
+                                            p-chkbox-label="">
+                                        </p-checkbox>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+    <!-- <ng-template pTemplate="header">
+            <p-toolbar>
+                <div class="p-toolbar-group-left p-card-title">
+                    Assessment Type&nbsp;&nbsp;
+                    <p-dropdown [options]="assesType" optionLabel="name" [style]=""></p-dropdown>
+                </div>
+            </p-toolbar>
+        </ng-template> -->
+
+
+</div>
+
+<div class="grid p-flex">
+    <div class="col-12">
+        <p-card>
+            <div class="col">
+                <div class="col-12">
+                    <p-carousel [value]="devDesc" [numVisible]="6" [circular]="true">
+                        <ng-template let-devDesc pTemplate="item">
+                            <div class="product-item">
+                                <div class="product-item-content">
+                                    <div class="devDescHead mt-0">
+                                        <span style="font-size: 14px;font-weight: 500;">
+
+                                            {{devDesc.deviceDescTitle}}
+                                        </span>
+                                    </div>
+                                    <div id="mu" class="mb-10" *ngIf="devDesc.deviceDescTitle=='Memory Utilization'">
+                                        <div id="chart" style="height: 168px;">
+                                            <!-- <canvas class="flot-base" width="202" height="125" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 162px; height: 100px;"></canvas> -->
+                                        </div>
+                                        <div>
+                                            <span style="font-size: 14px;font-weight: 500;"> 
+                                                {{
+                                                    devDesc.deviceDescSubText
+                                                }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="devDescNumber mt-7" *ngIf="devDesc.deviceDescTitle!='Memory Utilization'">
+                                        <h1>
+                                            {{devDesc.deviceDescCount}}
+                                        </h1>
+                                        <div class="devDescSubText mt-8">
+                                            <span style="font-size: 14px;font-weight: 500;"> 
+                                              {{
+                                                  devDesc.deviceDescSubText
+                                              }}
+                                          </span>  
+                                          </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- <div class="" style="height:186px;width:186px; padding-bottom:20%;background-color:lightgreen" class="mr-2"> -->
+                                <!-- <div class="grid ganesh" style="height:186px;width:186px; background-color:lightgreen" class="mr-2">
+                                    <div class="box boxHead" #boxHead style="font-weight: bold;">
+                                        
+                                            {{devDesc.deviceDescTitle}}
+                                        
+                                    </div>
+                                    <div class="box" #boxBody style="font-weight: bold;">
+                                        
+                                            {{devDesc.deviceDescCount}}
+                                        
+                                    </div>
+                                    <div class="box" #boxFooter>
+                                        {{
+                                            'Ganesh'
+                                        }}
+                                    </div>
+                                </div> -->
+                            <!-- </div> -->
+                        </ng-template>
+                    </p-carousel>
+                </div>
+                <div class="grid">
+                    <div class="col-12">
+
+                        <p-toolbar styleClass="mb-4">
+                            <ng-template pTemplate="left">
+                              
+                                <button pButton label="Clear" class="p-button-text"
+                                            icon="pi pi-filter-slash" (click)="clear(dt1)"
+                                            style="flex-basis: content;"></button>
+                             
+                                            
+                                            
+                                    <button pButton label="Settings" class="p-button-text mr-2" icon="pi pi-cog"
+                                    (click)="clear(dt1)" style="flex-basis: content;" (click)="op.toggle($event)"></button>
+            
+                                    <p-overlayPanel #op [dismissable]="true" [showCloseIcon]="true">
+                                        <ng-template pTemplate>
+                                    
+                                                
+                                        <p-multiSelect [options]="columns" [(ngModel)]="SelectedColumns"
+                                        optionLabel="header" selectedItemsLabel="{0} columns selected"
+                                        [style]="{minWidth: '200px'}" placeholder="Choose Columns">
+                                    </p-multiSelect>
+
+                                        </ng-template>
+                                    </p-overlayPanel>
+
+
+            
+                            </ng-template>
+                            <ng-template pTemplate="right">
+                                    
+                                    <span class="p-input-icon-left p-ml-auto" style="flex-basis: fit-content;">
+                                        <i class="pi pi-search"></i>
+                                        <input pInputText type="text"
+                                            (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+                                            placeholder="Search keyword" />
+                                    </span>
+                          
+                                
+                            </ng-template>
+                        </p-toolbar>
+
+
+                        <!-- <app-device-readiness-table></app-device-readiness-table> -->
+                        <p-table #dt1 [columns]="selectedColumns" [value]="importedDevices" [rows]="10"
+                            [paginator]="true" [(selection)]="selectedProducts" [rowHover]="true" dataKey="id"
+                            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                            [showCurrentPageReport]="true" [resizableColumns]="true"
+                            styleClass="p-datatable-gridlines p-datatable-sm" [globalFilterFields]="selectedColumns"
+                            [scrollable]="true" scrollHeight="400px" scrollDirection="both"
+                            [reorderableColumns]="true"  columnResizeMode="expand"
+                            paginatorPosition="top"
+                            [rowsPerPageOptions]="[10,25,50]">
+                            <ng-template pTemplate="caption">
+                                <div class="field">
+                                    <div class="flex align-items-center justify-content-between">
+                                    
+                                    </div>
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate="header" let-columns>
+                                <tr>
+                                    <th style="width:40px">
+                                        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                                    </th>
+                                    <ng-container *ngFor="let col of columns">
+                                        <th [pSortableColumn]="col.field" style="width:150px" pResizableColumn pReorderableColumn>
+                                            <div class="p-fluid" style="flex-grow: 1;">{{col.header}}</div>
+                                            <ng-template
+                                                [ngIf]="!(col.field ==='password' || col.field ==='enablepassword')">
+                                                <p-columnFilter type="text" [field]="col.field"
+                                                    [matchModeOptions]="matchModeOptions" [matchMode]="'custom-equals'"
+                                                    display="menu">
+                                                </p-columnFilter>
+                                                <p-sortIcon [field]="col.field"></p-sortIcon>
+                                            </ng-template>
+                                        </th>
+                                    </ng-container>
+                                    <th style="width:100px">SSH Log</th>
+                                </tr>
+                            </ng-template>
+
+                            <ng-template pTemplate="body" let-device let-columns="columns">
+                                <tr>
+                                    <td style="width:40px">
+                                        <p-tableCheckbox [value]="device"></p-tableCheckbox>
+                                    </td>
+                                    <td *ngFor="let col of columns" style="width:150px">
+                                        <div *ngIf="col.field == 'deviceName'">
+                                            <a (click)="showPositionDialog('right')">
+                                                {{device[col.field]}}
+                                            </a>
+                                        </div>
+                                        <div *ngIf="col.field != 'deviceName'">
+                                            {{device[col.field]}}
+                                        </div>
+
+                                    </td>
+                                    <td style="width:100px">
+                                        <button pButton pRipple icon="fa fa-file-text"
+                                            class="p-button-text p-button-warning"
+                                            (click)="deleteProduct(device)"></button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <div class="col-6">
+                        <div id="actualTarget" #actualTarget>
+                            <!-- Ganesh -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <!-- <p-overlayPanel [showTransitionOptions]="'1000ms'" [hideTransitionOptions]="'100ms'" #op [dismissable]="false"
+            [showCloseIcon]="true" class="marginStyle" appendTo="body">
+            <ng-template pTemplate>
+                <app-device-details></app-device-details>
+            </ng-template>
+        </p-overlayPanel> -->
+
+
+        <p-dialog header="" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+        [draggable]="false" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
+        [transitionOptions]="'1000ms'"
+        >
+        <ng-template pTemplate>
+            <app-device-details></app-device-details>
+        </ng-template>
+        </p-dialog>    
+    </div>
+</div>

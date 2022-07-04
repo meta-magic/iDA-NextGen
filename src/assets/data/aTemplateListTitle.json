@@ -1,0 +1,20 @@
+{
+    "success":true,
+    "message":"Active Template List in Operations page data Fetched Successfully",
+    "data":[
+        {
+            "listTitle":"test2",
+            "listTemplate":"Wired Global Template"
+        },
+        {
+            "listTitle":"TestInterface",
+            "listTemplate":"Wired Interface Template"
+        },{
+            "listTitle":"tests",
+            "listTemplate":"Wired Global Template"
+        },{
+            "listTitle":"Test",
+            "listTemplate":"Wired Interface Template"
+        }
+    ]
+}

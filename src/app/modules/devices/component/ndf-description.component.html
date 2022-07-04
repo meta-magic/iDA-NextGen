@@ -1,0 +1,131 @@
+<p-card>
+  <ng-template pTemplate="header">
+    <p-toolbar>
+      <div class="p-toolbar-group-left p-card-title" style="width: 80%;">
+        <i class="pi pi-book" style="cursor: pointer;font-weight: bold;"></i>&nbsp; Cisco
+      </div>
+      <div>
+        <b>Last modified on:</b>
+      </div><br>
+      <div style="width: 80%;">
+        <label for="ownerName" style="font-weight: bold;">Owner</label>&nbsp;admin (admin admin)
+      </div>
+      <div>
+        <b>Mar 22 2022 2:12:12 AM EDT</b>
+      </div>
+
+    </p-toolbar>
+
+  </ng-template>
+
+
+
+  <ng-template pTemplate="body">
+    <button pButton pRipple type="button" label="Instructions" class="p-button-rounded p-button-help m-4"
+    style="width: 10%;" (click)="openInstructions()"></button>
+
+    <div class="mainContent flex">
+
+      <div class="newDeviceProfile ml-4" style="width: 40%;">
+        <div class="titleForDeviceInfo" style="
+      font-weight: bolder;
+      font-size: x-large;
+      border-bottom: 2px solid;">Wired/Integrated</div>
+        <div class="flex m-1">
+          <label for="" class="required-field" style="width: 500px;">Profile Name:</label>
+          <input type="text" pInputText placeholder="Cisco" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" class="required-field" style="width: 500px;">Default Waiting Conditions:</label>
+          <input type="text" pInputText placeholder=">.#" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Enable Command:</label>
+          <input type="text" pInputText placeholder="enabled" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Running Configuration Command:</label>
+          <input type="text" pInputText placeholder="show running config" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Write Memory Command:</label>
+          <input type="text" pInputText placeholder="write memory" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Terminal Length Command:</label>
+          <input type="text" pInputText placeholder="terminal length 0" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Configuration Terminal Command:</label>
+          <input type="text" pInputText placeholder="configure terminal" disabled>
+        </div>
+
+      </div>
+
+      <div class="newDeviceProfile ml-4" style="width: 40%;">
+        <div class="titleForDeviceInfo" style="
+      font-weight: bolder;
+      font-size: x-large;
+      border-bottom: 2px solid;">Wireless</div>
+
+        <div class="flex m-1">
+          <label for="" class="required-field" style="width: 500px;">Default Waiting Conditions:</label>
+          <input type="text" pInputText placeholder=">.#" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Enable Command:</label>
+          <input type="text" pInputText placeholder="enable" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Running Configuration Command:</label>
+          <input type="text" pInputText placeholder="show run config commands" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Write Memory Command:</label>
+          <input type="text" pInputText placeholder="save config" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Terminal Length Command:</label>
+          <input type="text" pInputText placeholder="config paging disable" disabled>
+        </div>
+        <div class="flex m-1">
+          <label for="" style="width: 500px;">Configuration Terminal Command:</label>
+          <input type="text" pInputText placeholder="" disabled>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="mt-6">
+
+      <p-accordion>
+        <p-accordionTab header="Associated Devices">
+          <p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="ndf" [rows]="10"
+            [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true"
+            dataKey="id" currentPageReportTemplate="{first} to {last} of {totalRecords}">
+  
+            <ng-template pTemplate="body" let-entity>
+              <tr>
+  
+                <td>
+                  <div class="devSearchItemValue"><i class="pi pi-server" style="cursor: pointer;"></i>
+                    &nbsp; <a>{{entity.dName}}</a></div>
+                  <div class="devSearchItemValue">Model: {{entity.dSpec}}
+                  </div>
+                </td>
+                <td>
+                  <div class="devSearchItemValue">Product Type: {{entity.pType}}</div>
+                </td>
+              </tr>
+            </ng-template>
+  
+          </p-table>
+        </p-accordionTab>
+      </p-accordion>
+    </div>
+
+
+  </ng-template>
+
+</p-card>

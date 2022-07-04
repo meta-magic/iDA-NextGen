@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Partner details reterived successfully!",
+    "data":[{
+        "primaryId":"mh",
+        "primaryDisplay":"Maharashtra",
+        "countryId":"ind"
+    },{
+        "primaryId":"Pub",
+        "primaryDisplay":"Punjab",
+        "countryId":"ind"
+    }]
+}

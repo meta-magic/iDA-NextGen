@@ -1,0 +1,33 @@
+{
+    "success": true,
+    "message": "Filter reterived successfully!",
+    "data":[{
+        "primaryId":"equals",
+        "primaryDisplay":"Equals"
+    },{
+        "primaryId":"notequals",
+        "primaryDisplay":"Not Equals"
+    },{
+        "primaryId":"matches",
+        "primaryDisplay":"Matches"
+    },{
+        "primaryId":"startwith",
+        "primaryDisplay":"Start With"
+    },{
+        "primaryId":"endwith",
+        "primaryDisplay":"End With"
+    },{
+        "primaryId":"contains",
+        "primaryDisplay":"Contanins"
+    },{
+        "primaryId":"notcontains",
+        "primaryDisplay":"Not Contains"
+    },{
+        "primaryId":"in",
+        "primaryDisplay":"In"
+    },{
+        "primaryId":"notind",
+        "primaryDisplay":"Not In"
+    }
+]
+}

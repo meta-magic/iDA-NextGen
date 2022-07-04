@@ -1,0 +1,236 @@
+<p-card>
+    <p-accordion>
+        <p-accordionTab header="Admin & Monitoring Nodes" [selected]="true">
+            <div class="amnContainer m-2">
+                <div class="amnInputDataBox" style="width: 50%;">
+
+                    <div class="anContainer">
+
+                        <div class="flex" style="width: 100%;justify-content: space-between;">
+                            <label for="" style="font-weight: 700;">Admin Nodes</label>
+                            <div>
+
+                                <button pButton pRipple type="button" icon="pi pi-pencil"
+                                    class="p-button-rounded p-button-success p-button-text"></button>
+                                <button pButton pRipple type="button" icon="pi pi-times"
+                                    class="p-button-rounded p-button-danger p-button-text"></button>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper">
+                                <div class="field">
+                                    <label class="required-field" for="">Primary IP Address</label>
+                                    <div class="p-fluid">
+                                        <input type="text" pInputText>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="flex ml-2">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label for="">Secondary IP Address</label>
+                                        <div>
+                                            <input type="text" pInputText>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mnContainer">
+
+                        <div class="flex" style="width: 100%;justify-content: space-between;">
+                            <label for="" style="font-weight: 700;">Monitoring Nodes</label>
+                        </div>
+
+
+                        <div class="flex">
+                            <div class="input-wrapper">
+                                <div class="field">
+                                    <label class="required-field" for="">Primary IP Address</label>
+                                    <div class="p-fluid">
+                                        <input type="text" pInputText>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ml-2">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label for="">Secondary IP Address</label>
+                                        <div class="p-fluid">
+                                            <input type="text" pInputText>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+
+                            <div class="" style="width: 50%;">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label class="required-field" for="">User ID</label>
+                                        <div class="p-fluid">
+                                            <input type="text" pInputText>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ml-2">
+                                    <div class="input-wrapper">
+                                        <div class="field">
+                                            <label for="">Password</label>
+                                            <div class="p-fluid">
+                                                <input type="text" pInputText>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex ml-1" style="width: 50%;justify-content: center;align-items: center;">
+
+                                <div style="width: 90%;border: 1px solid #FBC02D;padding: 10px;border-radius: 5px;">
+                                    Note: Please ensure that the ERS API is enabled on ISE and the user is assigned to
+                                    groups Super Admin and ERS Admin
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="amnBtn flex" style="justify-content: end;">
+                    <button pButton pRipple label="Update" icon="pi pi-check"></button>
+                    <button pButton pRipple label="Cancel" class="ml-1" icon="pi pi-times"></button>
+                </div>
+            </div>
+        </p-accordionTab>
+        <p-accordionTab header="Load Balancers & PSN Nodes">
+            <div class="lbpnContainer flex m-2">
+
+                <div class="lbContainer" style="width: 48%;">
+                    <div class="titleBox" style="padding: 7px;">
+                        <label for="" style="font-weight: 700;">Load Balancers</label>
+                    </div>
+                    <p-toolbar styleClass="mb-2 mt-3">
+                        <ng-template pTemplate="left">
+                            <button pButton pRipple label="Add" icon="pi pi-plus" class="p-button-text mr-1"
+                                (click)="addLB()"></button>
+                            <button pButton pRipple label="Delete" icon="pi pi-trash"
+                                class="p-button-text mr-1"></button>
+
+                        </ng-template>
+
+                    </p-toolbar>
+                    <app-lbTable></app-lbTable>
+                </div>
+
+                <div class="pnContainer ml-2" style="width: 48%;">
+                    <div class="titleBox" style="padding: 7px;">
+                        <label for="" style="font-weight: 700;">PSN Nodes</label>
+                    </div>
+                    <p-toolbar styleClass="mb-2 mt-3">
+                        <ng-template pTemplate="left">
+                            <button pButton pRipple label="Add" icon="pi pi-plus" class="p-button-text mr-1"
+                                (click)="addPSN()"></button>
+                            <button pButton pRipple label="Delete" icon="pi pi-trash"
+                                class="p-button-text mr-1"></button>
+                        </ng-template>
+
+                    </p-toolbar>
+
+                    <app-psnTable></app-psnTable>
+                </div>
+
+            </div>
+
+
+
+        </p-accordionTab>
+
+    </p-accordion>
+    <p-dialog [(visible)]="productDialog1" [style]="{width: '450px'}" header="Add Load Balancer" styleClass="p-fluid">
+        <ng-template pTemplate="content">
+
+            <div class="field">
+                <label for="ipaddress">Virtual IP</label>
+                <input type="text" pInputText id="ipaddress" required autofocus />
+            </div>
+            <div class="field">
+                <label for="location">Location</label>
+                <input type="text" pInputText id="location" required autofocus />
+            </div>
+            <div class="field">
+                <label for="shortName">Short Name</label>
+                <input type="text" pInputText id="shortName" required autofocus />
+            </div>
+
+            <div class="field">
+                <label for="loadbalancer">Load Balancer</label>
+                <!-- <input type="text" pInputText id="loadbalancer" required autofocus /> -->
+                <select type="text" class="form-control">
+                    <option>
+
+                    </option>
+                </select>
+            </div>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+            <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text"></button>
+            <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text"></button>
+        </ng-template>
+    </p-dialog>
+
+    <p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Add PSN Nodes" styleClass="p-fluid">
+        <ng-template pTemplate="content">
+
+            <div class="field">
+                <label for="ipaddress">IP Address</label>
+                <input type="text" pInputText id="ipaddress" required autofocus />
+            </div>
+            <div class="field">
+                <label for="location">Location</label>
+                <input type="text" pInputText id="location" required autofocus />
+            </div>
+            <div class="field">
+                <label for="shortName">Short Name</label>
+                <input type="text" pInputText id="shortName" required autofocus />
+            </div>
+
+            <div class="field">
+                <label for="loadbalancer">Load Balancer</label>
+                <!-- <input type="text" pInputText id="loadbalancer" required autofocus /> -->
+                <select type="text" class="form-control">
+                    <option>
+
+                    </option>
+                </select>
+            </div>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+            <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text"></button>
+            <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text"></button>
+        </ng-template>
+    </p-dialog>
+
+</p-card>

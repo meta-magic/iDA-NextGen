@@ -1,0 +1,24 @@
+{
+    "success":true,
+    "message":"Device List in Push page data Fetched Successfully",
+    "data":[
+        {
+            "dName":"Device_6(10.254.4.6)",
+            "dSpec":"Wired WS-C3560CG-8PC-S"
+            
+        },
+        {
+            "dName":"26(10.254.4.26)",
+            "dSpec":"Wired WS-C2560CG-2PDC-S"
+        },{
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-P2560CG-2PC-S"
+        },{
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-K2560CG-8PDA-S"
+        },{
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-C2560CG-10CPA-SA"
+        }
+    ]
+}

@@ -1,0 +1,180 @@
+<p-card>
+  <ng-template pTemplate="header">
+    <p-toolbar>
+      <div class="p-toolbar-group-left p-card-title m-2">
+        <i class="pi pi-user" style="font-size: 17px;"></i>&nbsp;
+        Admin
+      </div>
+    </p-toolbar>
+  </ng-template>
+  <!-- <div class="menuIcon flex" style="
+  justify-content: center;
+">
+    <i class="pi pi-pencil p-2 ml-2" style="cursor: pointer;"></i>
+    <i class="pi pi-star-fill p-2 ml-2" style="cursor: pointer;"></i>
+    <i class="pi pi-user-minus p-2 ml-2" style="cursor: pointer;"></i>
+  </div> -->
+
+
+
+      <div class=" grid p-fluid">
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label class=" required-field" htmlFor="name1">Username</label>
+              <div class="inputText">
+                <input type="text" pInputText >
+
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            
+            <div class="field" style="margin-right: auto;">
+      
+              <label class="userTitle required-field" htmlFor="pass">Password</label>
+      
+              <div class="inputText">
+                <input type="text" pInputText >
+              </div>
+              </div>
+          </div>
+          
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            <div class="field " style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="confpass">Confirm Password</label>
+              
+              <div class="inputText">
+                <input type="text" pInputText >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            <div class="field " style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="fname">First Name</label>
+    
+              <div class="inputText">
+                <input type="text" pInputText >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            <div class="field " style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="mname">Middle Name</label>
+    
+              <div class="inputText">
+                <input type="text" pInputText >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            <div class="field " style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="lname">Last Name</label>
+    
+              <div class="inputText">
+                <input type="text" pInputText >
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            <div class="field" style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="role">Role</label>
+    
+              <div class="inputText">
+                <p-dropdown class="role" optionLabel="role" >
+                </p-dropdown>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            
+            <div class="field " style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="timezone">Time Zone</label>
+              
+              <div class="inputText">
+                <p-dropdown class="timezone" optionLabel="timezone" >
+                </p-dropdown>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+          <div class="col-3">
+            <div class="input-wrapper">
+              
+            </div>
+          </div>
+          <div class="field col-12" style="margin-right: auto;">
+            <div style="font-size: large;font-weight: 500;margin-top: 12px;margin-bottom: 12px;">
+            </div>
+              Contact Information
+            </div>
+    
+           <div class="field col-3" style="margin-right: auto;">
+    
+              <label class="userTitle required-field" htmlFor="email">Email</label>
+    
+              <div class="inputText">
+                <input type="text" pInputText >
+              </div>
+            </div>
+        
+
+        <!-- <div class="field btnForm flex mt-2" style="justify-content: end;padding: 2px;margin: 0px;width: 388px;">
+
+        </div> -->
+
+      </div>
+
+      <div class="backBtn flex" style="justify-content: space-between;">
+        <!-- <div class="field btnForm flex mt-2" style="justify-content: end;"> -->
+          <div>
+            <p-button class="" label="Back" (onClick)="goback()"></p-button>
+          </div>
+          <div>
+            <p-button class="ml-1" label="Save" ></p-button>
+            <p-button class="ml-1" label="Cancel"></p-button>
+          </div>
+        <!-- </div> -->
+      </div>
+
+</p-card>

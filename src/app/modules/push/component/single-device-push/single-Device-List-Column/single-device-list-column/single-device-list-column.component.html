@@ -1,0 +1,138 @@
+<div class="grid ">
+  <div>
+    <button pButton pRipple label="Search" icon="pi pi-search" class="p-button-text"
+    (click)="singleDeviceSearch()"></button>
+  </div>
+<div class="col-12">
+  <p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="singleDeviceList" [rows]="5"
+  [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+  currentPageReportTemplate="{first} to {last} of {totalRecords}"
+  paginatorPosition="top"
+  >
+
+  <ng-template pTemplate="body" let-entity>
+    <tr>
+
+      <td>
+        <div class="field">
+          <div class="" style="font-weight:bold;"><i class="pi pi-server" style="cursor: pointer;"></i> {{entity.dName}}</div>
+          <div class="" style="font-style: italic; font-size:small;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>{{entity.dSpec}}</a></div>
+        </div>
+      </td>
+
+    </tr>
+  </ng-template>
+
+</p-table>
+</div>  
+</div>
+
+<p-dialog header="Search Device" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="true" [resizable]="false">
+   
+    <p-card>
+      <div class="grid">
+        <!-- Device Name -->
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label class=" required-field" htmlFor="devicename">Device Name</label>
+              <div class="inputText">
+                <input type="text" pInputText >
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label class=" required-field" htmlFor="ipaddress">IP Address</label>
+              <div class="inputText">
+                <input type="text" pInputText >
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label class=" required-field" htmlFor="hardwaremodel">Hardware Model</label>
+              <div class="inputText">
+                <input type="text" pInputText >
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label>Device Type  </label>
+              <br />
+              <select type="text" >
+                  <option *ngFor="let node of deviceType" [value]="node.primaryId">
+                      {{node.primaryDisplay}}
+                  </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label>OS Version </label>
+              <br />
+              <select type="text">
+                  <option *ngFor="let node of osVersions" [value]="node.primaryId">
+                      {{node.primaryDisplay}}
+                  </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="input-wrapper">
+            <div class="field">
+              <label>Location </label>
+              <br />
+              <select type="text" >
+                  <option *ngFor="let node of deviceType" [value]="node.primaryId">
+                      {{node.primaryDisplay}}
+                  </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+
+          <p-toolbar>
+            <!-- <div class="p-toolbar-group-left">
+                <p-button label="New" icon="pi pi-plus"></p-button>
+                <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
+                    
+                <i class="pi pi-bars"></i>
+                
+                <p-splitButton label="Save" icon="pi pi-check" [model]="items" styleClass="p-button-warning"></p-splitButton>
+            </div>
+             -->
+            <div class="p-toolbar-group-right">
+                <p-button label="Search" icon="pi pi-search"  styleClass=" p-button-text" class="mr-2"></p-button>
+                <p-button label="Close" icon="pi pi-times" styleClass="p-button-danger p-button-text" (onClick)="closeSearch()"></p-button>
+            </div>
+        </p-toolbar>
+        </div>
+
+
+      </div>
+    </p-card>
+</p-dialog>

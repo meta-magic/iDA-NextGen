@@ -1,0 +1,66 @@
+<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped mt-2" [value]="psnData" [rows]="5"
+[globalFilterFields]="['name']" [rowHover]="true" [showCurrentPageReport]="true" dataKey="id">
+
+<ng-template pTemplate="header">
+
+    <tr>
+        <th>
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+
+        <th pSortableColumn="ipaddress">IP Address <p-sortIcon field="ipaddress"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="location">Location <p-sortIcon field="location"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="shortName">Short Name<p-sortIcon field="shortName"></p-sortIcon>
+        </th>
+
+        <th pSortableColumn="loadbalancer">Load Balancer<p-sortIcon field="loadbalancer"></p-sortIcon>
+        </th>
+
+      <th pSortableColumn="action"><p-sortIcon field="action"></p-sortIcon>
+      </th>
+
+    </tr>
+
+</ng-template>
+
+<ng-template pTemplate="body" let-entity>
+
+    <tr>
+        <td>
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </td>
+
+        <td>
+            <!-- <input type="text" pInputText placeholder="10.2.20.102">  -->
+            10.2.20.102
+        </td>
+
+        <td>
+            <!-- <input type="text" pInputText placeholder="All Locations">  -->
+            All Locations
+        </td>
+
+        <td>
+            <!-- <input type="text" pInputText placeholder="secureview">  -->
+            secureview
+        </td>
+
+        <td>
+            d
+        </td>
+
+        <td>
+            
+            <button pButton pRipple icon="pi pi-pencil" class="p-button-text p-button-success"></button>
+            
+        </td>
+
+    </tr>
+
+</ng-template>
+
+</p-table>

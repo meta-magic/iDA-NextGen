@@ -1,0 +1,191 @@
+<div class="col-12">
+    <div class="card">
+
+        <div class="grid">
+
+            <div class="col-5 flex align-items-center justify-content-center">
+                <form [formGroup]="form" novalidate>
+                    <p-progressBar *ngIf="loder" mode="indeterminate" [style]="{'height': '3px'}"></p-progressBar>
+                    <div class="p-fluid" style="margin-top: 20px;">
+
+                        <div class="field">
+                            <h3>FTP Details</h3>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="hostname">HostName/IP Adress</label>
+                            <input pInputText id="hostname" type="text" name="hostname" formControlName="hostname" />
+                            <ng-container *ngIf="!form.get('hostname')?.valid && form.get('hostname')?.touched">
+                                <small *ngIf="form.get('hostname')?.errors?.['required']" id="hostname-help"
+                                    class="p-error block">
+                                    Please enter valid Host Name /IP Address.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label>Port</label>
+                            <input pInputText id="port" type="text" name="port" formControlName="port" />
+                            <ng-container *ngIf="!form.get('port')?.valid && form.get('port')?.touched">
+                                <small *ngIf="form.get('port')?.errors?.['required']" id="port-help"
+                                    class="p-error block">
+                                    Please enter Port.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="username">User Name</label>
+                            <input pInputText id="username" type="text" name="username" formControlName="username" />
+                            <ng-container *ngIf="!form.get('port')?.valid && form.get('port')?.touched">
+                                <small *ngIf="form.get('port')?.errors?.['required']" id="port-help"
+                                    class="p-error block">
+                                    Please enter Port.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="password">Password</label>
+                            <input pInputText id="password" type="text" name="password" formControlName="password" />
+                            <ng-container *ngIf="!form.get('password')?.valid && form.get('password')?.touched">
+                                <small *ngIf="form.get('password')?.errors?.['required']" id="port-help"
+                                    class="p-error block">
+                                    Please enter password.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="loactionfolder">Location Folder</label>
+                            <input pInputText id="loactionfolder" type="text" name="loactionfolder"
+                                formControlName="loactionfolder" />
+                            <ng-container
+                                *ngIf="!form.get('loactionfolder')?.valid && form.get('loactionfolder')?.touched">
+                                <small *ngIf="form.get('loactionfolder')?.errors?.['required']" id="loactionfolder-help"
+                                    class="p-error block">
+                                    Please enter Location Folder.
+                                </small>
+                            </ng-container>
+                        </div>
+
+
+                        <div class="field">
+                            <div class="footer-button">
+                                <p-toolbar class="p-card-footer">
+                                    <div class="p-toolbar-group-right" style="margin-right: -15px;">
+                                        <button pButton pRipple label="Test" icon="" class="p-button-primary p-mr-2"
+                                            (click)="save()"></button>
+                                        <span>&nbsp;</span>
+
+                                        <button pButton pRipple label="Update" icon="" class="p-button-primary p-mr-2"
+                                            (click)="save()"></button>
+                                        <span>&nbsp;</span>
+                                        <button pButton pRipple label="Cancel" icon="" class="p-button-secondary p-mr-2"
+                                            (click)="save()"></button>
+                                    </div>
+                                </p-toolbar>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-2">
+                <p-divider layout="vertical">
+                    <b></b>
+                </p-divider>
+            </div>
+
+            <div class="col-5 flex align-items-center justify-content-center">
+                <form [formGroup]="form1" novalidate>
+                    <p-progressBar *ngIf="loder" mode="indeterminate" [style]="{'height': '3px'}"></p-progressBar>
+                    <div class="p-fluid" style="margin-top: 20px;">
+                        <div class="field">
+                            <h3>SFTP Details</h3>
+                        </div>
+                        <div class="field">
+                            <label htmlFor="sfhostname">HostName/IP Adress</label>
+                            <input pInputText id="sfhostname" type="text" name="sfhostname"
+                                formControlName="sfhostname" />
+                            <ng-container *ngIf="!form1.get('sfhostname')?.valid && form1.get('sfhostname')?.touched">
+                                <small *ngIf="form1.get('sfhostname')?.errors?.['required']" id="sfhostname-help"
+                                    class="p-error block">
+                                    Please enter valid Host Name /IP Address.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label>Port</label>
+                            <input pInputText id="sfport" type="text" name="sfport" formControlName="sfport" />
+                            <ng-container *ngIf="!form1.get('sfport')?.valid && form1.get('sfport')?.touched">
+                                <small *ngIf="form1.get('sfport')?.errors?.['required']" id="sfport-help"
+                                    class="p-error block">
+                                    Please enter Port.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="sFusername">User Name</label>
+                            <input pInputText id="sFusername" type="text" name="sFusername"
+                                formControlName="sFusername" />
+                            <ng-container *ngIf="!form1.get('sFusername')?.valid && form1.get('sFusername')?.touched">
+                                <small *ngIf="form1.get('sFusername')?.errors?.['required']" id="sFusername-help"
+                                    class="p-error block">
+                                    Please enter User Name.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="sfpassword">Password</label>
+                            <input pInputText id="sfpassword" type="text" name="sfpassword"
+                                formControlName="sfpassword" />
+                            <ng-container *ngIf="!form1.get('sfpassword')?.valid && form1.get('sfpassword')?.touched">
+                                <small *ngIf="form1.get('sfpassword')?.errors?.['required']" id="sfpassword-help"
+                                    class="p-error block">
+                                    Please enter Valid Passowrd
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <label htmlFor="sfLoactionFolder">Location Folder</label>
+                            <input pInputText id="sfLoactionFolder" type="text" name="sfLoactionFolder"
+                                formControlName="sfLoactionFolder" />
+                            <ng-container
+                                *ngIf="!form1.get('sfLoactionFolder')?.valid && form1.get('sfLoactionFolder')?.touched">
+                                <small *ngIf="form1.get('sfLoactionFolder')?.errors?.['required']"
+                                    id="sfLoactionFolder-help" class="p-error block">
+                                    Please enter Location Folder.
+                                </small>
+                            </ng-container>
+                        </div>
+
+                        <div class="field">
+                            <div class="footer-button">
+                                <p-toolbar class="p-card-footer">
+                                    <div class="p-toolbar-group-right" style="margin-right: -15px;">
+                                        <button pButton pRipple label="Test" icon="" class="p-button-primary p-mr-2"
+                                            (click)="save()"></button>
+                                        <span>&nbsp;</span>
+
+                                        <button pButton pRipple label="Update" icon="" class="p-button-primary p-mr-2"
+                                            (click)="save()"></button>
+                                        <span>&nbsp;</span>
+                                        <button pButton pRipple label="Cancel" icon="" class="p-button-secondary p-mr-2"
+                                            (click)="save()"></button>
+                                    </div>
+                                </p-toolbar>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+
+{
+    "success":true,
+    "message":"Network Device data Fetched Successfully",
+	"data": [
+		{
+			"id": "1000",
+            "status":"Run",
+            "compguid": "ISE_26_22_temp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Wireless",
+			"producttype": "Group C",
+            "location":"All Location",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		},
+		{
+			"id": "1001",
+            "status":"Stop",
+			"compguid":"ISE_26_22_temp",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Wired",
+			"producttype": "Group A",
+            "location":"All Location",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		},{
+			"id": "10100",
+            "status":"Bug",
+			"compguid": "ISE_26_22_temp",
+			"deviceName": "Main Switch ",
+			"ipHostName": "10.254.25.10",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Device Type 3",
+			"producttype": "Group D",
+            "location":"Pune",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		},
+		{
+			"id": "10021",
+            "status":"Run",
+			"compguid": "ISE_26_22_temp",
+			"deviceName": "Router",
+			"ipHostName": "10.254.22.56",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Device Type 3",
+			"producttype": "Group C",
+            "location":"Banglore",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		},{
+			"id": "11000",
+            "status":"Run",
+			"compguid": "ISE_26_22_temp",
+			"deviceName": "HUB",
+			"ipHostName": "10.254.12.10",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Wireless",
+			"producttype": "Group E",
+            "location":"Pune",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		},
+		{
+			"id": "10201",
+            "status":"Stop",
+			"compguid": "ISE_26_22_temp",
+			"deviceName": "Fiber Optics",
+			"ipHostName": "10.254.12.56",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Wired",
+			"producttype": "Group D",
+            "location":"All Location",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		},{
+			"id": "10040",
+            "status":"Run",
+			"compguid": "ISE_26_22_temp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"currentOs":"OS 15",
+			"recommandedOs":"NA",
+			"deviceType": "Wireless",
+			"producttype": "Group C",
+            "location":"All Location",
+            "softComp":"Okay",
+            "hardwareComp":"Okay"
+			
+		}	]
+}

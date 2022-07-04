@@ -1,0 +1,61 @@
+.templateSel {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.templateSearchBox {
+    display: inline-block;
+}
+
+// Device Data Table 
+.interfaceConfigBox {
+    flex-direction: column;
+}
+
+.searchDeviceTabs {
+    margin-top: 7px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intrfaceConfigResult-Table {
+    margin-top: 0px;
+    height: 47vh;
+}
+
+// Interface Device List Configuration
+// .intDeviceConfigList{
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.devSearchItemValue {
+    margin: 7px;
+}
+
+.intDeviceConfigList {
+    height: fit-content;
+    width: -webkit-fill-available;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    justify-content: space-around;
+}
+
+.intDeviceConfigPushList {
+    width: 100%;
+    height: fit-content;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    justify-content: flex-start;
+}
+
+
+#deviceListBtn {
+    justify-content: end;
+}

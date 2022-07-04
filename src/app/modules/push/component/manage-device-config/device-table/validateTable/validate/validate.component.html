@@ -1,0 +1,41 @@
+<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="validate" [rows]="10"
+  [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+
+  <ng-template pTemplate="body" let-entity>
+    <tr>
+      <td>
+        <p-tableCheckbox [value]="entity"></p-tableCheckbox>
+      </td>
+      <td>
+        <div class="devSearchItemValue"><i class="pi pi-server" style="cursor: pointer;"></i>
+          &nbsp; <a>{{entity.dName}}</a></div>
+        <div class="devSearchItemValue">{{entity.dSpec}}
+        </div>
+        <div class="devSearchItemValue">OS Version :
+          <a>{{entity.osVersion}}</a>
+        </div>
+
+
+      </td>
+      <td>
+        <div class="devSearchItemValue">Profile Name: {{entity.pName}}
+        </div>
+        <div class="devSearchItemValue">Product Type: {{entity.pType}}</div>
+
+      </td>
+
+      <td>
+        <div class="devSearchItemValue">Owner: {{entity.owner}}
+        </div>
+
+        <div class="devSearchItemValue">Location:
+          {{entity.location}}</div>
+          
+        </td>
+
+    </tr>
+
+  </ng-template>
+
+</p-table>

@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "message": "Device Type reterived successfully!",
+    "data":[{
+        "primaryId":"wired",
+        "primaryDisplay":"Wired"
+    },{
+        "primaryId":"wireless",
+        "primaryDisplay":"Wireless"
+    },
+    {
+        "primaryId":"integrated",
+        "primaryDisplay":"Integrated"
+    }]
+}

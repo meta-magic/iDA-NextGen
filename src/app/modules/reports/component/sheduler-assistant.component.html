@@ -1,0 +1,96 @@
+<p-card class="col">
+
+  <ng-template pTemplate="header">
+    <div class="noteBox mt-4 ml-2" style="display: inline-block;border: 1px solid #FBC02D;height: 40px;padding: 10px;border-radius: 5px;">
+      <b>Note:</b> To create a new schedule job. Please follow the report creation process.
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="body">
+
+    <div class="interfaceConfigBox" style="flex-direction: column;">
+
+      <div class="flex searchDeviceTabs mb-2" style="justify-content: flex-start;" >
+
+        <div class="searchDevTabs" id="searchDevTabs_btn">
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
+          </span>
+        </div>
+
+        <div class="searchDevTabs ml-2">
+          <span class="totalSelInterfaces">Total Jobs Selected :
+            <span class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
+        </div>
+
+
+
+        <!-- <div class="searchDevTabs">
+          <p-paginator [rows]="1" [totalRecords]="2" [rowsPerPageOptions]="[1,5,10]">
+          </p-paginator>
+      </div> -->
+
+      </div>
+
+      <p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="scheduler" [rows]="10"
+        [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+
+        <ng-template pTemplate="body" let-entity>
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="entity"></p-tableCheckbox>
+            </td>
+
+            <td>
+              <div class="devSearchItemValue">Task Name : <a>{{entity.tName}}</a></div>
+              <div class="devSearchItemValue">Description : {{entity.desc}}
+              </div>
+
+
+            </td>
+
+            <td>
+              <div class="devSearchItemValue">Report Type: {{entity.rType}}
+              </div>
+              <div class="devSearchItemValue">Frequency: {{entity.freq}}</div>
+            </td>
+
+            <td>
+              <div class="devSearchItemValue">Location: {{entity.Local}}
+              </div>
+              <div class="devSearchItemValue">Created By:
+                {{entity.createdBy}}</div>
+            </td>
+
+            <td>
+              <div class="devSearchItemValue">Next Run: {{entity.nextRun}}
+              </div>
+              <div class="devSearchItemValue">Last Run: {{entity.lastRun}}</div>
+            </td>
+
+            <td>
+              <div class="devSearchItemValue">Job Status: <span style="font-weight:bold; color: #5F093D;">{{entity.jobStatus}}</span>
+              </div>
+              <div class="devSearchItemValue">Last Run Status: <span style="font-weight:bold; color: #32CD30">{{entity.lastRunStatus}}</span></div>
+            </td>
+
+            <td>
+              <i class="pi pi-pause ml-2" style="cursor: pointer;"></i>
+              <i class="pi pi-pencil ml-2" style="cursor: pointer;"></i>
+              <i class="pi pi-trash ml-2" style="cursor: pointer;"></i>
+              <i class="pi pi-clock ml-2" style="cursor: pointer;"></i>
+
+            </td>
+          </tr>
+
+        </ng-template>
+
+      </p-table>
+
+    </div>
+
+  </ng-template>
+
+</p-card>

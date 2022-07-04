@@ -1,0 +1,17 @@
+{
+    "success":true,
+    "message":"ISE Environment Setup Load Balancer data Fetched Successfully",
+    "data":[
+        {
+            "ipaddress": "",
+
+            "location": "",
+
+            "shortName": "",
+
+            "loadbalancer": "",
+
+            "action": ""
+        }
+    ]
+}

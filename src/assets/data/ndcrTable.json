@@ -1,0 +1,71 @@
+{
+    "success":true,
+    "message":"Network Device Compliance Report data Fetched Successfully",
+    "data":[
+        {
+            "sStatus": "Scheduled",
+
+            "rName": "cr1",
+
+            "generatedBy": "admin1",
+
+            "dateNTime": "Jun 25 2022 06:06:00 AM EDT",
+
+            "status": "Completed",
+
+            "action": ""
+        },
+        {
+            "sStatus": "Scheduled",
+
+            "rName": "dr1",
+
+            "generatedBy": "admin2",
+
+            "dateNTime": "Jun 24 2022 06:06:00 AM EDT",
+
+            "status": "Completed",
+
+            "action": ""
+        },
+        {
+            "sStatus": "Scheduled",
+
+            "rName": "er1",
+
+            "generatedBy": "admin3",
+
+            "dateNTime": "Jun 21 2022 06:06:00 AM EDT",
+
+            "status": "Completed",
+
+            "action": ""
+        },
+        {
+            "sStatus": "Scheduled",
+
+            "rName": "fr1",
+
+            "generatedBy": "admin4",
+
+            "dateNTime": "Jun 20 2022 06:06:00 AM EDT",
+
+            "status": "Completed",
+
+            "action": ""
+        },
+        {
+            "sStatus": "Scheduled",
+
+            "rName": "gr1",
+
+            "generatedBy": "admin5",
+
+            "dateNTime": "Jun 27 2022 06:06:00 AM EDT",
+
+            "status": "Completed",
+
+            "action": ""
+        }
+    ]
+}

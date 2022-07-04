@@ -1,0 +1,91 @@
+<div class="card p-fluid">
+
+  <div class="grid col-12">
+    <ng-template pTemplate="header">
+
+      <div class="p-toolbar-group-left p-card-title">
+        Instruction
+      </div>
+
+    </ng-template>
+
+
+
+  <!-- <p-toolbar>
+    <div class="p-toolbar-group-left">
+    </div>
+  </p-toolbar> -->
+
+  <!-- </div> -->
+  <div class="grid">
+    <!-- <div class="col-3 md:col-3">
+          <div class="input-wrapper">
+              <div class="field">
+                  <p-tree [value]="locations" layout="vertical" selectionMode="single" [(selection)]="selectedFile"></p-tree>
+              </div>
+          </div>
+      </div> -->
+    <div class="col-12 md:col-12">
+      <div class="input-wrapper">
+        <div class="field">
+          <li>Profile Name: Provide the name of the profile</li>
+          <li>Default Waiting Condition: Provide default waiting condition like ">,#". Here 2 conditions with
+            comma-separated is expected. The sequence of the waiting condition is important.</li>
+          <div class="centerInstruction">
+
+            <div class="flex ml-4">
+              <div>(a)</div>
+              <div class="ml-2">
+                <div class="para">How to identify the first waiting condition: To identify, simply login to the device
+                  and then the last character of the output prompt is your first default character. In the following
+                  example, '>' is the first
+                  default character.<br>Device Console:</div>
+                <div class="blackConsole " style="background-color: black;color: white;display: block;padding: 12px;">
+                  login as: cisco<br>
+                  Using keyboard-interactive authentication.<br>
+                  Password:<br>
+                  WS-C2960X-24PD-L-01><br>
+                </div>
+              </div>
+            </div>
+
+
+            <div>
+              <div class="flex ml-4">
+                <div>(b)</div>
+                <div class="ml-2">
+                  <div class="para">How to identify the second waiting condition: After login to the device execute
+                    enable
+                    command on the device then the last character of the output prompt is a second waiting condition. If
+                    enable command is not configured on the device, then execute configuration terminal command on the
+                    device
+                    and get the last character for second waiting condition. In the following example '#' is the second
+                    default waiting condition.<br>Device Console:</div>
+                  <div class="blackConsole" style="background-color: black;color: white;display: block;padding: 12px;">
+                    login as: cisco<br>
+                    Using keyboard-interactive authentication.<br>
+                    Password:<br>
+                    WS-C2960X-24PD-L-01><br>
+                    WS-C2960X-24PD-L-01>enable<br>
+                    Password:<br>
+                    WS-C2960X-24PD-L-01#<br>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <li>Enable Command: Provide command to enter into privilege EXEC mode.</li>
+            <li>Running Configuration Command: Provide the command to fetch the current running configuration of the
+              device.</li>
+            <li>Write Memory Command: Provide the command to save the running configuration onto the memory.</li>
+            <li>Terminal Length Command: Provide the command to disable pagination on the device for command output.
+            </li>
+            <li>Configuration Terminal Command: Provide the command to enter into configuration mode.</li>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

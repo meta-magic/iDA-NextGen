@@ -1,0 +1,10 @@
+{
+    "success":true,
+    "message":"Template type data Fetched Successfully",
+	"data": [
+        {"name": "Wired Global Template", "code": "WGT"},
+        {"name": "Wireless Global Template", "code": "WLGT"},
+        {"name": "Wired Local Template", "code": "WLT"},
+        {"name": "Wireless Local Template", "code": "WLLT"}
+    ]
+}

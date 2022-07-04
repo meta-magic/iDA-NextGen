@@ -1,0 +1,204 @@
+// // assessment type header 
+
+// .dropdownHead {
+//     margin-top: 10px;
+// }
+
+// // Select ISE services checkbox
+// .servIse {
+//     display: inline-block;
+//     margin-right: 10px;
+// }
+
+// .servIseDiv {
+//     margin-top: 10px;
+//     width: 50vw;
+//     margin-left: 1px;
+// }
+
+// .selectAllIse {
+//     margin-top: 1rem;
+// }
+
+// .servIseChkBoxItem {
+//     width: 22rem;
+//     height: 2rem;
+// }
+
+// .servSelSubMenu {
+//     margin-top: 1rem;
+//     justify-content: space-between;
+// }
+
+// .subMenuIseItem {
+//     margin: 4px;
+// }
+
+// .subMenuIseBtnItem {
+//     margin: 4px;
+// }
+
+// // Hardware and Software Chart Items 
+// .chartDevices{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .labelsInChartBox{
+//     margin: 4px;
+//     padding: 4px;
+// }
+
+// .hwAndSwChart{
+//     border: 1px solid gray;
+//     width: 13rem;
+//     height: 13rem;
+//     margin: 8px;
+//     display: flex;
+//     justify-content: center;
+//     border-radius: 5px;
+// }
+
+
+// .product-item {
+//     .product-item-content {
+//         border: 1px solid #dee2e6;
+//         border-radius: 3px;
+//         margin: .3rem;
+//         text-align: center;
+//         padding: 0.5rem 0;
+//     }
+// }
+
+// .devDescParent{
+//     height: 100%;
+// }
+
+
+
+// assessment type header 
+
+.dropdownHead {
+    margin-top: 10px;
+}
+
+:host {
+    ::ng-deep .p-card .p-card-body {
+      padding:  0.5rem;
+    }
+  }
+
+// Select ISE services checkbox
+.servIse {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.servIseDiv {
+    margin-top: 10px;
+    width: 80vw;
+    margin-left: 1px;
+}
+
+.selectAllIse {
+    margin-top: 1rem;
+}
+
+.servIseChkBoxItem {
+    width: 13rem;
+    height: 2rem;
+}
+
+.servSelSubMenu {
+    margin-top: 2px;
+    justify-content: space-between;
+}
+
+.subMenuIseItem {
+    margin: 4px;
+}
+
+.subMenuIseBtnItem {
+    margin: 4px;
+}
+
+// Hardware and Software Chart Items 
+.chartDevices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelsInChartBox{
+    margin: 4px;
+    padding: 4px;
+}
+
+.hwAndSwChart{
+    border: 1px solid gray;
+    width: 13rem;
+    height: 13rem;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.product-item {
+
+    .product-item-content {
+        border: 1px solid #dee2e6;
+        border-radius: 3px;
+        margin: 2px;
+        padding: 0.5rem 0;
+        width: 220px;
+        height: 220px;
+        text-align: center;
+    }
+}
+
+.ganesh{
+    display: grid;
+    // width: 185px;
+    background-color: aquamarine;
+
+    
+}
+
+.box{
+ 
+
+}
+
+.boxHead{
+    height: 20%;
+}
+#boxBody{
+    height: 60%;
+}
+#boxFooter{
+    height: 20%;
+}
+#boxTitle {
+    height: 38px;
+}
+
+.devDescParent{
+    height: 100%;
+}
+
+.Centered {
+	position: fixed;
+	top: 00%;
+	left: 00%;
+	transform: translate(-50%, -50%);
+}
+
+.c3-chart-arcs-title{
+    fill: red;
+    font-size: 14px;
+    font-weight: 500;
+}
+

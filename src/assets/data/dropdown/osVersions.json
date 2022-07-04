@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Device Type reterived successfully!",
+    "data":[{
+        "primaryId":"1",
+        "primaryDisplay":"15.2(4)E6"
+    },{
+        "primaryId":"2",
+        "primaryDisplay":"15.3(4)E8"
+    }]
+}

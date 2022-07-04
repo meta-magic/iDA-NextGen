@@ -1,0 +1,19 @@
+<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="portDeviceList" [rows]="5"
+  [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  paginatorPosition="top">
+
+  <ng-template pTemplate="body" let-entity>
+    <tr>
+
+      <td>
+        <div class="field">
+          <div class="" style="font-weight:bold;"><i class="pi pi-server" style="cursor: pointer;"></i> {{entity.dName}}</div>
+          <!-- <div class="" style="font-style: italic; font-size:small;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>{{entity.dSpec}}</a></div> -->
+        </div>
+      </td>
+
+    </tr>
+  </ng-template>
+
+</p-table>

@@ -1,0 +1,18 @@
+{
+    "success":true,
+    "message":"Device List in Device Profile page data Fetched Successfully",
+    "data":[
+        {
+            "dName":"HP"
+        },
+        {
+            "dName":"Arista"
+        },
+        {
+            "dName":"Paloalto"
+        },
+        {
+            "dName":"Cisco"
+        }
+    ]
+}

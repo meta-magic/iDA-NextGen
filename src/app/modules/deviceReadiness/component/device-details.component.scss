@@ -1,0 +1,63 @@
+// Basic Info section 
+
+// Title grid 
+.bTitle{
+    justify-content:space-between;
+}
+
+#bInfoTitle{
+    border-bottom: #ffff;
+}
+
+// basic info details section 
+.p-button.p-button-warning.p-button-outlined, .p-buttonset.p-button-warning > .p-button.p-button-outlined, .p-splitbutton.p-button-warning > .p-button.p-button-outlined{
+    background-color: #ffff;
+}
+
+.basinInfoFields{
+    display: inline;
+    height: 24px;
+    width: 33vw;
+    margin: 2px;
+    padding: 1px;
+}
+
+.bInfoFields{
+    height: 14px;
+    width: 100%;
+    margin: 2px;
+    padding: 2px;
+}
+
+// Hardware Support box 
+.bInfoTitle{
+    border-bottom: 1px solid darkgray;
+    margin-left: 2px;
+}
+.modelDiv{
+    margin-top: 10px;
+}
+// .hwSupportTableBox, .swSupportTableBox{
+//     display: block;
+//     margin: 5px;
+//     padding: 2px;
+// }
+
+.hwSupportTable, .swSupportTable{
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.hwSupportTable, .swSupportTable{
+    border: 1px solid #dee2e6;
+}
+
+.hwSupportTableBox, .swSupportTableBox{
+    border: 1px solid #dee2e6;
+    display: block;
+    margin: 0;
+    padding: 5px;
+}
+
+// Software Support box 
+

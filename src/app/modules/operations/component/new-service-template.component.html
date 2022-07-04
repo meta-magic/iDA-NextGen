@@ -1,0 +1,209 @@
+<!-- New Service Template Page   -->
+<!-- <p-card>
+    <ng-template pTemplate="header">
+      <p-toolbar>
+        <div class="p-toolbar-group-left p-card-title" style="width: 80%;">
+          <i class="pi pi-book" style="cursor: pointer;font-weight: bold;"></i>&nbsp; Cisco
+        </div>
+        <div>
+          <b>Last modified on:</b>
+        </div><br>
+        <div style="width: 80%;">
+          <label for="ownerName" style="font-weight: bold;">Owner</label>&nbsp;admin (admin admin)
+        </div>
+        <div>
+          <b>Mar 22 2022 2:12:12 AM EDT</b>
+        </div>
+  
+      </p-toolbar>
+  
+    </ng-template>
+  
+  
+  
+    <ng-template pTemplate="body">
+
+        <div class="osTrailBox">
+            <div>OS Trail</div>
+            <div class="field-radiobutton">
+                <p-checkbox label="hi"></p-checkbox>
+            </div>
+            <div>12 out of 12 devices belong to this category</div>
+        </div>
+  
+
+    </ng-template>
+  
+  </p-card> -->
+
+    <p-card>
+        <ng-template pTemplate="header">
+            <p-toolbar>
+                <div class="p-toolbar-group-left p-card-title" style="width: 80%;">
+                    <i class="pi pi-book" style="cursor: pointer;font-weight: bold;"></i>&nbsp; New Service Template
+                </div>
+            </p-toolbar>
+            <div class="input-wrapper">
+                <div class="field">
+                    <div class="flex">
+                        <div class="newServTempLeftPanel">
+                            <div class="template flex m-4" style=" align-items: center;">
+                                <label for="Service Template">Service Template</label>
+                                <p-dropdown class="ml-2" optionLabel="name" placeholder="Select a Service Template">
+                                </p-dropdown>
+                                <p-checkbox class="ml-4" name="" value="" label="IBNS 2.0 Template Style">
+                                </p-checkbox>
+                            </div>
+                            <div class="tName flex m-4" style=" align-items: center;">
+                                <label for="Template Name">Template Name</label>
+                                <input type="text" pInputText style="margin-left:10px; width: 30%;" />
+                            </div>
+                            <div class="iseServBox m-4">
+                                <label for="ISE Service" style="display:block ;font-weight: bold; font-size: large;">ISE Services</label>
+                                <p-checkbox class="p-1" name="" value="" label="Authenticaion/802.1x"></p-checkbox>
+                                <p-checkbox class="" name="" value="" label="Endpoint Posture"></p-checkbox>
+                                <p-checkbox class="" name="" value="" label="Profiling Without Device Sensor">
+                                </p-checkbox>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="osTrailBox" style="margin: 30px;">
+                            <div>
+                                <label class="mt-4 " for="" style="font-weight: bold; font-size: large;">OS
+                                    Trail</label>
+                                <div class=" m-1">
+                                    <div *ngFor="let category of osTrailCategories" class="p-field-checkbox mb-1" style="display: flex;">
+                                        <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedOsTrailCategory"
+                                            ></p-radioButton>
+                                        <label [for]="category.key">{{category.name}}</label>
+                                        <div class="ml-6"><label [for]="category.key">{{category.desc}}</label></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p-accordion>
+                <p-accordionTab header="Template Parameters">
+                    <div class="m-2"><b>Inbuilt Parameters:</b></div>
+                    <div class="">
+                    <div class="inbuiltParamBox grid m-2"
+                        style="padding: 4px; align-items: center; justify-content: space-between; border: 1px solid #f8f9fa; border-radius: 5px;">
+                        <div class="nameBox m-1">
+                            <label for="name" class="mr-1" style="font-weight: bold;">Name:</label>DATA_VLAN
+                        </div>
+
+                        <div class="descBox m-1">
+                            <label for="desc" class="mr-1"
+                                style="font-weight: bold;">Description:</label>Substituted by actualy value of data
+                            vlan, while
+                            processing
+                        </div>
+
+                        <div class="descBox flex m-1">
+                            <label for="search" class="mr-1" style="font-weight: bold;">Search Scope:</label>
+                       
+
+                                <div *ngFor="let category of categories" class="p-field-checkbox flex ml-1">
+                                    <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"></p-radioButton>
+                                   <label [for]="category.key">{{category.name}}</label>
+                                </div>
+
+                            
+                        </div>
+                    </div>
+                        <div class="descBox m-1">
+                            <div class="flex" style="align-items: center;">
+                                <label for="value" class="mr-1 flex" style="font-weight: bold;">Where can the value
+                                    be found?</label>
+                                <div class="forvlan"
+                                    style="align-items: center;border: 1px solid #acacac;border-radius: 3px;margin-left: 5px;padding: 4px;cursor: pointer;">
+                                    switchport access vlan?
+                                </div>
+                                <div style="margin-left: 5px;padding: 4px;">
+                                    OR
+                                </div>
+                                <div class="selection"
+                                    style="align-items: center;border: 1px solid #acacac;border-radius: 3px;margin-left: 5px;padding: 4px;cursor: pointer;">
+                                    <div class="forvlan">
+                                        source template *
+                                    </div>
+
+                                    <div class="forvlan">
+                                        switchport access vlan?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <p-divider></p-divider>
+                    
+                    <div class="inbuiltParamBox grid m-2"
+                        style="padding: 4px; align-items: center; justify-content: space-between; border: 1px solid #f8f9fa; border-radius: 5px;">
+                        <div class="nameBox m-1">
+                            <label for="name" class="mr-1" style="font-weight: bold;">Name:</label>DATA_VLAN
+                        </div>
+
+                        <div class="descBox m-1">
+                            <label for="desc" class="mr-1"
+                                style="font-weight: bold;">Description:</label>Substituted by actualy value of data
+                            vlan, while
+                            processing
+                        </div>
+
+                        <div class="descBox flex m-1">
+                            <label for="search" class="mr-1" style="font-weight: bold;">Search Scope:</label>
+                       
+
+                                <div *ngFor="let category of categories" class="p-field-checkbox flex ml-1">
+                                    <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"></p-radioButton>
+                                   <label [for]="category.key">{{category.name}}</label>
+                                </div>
+
+                            
+                        </div>
+                    </div>
+
+
+                </p-accordionTab>
+            </p-accordion>
+
+            <div class="col-8">
+                <div class="titleBox flex justify-content-between ml-4">
+                    <div>
+                        <b>Service Details</b>
+                    </div>
+
+                    <div>
+                        <i class="pi pi-cog" style="cursor: pointer;"><b>&nbsp;Generate Template</b></i>
+                    </div>
+
+                    <div disabled="disabled">
+                        <i class="pi pi-download" style="cursor: pointer;"><b>&nbsp;Download</b></i>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="col ml-4" style="margin-top: 7px;">
+                        <p-scrollPanel [style]="{width: '100%', height: '300px', border: '1px solid #acacac'}">
+                        </p-scrollPanel>
+                        <div class="flex deviceListBtn justify-content-end">
+                            <p-button label="Save" class="mt-1 mr-2"></p-button>
+                            <p-button label="Reset" class="mt-1 mr-2"></p-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ng-template>
+    </p-card>
+    

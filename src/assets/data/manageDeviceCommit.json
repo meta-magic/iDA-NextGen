@@ -1,0 +1,48 @@
+{
+    "success":true,
+    "message":"Manage Device Configuration Commit data Fetched Successfully",
+    "data":[
+        {
+            "dName":"Device_6(10.254.4.6)",
+            "dSpec":"Wired WS-C3560CG-8PC-S",
+            "osVersion":"15.3(2)E9",
+
+            "pName" : "Cisco", "pType" : "Catalyst 3560-C", 
+            
+            "owner" : "Admin", "location" : "All Locations"
+        },
+        {
+            "dName":"26(10.254.4.26)",
+            "dSpec":"Wired WS-C2560CG-2PDC-S",
+            "osVersion":"15.2(4)E5",
+
+            "pName" : "Cisco", "pType" : "IOS", 
+            
+            "owner" : "Admin", "location" : "All Locations"
+        },{
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-P2560CG-2PC-S",
+            "osVersion":"15.2(4)E5",
+
+            "pName" : "Cisco", "pType" : "IOS", 
+            
+            "owner" : "Admin", "location" : "All Locations"
+        },{
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-K2560CG-8PDA-S",
+            "osVersion":"15.2(4)E5",
+
+            "pName" : "Cisco", "pType" : "IOS", 
+            
+            "owner" : "Admin", "location" : "All Locations"
+        },{
+            "dName":"14(10.254.4.14)",
+            "dSpec":"Wired WS-C2560CG-10CPA-SA",
+            "osVersion":"15.2(4)E5",
+
+            "pName" : "Cisco", "pType" : "IOS", 
+            
+            "owner" : "Admin", "location" : "All Locations"
+        }
+    ]
+}

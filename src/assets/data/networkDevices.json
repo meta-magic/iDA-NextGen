@@ -1,0 +1,304 @@
+
+{
+    "success":true,
+    "message":"Network Device data Fetched Successfully",
+	"data": [
+		{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "10100",
+			"userName": "Philp",
+			"deviceName": "Main Switch ",
+			"ipHostName": "10.254.25.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 3",
+			"producttype": "Group D",
+            "location":"Pune",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "10021",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.22.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 3",
+			"producttype": "Group C",
+            "location":"Banglore",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "11000",
+			"userName": "Ganesh",
+			"deviceName": "HUB",
+			"ipHostName": "10.254.12.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 10",
+			"producttype": "Group E",
+            "location":"Pune",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "10201",
+			"userName": "Toni Macy",
+			"deviceName": "Fiber Optics",
+			"ipHostName": "10.254.12.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group D",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "10040",
+			"userName": "Simon Cheng",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "10015",
+			"userName": "Stan",
+			"deviceName": "Router-18",
+			"ipHostName": "10.254.21.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group D",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "123000",
+			"userName": "Rohan Pawar",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.21.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group D",
+            "location":"Pune",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "10031",
+			"userName": "Madhura Pandit",
+			"deviceName": "Router-16",
+			"ipHostName": "10.254.21.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 5",
+			"producttype": "Group D",
+            "location":"Nagpur",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "10020",
+			"userName": "Bety yeu",
+			"deviceName": "Hub",
+			"ipHostName": "10.254.122.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group D",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "100111",
+			"userName": "Cisco",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "100220",
+			"userName": "Philip Singh",
+			"deviceName": "Fiber",
+			"ipHostName": "10.254.112.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group D",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "100122",
+			"userName": "Ganesh Yadwad",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "100021",
+			"userName": "Philip",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "100134",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "1000211",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "1001222",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "10002",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "100111",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},{
+			"id": "1001022",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		},
+		{
+			"id": "10011121",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A",
+            "location":"Mumbai",
+            "owner":"--",
+            "deviceProfile":"--"
+			
+		}	]
+}

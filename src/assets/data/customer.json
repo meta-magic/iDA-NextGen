@@ -1,0 +1,43 @@
+{
+    "success":true,
+    "message":"Customer data Fetched Successfully",
+    "data":[
+        {
+            "id":"sadsdadssfsdfdsf",
+            "customername":"Philip",
+            "country":"USA",
+            "state":"Florida",
+            "city":"Miami",
+            "isesoft":"3.0"
+        },
+        {
+            "id":"kdajbks11",
+            "customername":"Mary Ellen",
+            "country":"USA",
+            "state":"New York",
+            "city":"Albany",
+            "isesoft":"3.0"
+        },{
+            "id":"hajayL",
+            "customername":"Bety Yau",
+            "country":"China",
+            "state":"Sichuan",
+            "city":"Suchu",
+            "isesoft":"2.0"
+        },{
+            "id":"saasasaska",
+            "customername":"Simon Cheng",
+            "country":"China",
+            "state":"Sichuan",
+            "city":"Suchu",
+            "isesoft":"2.5"
+        },{
+            "id":"sads",
+            "customername":"Rohan Shinde",
+            "country":"India",
+            "state":"Maharashtra",
+            "city":"Pune",
+            "isesoft":"2.0"
+        }
+    ]
+}

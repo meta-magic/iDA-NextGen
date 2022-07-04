@@ -1,0 +1,61 @@
+<span class="p-input-icon-left">
+  <i class="pi pi-search"></i>
+  <input type="text" pInputText placeholder="Search"  style="width: 25%;"/>
+</span>
+<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped mt-2" [value]="ndcrDevSumData" [rows]="10"
+  [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" paginatorPosition="top">
+
+
+
+  <ng-template pTemplate="body" let-entity>
+
+    <tr>
+
+      <td>
+        <div class="devSearchItemValue" style="cursor: pointer;" ><a (click)="showPositionDialog('right')">{{entity.DevName}}</a></div>
+        <div> Product Type: <span class="devSearchItemValue" style="color: #4b6cb7;cursor: pointer;">{{entity.pType}}</span></div>
+        <div>OS Type: <span class="devSearchItemValue" style="color: #4b6cb7;cursor: pointer;">{{entity.osType}}</span></div>
+      </td>
+
+      <td>
+        <div>Interface Assessed: <span class="devSearchItemValue" style="color: #4b6cb7;cursor: pointer;">{{entity.iAssessed}}</span></div>
+        <div>OS Version: <span class="devSearchItemValue" style="color: #4b6cb7;cursor: pointer;">{{entity.osVersion}}</span></div>
+      </td>
+
+      <td>
+        <div>Location: <span class="devSearchItemValue" style="color: #4b6cb7;cursor: pointer;">{{entity.location}}</span></div>
+      </td>
+
+      <td>
+        <div class="devSearchItemValue" style="color: red;font-size: 20px;cursor: pointer;">{{entity.complaint}}%</div><div>Complaint</div>
+      </td>
+
+    </tr>
+
+    <div class="grid">
+      <div class="col-6">
+          <p-dialog header="" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+          [draggable]="true" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
+          [transitionOptions]="'1000ms'"
+          >
+          <ng-template pTemplate>
+              <app-network-device-details-overlay></app-network-device-details-overlay>
+          </ng-template>
+          </p-dialog>    
+      </div>
+  </div>
+
+  </ng-template>
+  
+
+</p-table>
+
+<p-dialog header="Ganesh" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+[draggable]="false" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
+[transitionOptions]="'1000ms'"
+>
+ <ng-template pTemplate>
+    <app-network-device-details-overlay></app-network-device-details-overlay>
+</ng-template>
+</p-dialog> 

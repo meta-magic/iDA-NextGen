@@ -1,0 +1,70 @@
+<p-card>
+    <ng-template pTemplate="header">
+        <div class=" p-card-title" style="margin-left: 22px;">
+            Location
+        </div>
+        <p-toolbar>
+            <div class="p-toolbar-group-left">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left">
+                        <p-button label="Add" styleClass="p-button-text" icon="pi pi-plus" ></p-button>
+                        <!-- <button pButton pRipple icon="pi pi-trash"
+                        class="p-button-text p-button-danger"></button> -->
+                    </div>
+                    <div class="p-toolbar-group-right">
+                        <p-button label="Expand All" styleClass="p-button-text" icon="fa fa-expand"  (click)="expandAll()" [disabled]="expandAllClicked"></p-button>
+                        <p-button label="Collapse All" icon="fa fa-compress" styleClass="p-button-text" (click)="collapseAll()" [disabled]="collapseAllClicked"></p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+        </p-toolbar>
+    </ng-template>
+    <div class="grid">
+        <!-- <div class="col-3 md:col-3">
+            <div class="input-wrapper">
+                <div class="field">
+                    <p-tree [value]="locations" layout="vertical" selectionMode="single" [(selection)]="selectedFile"></p-tree>
+                </div>
+            </div>
+        </div> -->
+        <div class="col-12 md:col-12">
+            <div class="input-wrapper">
+                <div class="field">
+                    <p-treeTable [value]="files" [columns]="cols" styleClass="p-treetable-sm">
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns">
+                                    {{col.header}}
+                                </th>
+                                <th>Action</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+                            <tr>
+                                <td *ngFor="let col of columns; let i = index" ttEditableColumn
+                                    [ngClass]="{'p-toggler-column': i === 0}">
+                                    <p-treeTableToggler [rowNode]="rowNode" *ngIf="i === 0"></p-treeTableToggler>
+                                    <p-treeTableCellEditor>
+                                        <ng-template pTemplate="input">
+                                            <input pInputText type="text" [(ngModel)]="rowData[col.field]"
+                                                [ngStyle]="{'width': i == 0 ? '90%': '100%'}">
+                                        </ng-template>
+                                        <ng-template pTemplate="output">{{rowData}}</ng-template>
+                                    </p-treeTableCellEditor>
+                                </td>
+                                <td>
+                                    <button pButton pRipple icon="pi pi-plus" class="p-button-text"></button>
+                                    <button pButton pRipple icon="pi pi-pencil"
+                                        class="p-button-text p-button-success"></button>
+                                    <button pButton pRipple icon="pi pi-trash"
+                                        class="p-button-text p-button-danger"></button>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-treeTable>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</p-card>

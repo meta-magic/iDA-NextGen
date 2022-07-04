@@ -1,0 +1,209 @@
+<p-card>
+    <div class="grid p-fluid">
+        <!-- <div class="col-6 md:col-6">
+            <div class="input-wrapper">
+                <div class="field">
+                    <label>Assesment Type </label>
+                    <br />
+                    <select type="text" class="form-control"
+                        (change)="onAssesmentType()">
+                        <option *ngFor="let node of assessmentType" [value]="node.primaryId">
+                            {{node.primaryDisplay}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <div class="field">
+                    <h5>Note</h5>
+                    <ul>
+                        <li>
+                            Device Name,IP/Hostname and Username are required
+                        </li>
+                        <li>
+                            Additional commands are fired on devices to collect more information
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-6 md:col-6">
+            <div class="input-wrapper">
+                <div class="field">
+
+
+                    <label>Upload Device Files</label>
+                    <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload()" accept="image/*">
+                        <ng-template pTemplate="content">
+                            <ul *ngIf="uploadedFiles.length">
+                                <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes
+                                </li>
+                            </ul>
+                        </ng-template>
+                    </p-fileUpload>
+                </div>
+
+            </div>
+        </div> -->
+    </div>
+    <div class="grid p-fluid">
+        <div class="col-12 md:col-12">
+            <p-toolbar styleClass="mb-4">
+                <ng-template pTemplate="left">
+                    <button pButton pRipple label="Add" icon="pi pi-plus" class="p-button-text mr-1"
+                        (click)="adddevice()"></button>
+                    <button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-text mr-1"
+                        (click)="deleteSelectedProducts()"
+                        [disabled]="!selectedProducts || !selectedProducts.length"></button>
+                    <button pButton pRipple label="Import" icon="pi pi-cloud-upload" class="p-button-text mr-1"
+                        (click)="deleteSelectedProducts()"></button>
+
+                    <button pButton pRipple label="Export" icon="pi pi-file" class="p-button-text mr-1"
+                        (click)="deleteSelectedProducts()"
+                        [disabled]="!selectedProducts || !selectedProducts.length"></button>
+
+                    <!-- 
+                        <p-fileUpload #fubauto mode="basic" accept="image/*" [maxFileSize]="1000000" [auto]="true" chooseLabel="Import" 
+                        chooseIcon="pi pi pi-plus" uploadIcon="pi pi-upload" [showUploadButton]="false"></p-fileUpload> -->
+
+                    <button pButton pRipple label="Download" icon="fa fa-download" class="p-button-text mr-1"
+                        (click)="openNew()"></button>
+                    <button pButton pRipple label="Location" icon="fa fa-map-marker" class="p-button-text mr-1"
+                        (click)="openlocation()"></button>
+                    <button pButton pRipple label="Bulk Update" icon="fa fa-cog" class="p-button-text mr-1"
+                        (click)="settingsDevice()"></button>
+
+
+                </ng-template>
+                <!-- <ng-template pTemplate="right">
+                    <button pButton label="Clear" class="p-button-text" icon="pi pi-filter-slash" (click)="clear(dt1)"
+                        style="flex-basis: content;"></button>
+
+                    <button pButton label="Settings" class="p-button-text mr-2" icon="pi pi-cog" (click)="clear(dt1)"
+                        style="flex-basis: content;" (click)="op.toggle($event)"></button>
+
+                    <p-overlayPanel #op [dismissable]="true" [showCloseIcon]="true">
+                        <ng-template pTemplate>
+                            <p-multiSelect [options]="columns" #ganesh [(ngModel)]="SelectedColumns"
+                                optionLabel="header" selectedItemsLabel="{0} columns selected"
+                                [style]="{minWidth: '200px'}" placeholder="Choose Columns"></p-multiSelect>
+                        </ng-template>
+                    </p-overlayPanel>
+
+                    <span class="p-input-icon-left p-ml-auto" style="flex-basis: fit-content;">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+                            placeholder="Search keyword" />
+                    </span>
+                </ng-template> -->
+            </p-toolbar>
+            <div class="tableScroller">
+                <p-table #dt1 [columns]="selectedColumns" [value]="importedDevices" [rows]="22" [paginator]="true"
+                    [(selection)]="selectedProducts" [rowHover]="true" dataKey="id" [resizableColumns]="true"
+                    styleClass="p-datatable-gridlines p-datatable-sm" [globalFilterFields]="selectedColumns"
+                    [scrollable]="true" scrollHeight="400px" scrollDirection="both"
+                    [rowsPerPageOptions]="[50,100,150,200]" [reorderableColumns]="true" columnResizeMode="expand"
+                    paginatorPosition="top" class="layout-news-active">
+                    <!-- <ng-template pTemplate="caption">
+                    <ng-template pTempl
+              
+                    <div class="grid p-fluid">
+                        <div class="col-4">
+                            <p-paginator [rows]="10" [totalRecords]="22" [rowsPerPageOptions]="[10,20,30]">sbajbs</p-paginator>
+
+                            
+                        </div>
+
+                            <div class="col-8">
+                            <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
+                            <span class="p-input-icon-left ml-auto">
+                                <i class="pi pi-search"></i>
+                                <input pInputText type="text" (input)="dt1.filterGlobal($event, 'contains')" placeholder="Search keyword" />
+                            </span>
+    
+                        </div>
+                      
+
+                        
+                    </div>
+                </ng-template> -->
+                    <!-- [paginator]="true" -->
+                    <ng-template pTemplate="paginatorleft" let-importedDevices>
+                        <div>
+                            Showing {{(importedDevices.page * importedDevices.rows) + 1}} to {{importedDevices.rows *
+                            (importedDevices.page + 1)}} of {{importedDevices.totalRecords}} entries
+
+                        </div>
+
+                        <!-- Showing {{(state.page  * state.rows) + 1}} to {{state.rows * (state.page + 1)}} of {{state.totalRecords}} entries -->
+
+                    </ng-template>
+                    <ng-template pTemplate="paginatorright">
+                        <button pButton label="Clear" class="p-button-text" icon="pi pi-filter-slash" (click)="clear(dt1)"
+                            style="flex-basis: content;"></button>
+    
+                        <button pButton label="Settings" class="p-button-text mr-2" icon="pi pi-cog" (click)="clear(dt1)"
+                            style="flex-basis: content;" (click)="op.toggle($event)"></button>
+    
+                        <p-overlayPanel #op [dismissable]="true" [showCloseIcon]="true">
+                            <ng-template pTemplate>
+                                <p-multiSelect [options]="columns" #ganesh [(ngModel)]="SelectedColumns"
+                                    optionLabel="header" selectedItemsLabel="{0} columns selected"
+                                    [style]="{minWidth: '200px'}" placeholder="Choose Columns"></p-multiSelect>
+                            </ng-template>
+                        </p-overlayPanel>
+    
+                        <span class="p-input-icon-left p-ml-auto" style="flex-basis: fit-content;">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+                                placeholder="Search keyword" />
+                        </span>
+                    </ng-template>
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th style="width:40px">
+                                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                            </th>
+                            <ng-container *ngFor="let col of columns">
+                                <th class="layout-news-active" [pSortableColumn]="col.field" style="width:150px"
+                                    pResizableColumn pReorderableColumn>
+                                    <div class="p-fluid" style="flex-grow: 1;">{{col.header}}</div>
+                                    <ng-template [ngIf]="!(col.field ==='password' || col.field ==='enablepassword')">
+                                        <p-columnFilter type="text" [field]="col.field"
+                                            [matchModeOptions]="matchModeOptions" [matchMode]="'custom-equals'"
+                                            display="menu"></p-columnFilter>
+                                        <p-sortIcon [field]="col.field"></p-sortIcon>
+                                    </ng-template>
+                                </th>
+                            </ng-container>
+                            <th style="width:150px">Action</th>
+                        </tr>
+                    </ng-template>
+
+                    <ng-template pTemplate="body" let-device let-columns="columns" let-index="rowIndex">
+                        <tr style="height: 35px;">
+                            <td style="width:40px">
+                                <p-tableCheckbox [value]="device"></p-tableCheckbox>
+                            </td>
+                            <td *ngFor="let col of columns" style="width:150px">
+                                {{device[col.field]}}
+                            </td>
+                            <td style="width:150px">
+                                <button pButton pRipple icon="pi pi-pencil" class="p-button-text p-button-success mr-2"
+                                    (click)="ganesh(device)"></button>
+                                <button pButton pRipple icon="pi pi-trash" class="p-button-text p-button-warning"
+                                    (click)="deleteProduct(device)"></button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <!-- <ng-template pTemplate="summary">
+                    <div class="flex align-items-center justify-content-between">
+                        In total there are {{importedDevices ? importedDevices.length : 0 }} devices.
+                    </div>
+                </ng-template> -->
+                </p-table>
+            </div>
+        </div>
+    </div>
+</p-card>
+<p-toast></p-toast>

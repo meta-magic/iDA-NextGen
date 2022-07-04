@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Country reterived successfully!",
+    "data":[{
+        "primaryId":"frd",
+        "primaryDisplay":"Forward Proxy"
+    },{
+        "primaryId":"rev",
+        "primaryDisplay":"Reverse Proxy"
+    }]
+}

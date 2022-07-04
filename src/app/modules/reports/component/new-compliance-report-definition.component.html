@@ -1,0 +1,114 @@
+<div class="grid p-fluid">
+  <div class="col-12 md:col-12">
+    <p-card>
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <i class="pi pi-book" style="font-size: 17px;"></i>
+          <label for="NCRD" icon="pi pi-book" class="p-button-text mr-2 ml-2"
+            style="font-size: 20px;">New Compliance Report Definition</label>
+          <i class="pi pi-question-circle" style="color: #0071bc;font-weight: bold;font-size: 17px;"></i>
+        </ng-template>
+      </p-toolbar>
+      <p-panel header="Compliance Check">
+        <ng-template pTemplate="icons">
+          <i class="pi pi-sign-in mr-2" style="cursor: pointer;"></i>
+        </ng-template>
+        <div class="input-wrapper">
+          <div class="field">
+        <div class="flex" style="
+              justify-content: space-between;">
+          <div class="insideDiv">
+            <div>
+              <label for="reportname">Report Name</label>
+              <input type="text" pInputText>
+            </div>
+            <div>
+              <label for="reportname">Report Description</label>
+              <input type="text" pInputText style="height: 66px;">
+            </div>
+          </div>
+          <div class="insideDiv">
+            <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-outlined" (click)="cancel1()"></button>
+            <!-- <button pButton type="button" label="Cancel" class="p-button-outlined"></button> -->
+            <!-- <button pButton type="button" label="Next" class="p-button-outlined ml-1"></button> -->
+            <button pButton pRipple label="Next" icon="pi pi-angle-double-right"
+              class="p-button-outlined ml-1"></button>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          Provide set of commands to be checked of the device at global/interface level. Accordingly, you can select the
+          set of commands from the desired pre-generated templates and fetch them for compliance check. You can alos
+          write your own set of commands or modify the fetched commands as per your requirement. Modifying these
+          commands from the existing templates will not alter the actual templates.
+        </div>
+
+        <div class="grid mt-4 ml-1">
+          
+          <div class="gCompliance" style="
+          width: 47%;
+      ">
+            <label for="gtemp">Select from Global Tamplates</label>
+            <div class="flex" style="
+            justify-content: space-between;
+        ">
+              <p-dropdown class="mt-1" optionLabel="name" [style]="{'width': '500%'}"></p-dropdown>
+              <button pButton pRipple type="button" label="Edit" class="p-button-text"></button>
+            </div>
+            <input class="mt-1" type="text" pInputText style="height: 200px;" disabled>
+          </div>
+          <div class="iCompliance ml-6" style="
+          width: 47%;
+      ">
+            <label for="itemp">Select from Interface Tamplates</label>
+            <div class="flex" style="
+            justify-content: space-between;
+        ">
+              <p-dropdown class="mt-1" optionLabel="name" [style]="{'width': '500%'}"></p-dropdown>
+              <button pButton pRipple type="button" label="Edit" class="p-button-text"></button>
+            </div>
+            <input class="mt-1" type="text" pInputText style="height: 200px;" disabled>
+          </div>
+        </div>
+
+        <p-accordion [style]="
+        {'margin-top': '20px'}
+    ">
+          <p-accordionTab header="Template Parameters">
+             <div class="inbultBox">
+              <div class="flex" style="
+              justify-content: space-between;
+          ">
+                <label for="">InBuilt Parameters:</label>
+              <button pButton pRipple type="button" label="Edit" class="p-button-text"></button>
+              </div>
+              <div style="background-color: #f8f9fa;" class="ml-4">Inbuilt parameters are not imported for this template</div>
+             </div>
+
+             <div class="customBox" style="
+             margin-top: 15px;
+         ">
+              <div class="flex" style="
+              justify-content: space-between;
+          ">
+                <label for="">Custom Parameters:</label>
+              <button pButton pRipple type="button" label="Edit" class="p-button-text"></button>
+              </div>
+              <div class="flex" style="
+              justify-content: space-between;">
+                <div class="ml-4">
+                  <label for="" style="background-color: #f8f9fa;">Custom parameters are not defined for this template</label>
+                </div>
+                <div>
+                  <button pButton pRipple type="button" label="New" icon="pi pi-plus" class="p-button-text"></button>
+                  <button pButton pRipple type="button" label="Delete" icon="pi pi-trash" class="p-button-text"></button>
+                </div>
+              </div>
+             </div>
+          </p-accordionTab>
+      </p-accordion>
+      </p-panel>
+    </p-card>
+  </div>
+</div>

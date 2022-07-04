@@ -1,0 +1,22 @@
+{
+    "success":true,
+    "message":"Report data Fetched Successfully",
+	"data": [
+		{
+            "id":"ljjsdkjas",
+			"sstatus": "scheduled",
+			"reportname": "pr1_Daily_15June2022_032900PMIST",
+			"generatedby": "admin1",
+			"datetime": "June 15 2022 5:59:00 AM EDT",
+            "status":"Completed"
+		},
+		{
+            "id":"ljjsdkjasaa",
+			"sstatus": "scheduled",
+			"reportname": "pr112_Ellen_Daily_15June2022_032900PMIST",
+			"generatedby": "Ellen",
+			"datetime": "June 15 2022 5:59:00 AM EDT",
+            "status":"Aborted"
+		}
+    ]
+}

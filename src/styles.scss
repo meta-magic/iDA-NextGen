@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/prismjs/themes/prism-coy.css";
+@import "../node_modules/@fullcalendar/daygrid/main.min.css";
+@import "../node_modules/@fullcalendar/timegrid/main.min.css";
+@import "../node_modules/c3/c3.min.css";
+
+a{
+    cursor: pointer;
+}
+ 
+.p-toolbar {
+   border: none !important;
+}
+ 
+.flex-inline-center {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.flex-inline-spacebetween {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.p-card-footer-toolbar{
+    display: block;
+    margin: -14px;
+    border-top:1px solid #ced4da;
+}
+
+
+.p-card-header-toolbar{
+    display: block;
+    border-bottom:1px solid #ced4da;
+}
+
+.layout-menu{
+    font-size: 15px;
+}
+
+.list{
+    border:1px solid #ced4da !important;
+}
+
+select{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ced4da;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    color: #495057;
+    background: #ffffff;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #ced4da;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 3px;
+}
+
+.tableScroller{
+    height: 100%;
+}
+.tableScroller .p-datatable-wrapper{
+    height: unset!important;
+    width: unset!important;
+}
+
+.c3-chart-arcs-title{
+    font-size: 18px;
+    font-weight: 700;
+}

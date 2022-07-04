@@ -1,0 +1,237 @@
+{
+    "success":true,
+    "message":"Customer data Fetched Successfully",
+	"data": [
+		{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		},{
+			"id": "1000",
+			"userName": "Philp",
+			"deviceName": "Switch",
+			"ipHostName": "10.254.2.10",
+			"password": "******",
+			"enablepassword": "******",
+			"deviceType": "Device Type 1",
+			"producttype": "Group C"
+			
+		},
+		{
+			"id": "1001",
+			"userName": "Mery Ellen",
+			"deviceName": "Router",
+			"ipHostName": "10.254.2.56",
+			"password": "*******",
+			"enablepassword": "*******",
+			"deviceType": "Device Type 2",
+			"producttype": "Group A"
+			
+		}	]
+}

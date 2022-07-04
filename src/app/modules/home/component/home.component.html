@@ -1,0 +1,85 @@
+<!-- //layout-wrapper-horizontal-sidebar -->
+<div class="layout-wrapper ">
+  <div class="layout-topbar">
+    <a class="logo home-logo" href="/">
+      <img src="../../../../assets/images/IDA_4_C_HEADER.svg" alt="ida-ng-logo" />
+    </a>
+    <a id="menu-button" (click)="toggleSideNav()"><i       class="pi"
+      [ngClass]="{
+        'pi-angle-double-left': showSideNav,
+        'pi-angle-double-right': !showSideNav
+      }"></i></a>
+    <div id="right-sidebar-button" style="width: unset; display: inline-flex;vertical-align: middle;">
+      <label>
+        {{userName}},&nbsp;{{currentDate | date:'dd/mm/yyyy'}}&nbsp;&nbsp;&nbsp;
+      </label>
+      <i class="fa fa-ellipsis-v" aria-hidden="true" (click)="menu.toggle($event);"></i>&nbsp;
+      <!-- <button name="menu1" type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button> -->
+      <p-menu #menu [popup]="true" [model]="profileSettting"  appendTo="body"></p-menu>
+    </div>
+
+  </div>
+
+  
+  
+  <div class="layout-sidebar " *ngIf="showSideNav">
+    <div class="sidebar-scroll-content">
+      <ul class="layout-menu">
+        <li *ngFor="let menu of menus">
+          <a style="border-top: 1px solid #e4e2e0   ;" (click)="onMenuClick(menu)" 
+          [routerLink]="menu.children" routerLinkActive="active-menuitem-routerlink"
+          pRipple>
+            <i class="layout-menuitem-icon" [ngClass]="menu.icon"></i>
+            <span >{{menu.title}}</span>
+            <i *ngIf="menu.children && menu.children.length>0"
+              class="pi pi-fw pi-angle-down layout-menuitem-toggler"></i>
+          </a>
+
+          <ul style="opacity: 1;" *ngIf="menu.children && menu.children.length>0 && menu.expanded">
+            <li *ngFor="let innerMenu of menu.children">
+              <a class="p-ripple p-element" (click)="onSubMenuClick(innerMenu)">
+                <i class="layout-menuitem-icon" [ngClass]="innerMenu.icon"></i>
+                <span>{{innerMenu.title}}</span>
+                <span class="p-ink"></span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-main" [ngStyle]="{'margin-left':!showSideNav? '0px':'230px'}">
+
+    <div class="route-bar flex-inline-spacebetween" style="font-weight: 400;font-size: 14px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
+    'Segoe UI Symbol';  flex-grow: 1;position: 
+    fixed;height: 39px; z-index: 1000;background-color:white;width: 100%;" 
+    
+    >
+    <!-- style="font-weight: 400;font-size: 14px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 
+    'Segoe UI Symbol';  flex-grow: 1;position: 
+    fixed;height: 39px; z-index: 1000;background-color:white;width: 100%;" -->
+      <div class="route-bar-breadcrumb" style="flex-grow: 1">
+        <i class="pi pi-home" (click)="homeClick(routeInfo)" style="cursor: pointer;"></i>
+        <span> / </span>
+        <ng-container *ngFor="let route of routeInfo">
+          <a>{{route}}</a>
+          <span>/ </span>
+        </ng-container>
+      </div>
+          <div style="padding: 0px 10px;right: 233px;position: absolute;">
+            <label>Customer: </label>
+        <p-dropdown
+          [options]="customers"
+          optionLabel="name"
+        ></p-dropdown>
+      </div>
+ 
+    </div>
+    <div class="layout-main-content">
+      <br>
+      <br>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

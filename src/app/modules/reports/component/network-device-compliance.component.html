@@ -1,0 +1,95 @@
+<div class="grid p-fluid">
+    <div class="md:col-2">
+        <p-card>
+            <div class="p-card-content" style="height: 100vh;">
+                <div class="flex leftSidePortCol">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input type="text" pInputText placeholder="Search" />
+                    </span>
+                    <span>
+                        <i class="pi pi-book m-2" style="cursor: pointer;" (click)="openNdcr()"></i>
+                    </span>
+                </div>
+
+                <p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="ndcrDevicelist" [rows]="5"
+                    [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true"
+                    dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                    paginatorPosition="top">
+
+                    <ng-template pTemplate="body" let-entity>
+                        <tr>
+                            <td>
+                                <div class="field">
+                                    <div class="" style="font-weight:bold;"><i class="pi pi-book"
+                                            style="cursor: pointer;" (click)="openReportD()"></i> {{entity.dName}}</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+
+                </p-table>
+
+            </div>
+
+        </p-card>
+
+    </div>
+
+    <div class="md:col-10">
+        <div class="grid p-fluid">
+            <div class="col-12 md:col-12">
+
+                <ng-template [ngIf]="isNewDeviceProfileScreen">
+                    <app-new-compliance-report-definition></app-new-compliance-report-definition>
+                </ng-template>
+                <ng-template [ngIf]="isDefault">
+
+                    <p-card>
+                        <p-toolbar styleClass="mb-4">
+                            <ng-template pTemplate="left">
+                                <button pButton pRipple label="cr1" icon="pi pi-cog" class="p-button-text mr-1"
+                                    style="font-weight: bold;font-size: 20px;"></button>
+                                <i class="pi pi-info-circle"
+                                    style="color: #0071bc;font-weight: bold;font-size: 17px;"></i>
+
+                            </ng-template>
+
+                            <ng-template pTemplate="right">
+
+                                <button pButton pRipple type="button" label="Report Scheduled"
+                                    class="p-button-help p-button-sm"></button>
+                                <button pButton label="Execute Report" class="p-button-text" icon="pi pi-cog"
+                                    style="flex-basis: content;"></button>
+
+                                <button pButton label="" class="p-button-text mr-2" icon="pi pi-bars"
+                                    style="flex-basis: content;"></button>
+
+
+                            </ng-template>
+
+                        </p-toolbar>
+
+                        <div class="ml-2">
+                            Execution History <i class="pi pi-question-circle" style="color: #0071bc;"></i>
+                        </div>
+
+                        <div class="noteBox mt-4 ml-2"
+                            style="display: inline-block;border: 1px solid #FBC02D;height: 40px;padding: 10px;border-radius: 5px;">
+                            <b>Note:</b> To view the detailed report please click on the report name or view icon.
+                        </div>
+
+                        <app-ndcrTable></app-ndcrTable>
+
+                    </p-card>
+
+                </ng-template>
+                <ng-template [ngIf]="reportDetails">
+                    <app-device-chart-page></app-device-chart-page>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+
+
+</div>

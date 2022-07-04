@@ -1,0 +1,15 @@
+{
+    "success":true,
+    "message":"ISE Environment Setup Load Balancer data Fetched Successfully",
+    "data":[
+        {
+            "virtualIP": "10.2.20.103",
+
+            "location": "All Location..",
+
+            "shortName": "d",
+
+            "action": ""
+        }
+    ]
+}

@@ -1,0 +1,646 @@
+<p-tabView [(activeIndex)]="index">
+    <p-tabPanel header="New Customer">
+        <p-card>
+            <ng-template pTemplate="header">
+                <p-toolbar class="p-card-header-toolbar">
+                    <div class="p-toolbar-group-left p-card-title">
+                        Customer Details
+                    </div>
+                </p-toolbar>
+            </ng-template>
+
+            <form [formGroup]="form" novalidate>
+                <p-progressBar *ngIf="loder" mode="indeterminate" [style]="{'height': '3px'}"></p-progressBar>
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-6">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Customer Name</label>
+                                <input type="text" autocomplete="off" pInputText id="customername" name="customername"
+                                    formControlName="customername">
+                                <ng-container
+                                    *ngIf="!form.get('customername')?.valid && form.get('customername')?.touched">
+                                    <small *ngIf="form.get('customername')?.errors?.['required']" id="customername-help"
+                                        class="p-error block">
+                                        Please enter valid customer name.
+                                    </small>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 md:col-6">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>ISE Software Version</label>
+                                <input type="text" autocomplete="off" pInputText id="isesoft" name="isesoft"
+                                    formControlName="isesoft">
+                                <ng-container *ngIf="!form.get('isesoft')?.valid && form.get('isesoft')?.touched">
+                                    <small *ngIf="form.get('isesoft')?.errors?.['required']" id="group-help"
+                                        class="p-error block">
+                                        Please enter valid Ise software version.
+                                    </small>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-12">
+                        <h5>Address Information</h5>
+                    </div>
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Street1</label>
+                                <input type="text" autocomplete="off" pInputText id="street1" name="street1"
+                                    formControlName="street1">
+                                <ng-container *ngIf="!form.get('street1')?.valid && form.get('street1')?.touched">
+                                    <small *ngIf="form.get('street1')?.errors?.['required']" id="street1-help"
+                                        class="p-error block">
+                                        Please enter valid street1.
+                                    </small>
+                                </ng-container>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Street2</label>
+                                <input type="text" autocomplete="off" pInputText id="street2" name="street2"
+                                    formControlName="street2">
+                                <ng-container *ngIf="!form.get('street2')?.valid && form.get('street2')?.touched">
+                                    <small *ngIf="form.get('street2')?.errors?.['required']" id="street2-help"
+                                        class="p-error block">
+                                        Please enter valid street2.
+                                    </small>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 md:col-4"></div>
+
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Country </label>
+                                <br />
+                                <select type="text" formControlName="countryId" class="form-control"
+                                    (change)="onCountrySelect(form.value.countryId)">
+                                    <option *ngFor="let node of country" [value]="node.primaryId">
+                                        {{node.primaryDisplay}}
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- 
+                            <ng-container *ngIf="!form.get('countryId')?.valid && form.get('countryId')?.touched">
+                                <small *ngIf="form.get('countryId')?.errors?.['required']" id="countryId-help"
+                                    class="p-error block">
+                                    Please enter valid Country.
+                                </small>
+                            </ng-container> -->
+                        </div>
+                    </div>
+
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>State</label>
+                                <select type="text" formControlName="stateId" class="form-control"
+                                    (change)="onStateSelect(form.value.stateId)">
+                                    <option *ngFor="let node of states" [value]="node.primaryId">{{node.primaryDisplay}}
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- 
+                            <ng-container *ngIf="!form.get('stateId')?.valid && form.get('stateId')?.touched">
+                                <small *ngIf="form.get('stateId')?.errors?.['required']" id="stateId-help"
+                                    class="p-error block">
+                                    Please enter valid state.
+                                </small>
+                            </ng-container> -->
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+
+                            <div class="field">
+                                <label>City</label>
+
+                                <select type="text" formControlName="cityId" class="form-control">
+                                    <option *ngFor="let node of cities" [value]="node.primaryId">{{node.primaryDisplay}}
+                                    </option>
+                                </select>
+
+                                <ng-container *ngIf="!form.get('cityId')?.valid && form.get('cityId')?.touched">
+                                    <small *ngIf="form.get('cityId')?.errors?.['required']" id="cityId-help"
+                                        class="p-error block">
+                                        Please enter valid city.
+                                    </small>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Zip Code</label>
+                                <input type="text" autocomplete="off" pInputText id="zipcode" name="zipcode"
+                                    formControlName="zipcode">
+                                <ng-container *ngIf="!form.get('zipcode')?.valid && form.get('zipcode')?.touched">
+                                    <small *ngIf="form.get('zipcode')?.errors?.['required']" id="zipcode-help"
+                                        class="p-error block">
+                                        Please enter valid zip code.
+                                    </small>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <ng-template pTemplate="footer">
+                <p-toolbar class="p-card-footer-toolbar">
+                    <div class="p-toolbar-group-left ">
+                        <button pButton pRipple icon="pi pi-arrow-left" class="p-button-secondary p-mr-2"
+                            (click)="navigateToPartnerList()"></button>
+
+                    </div>
+                    <div class="p-toolbar-group-right">
+                        <button pButton pRipple label="Reset" icon="pi pi-refresh" class="p-button-secondary p-mr-2"
+                            (click)="reset()"></button>
+                        <span>&nbsp;</span>
+                        <button pButton pRipple label="Save" icon="pi pi-save" class="p-button-primary p-mr-2"
+                            (click)="save()"></button>
+
+                        <button pButton pRipple label="Next" icon="fa fa-arrow-right" class="p-button-primary p-ml-3"
+                            (click)="openNext()" style="margin-left: 5px;"></button>
+
+                    </div>
+                </p-toolbar>
+            </ng-template>
+
+        </p-card>
+
+    </p-tabPanel>
+    <p-tabPanel header="Service Selection">
+        <p-card>
+            <ng-template pTemplate="header">
+                <p-toolbar class="p-card-header-toolbar">
+                    <div class="p-toolbar-group-left p-card-title">
+                        Select the ISE Services you want to implement
+                    </div>
+                </p-toolbar>
+            </ng-template>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-6">
+                    <div class="field-checkbox">
+                        <p-checkbox name="group2" (onChange)="selectallIseversions(!selecteAllIse)"
+                            [value]="selecteAllIse" [binary]="true" [(ngModel)]="selecteAllIse">
+                        </p-checkbox>
+                        <label for="item.id">{{selecteAllIse ? 'DSelect All':'Select All'}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-12 md:col-6" *ngFor="let item of iseVersionlist;">
+                    <div class="field-checkbox">
+                        <p-checkbox name="group1" [value]="item.id" [(ngModel)]="selectedIse">
+                        </p-checkbox>
+                        <label for="item.id">{{item.name}}</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-12 md:col-6">
+                <div class="input-wrapper">
+                    <div class="field">
+                        <div class="grid p-fluid" style="align-items: end;">
+                            <div class="col-10">
+                                <label>Select Compabuility guid for assessment : </label>
+                                <br />
+                                <br>
+                                <select type="text">
+                                    <option *ngFor="let node of guideList" [(ngModel)]="selectGuid"
+                                        [value]="node.primaryId">
+                                        {{node.primaryDisplay}}</option>
+                                </select>
+                            </div>
+                            <label for=""></label>
+                            <div class="col-2">
+                                <button pButton pRipple icon="fa fa-refresh"
+                                    class="p-button-text p-button-success mr-2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-12">
+                <div class="input-wrapper">
+                    <h5>Note :</h5>
+                    <label> In case you do not find the Compabuility guid you want in the above drop-down box,the tool
+                        might have not beeen downloaded. </label>
+                    <br>
+                    <label>Please click on the refresh button next to the drop-down to get it.</label>
+                </div>
+            </div>
+            <ng-template pTemplate="footer">
+                <p-toolbar class="p-card-footer-toolbar">
+                    <div class="p-toolbar-group-left ">
+                        <button pButton pRipple icon="pi pi-arrow-left" class="p-button-secondary p-mr-2"
+                            (click)="navigateToPartnerList()"></button>
+                    </div>
+                    <div class="p-toolbar-group-right">
+                        <button pButton pRipple label="Reset" icon="pi pi-refresh" class="p-button-secondary p-mr-2"
+                            (click)="reset()"></button>
+                        <span>&nbsp;</span>
+                        <button pButton pRipple label="Save" icon="pi pi-save" class="p-button-primary p-mr-2"
+                            (click)="save()"></button>
+                        <button pButton pRipple label="Previous" icon="fa fa-arrow-left" class="p-button-primary p-ml-3"
+                            (click)="openPrev()" style="margin-left: 5px;"></button>
+                        <button pButton pRipple label="Next" icon="fa fa-arrow-right" class="p-button-primary p-ml-3"
+                            (click)="openNext()" style="margin-left: 5px;"></button>
+                    </div>
+                </p-toolbar>
+            </ng-template>
+        </p-card>
+    </p-tabPanel>
+    <p-tabPanel header="Network Devices">
+        <div class="col-12 md:col-12">
+            <div class="card">
+                <p-progressBar *ngIf="loder" mode="indeterminate" [style]="{'height': '3px'}"></p-progressBar>
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-6">
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <label>Assesment Type </label>
+                                <br />
+                                <select type="text" class="form-control"
+                                    (change)="onAssesmentType(form.value.primaryId)">
+                                    <option *ngFor="let node of assessmentType" [value]="node.primaryId">
+                                        {{node.primaryDisplay}}</option>
+                                </select>
+                            </div>
+                            <!-- <ng-container
+                                *ngIf="!form.get('assessmentType')?.valid && form.get('assessmentType')?.touched">
+                                <small *ngIf="form.get('assessmentType')?.errors?.['required']" id="assessmentType-help"
+                                    class="p-error block">
+                                    Please enter valid Assesment Type.
+                                </small>
+                            </ng-container> -->
+                        </div>
+                        <div class="input-wrapper">
+                            <div class="field">
+                                <h5>Note</h5>
+                                <ul>
+                                    <li>
+                                        Device Name,IP/Hostname and Username are required
+                                    </li>
+                                    <li>
+                                        Additional commands are fired on devices to collect more information
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6">
+                        <div class="input-wrapper">
+                            <h5>Upload Device Files</h5>
+                            <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload()" accept="image/*">
+                                <ng-template pTemplate="content">
+                                    <ul *ngIf="uploadedFiles.length">
+                                        <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes
+                                        </li>
+                                    </ul>
+                                </ng-template>
+                            </p-fileUpload>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="grid p-fluid">
+                    <div class="col-12 md:col-4">
+                        <div class="input-wrapper">
+                            <label>Note: </label>
+                            <ul>
+                                <li>Device Name IP/Host Name ,user name are required</li>
+                                <li>Additional commands are fired on devices to collect more Information </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+                <br>
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-12">
+                        <div class="input-wrapper">
+                            <div class="grid p-fluid">
+                                <div class="col-12 md:col-7">
+                                    <div class="input-wrapper">
+                                        <label>Import the list of the network devices from xlsx file . Format of
+                                            this File
+                                            can be obtained by Downloading this template</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 md:col-2">
+                                    <div class="input-wrapper">
+                                        <button pButton pRipple label="Download" icon="fa fa-download "
+                                            class="p-button-primary p-ml-3" (click)="downloadfile()"
+                                            style="margin-left: 5px;"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+<!-- 
+                <div class="grid p-fluid">
+                    <div class="col-12 md:col-6">
+                        <div class="input-wrapper">
+                            <h5>Upload Device Files</h5>
+                            <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload()" accept="image/*">
+                                <ng-template pTemplate="content">
+                                    <ul *ngIf="uploadedFiles.length">
+                                        <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes
+                                        </li>
+                                    </ul>
+                                </ng-template>
+                            </p-fileUpload>
+
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+        <div class="col-12 md:col-12">
+            <div class="card">
+                <p-accordion>
+                    <p-accordionTab header="Network Configuration (Optional)" [selected]="false"
+                        class="line-height-3 m-0">
+                        <div class="grid p-fluid">
+                            <div class="col-12 md:col-4">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label>Proxy Type </label>
+                                        <br />
+                                        <select type="text" class="form-control"
+                                            (change)="onProxyTypeSelect(form.value.primaryId)">
+                                            <option *ngFor="let node of proxyType" [value]="node.primaryId">
+                                                {{node.primaryDisplay}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 md:col-4">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label>IP Address</label>
+                                        <input type="text" autocomplete="off" pInputText id="ipAddress"
+                                            name="ipAddress">
+                                        <ng-container
+                                            *ngIf="!form.get('ipAddress')?.valid && form.get('ipAddress')?.touched">
+                                            <small *ngIf="form.get('ipAddress')?.errors?.['required']"
+                                                id="ipAddress-help" class="p-error block">
+                                                Please enter valid IP Address.
+                                            </small>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 md:col-4">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label>Proxy port</label>
+                                        <input type="text" autocomplete="off" pInputText id="proxyPort"
+                                            name="customername">
+                                        <ng-container
+                                            *ngIf="!form.get('proxyPort')?.valid && form.get('proxyPort')?.touched">
+                                            <small *ngIf="form.get('proxyPort')?.errors?.['required']"
+                                                id="customername-help" class="p-error block">
+                                                Please enter valid Proxy Port.
+                                            </small>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 md:col-4">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label>Proxy User Name</label>
+                                        <input type="text" autocomplete="off" pInputText id="userName" name="userName">
+                                        <ng-container
+                                            *ngIf="!form.get('userName')?.valid && form.get('userName')?.touched">
+                                            <small *ngIf="form.get('userName')?.errors?.['required']"
+                                                id="customername-help" class="p-error block">
+                                                Please enter valid User name.
+                                            </small>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 md:col-4">
+                                <div class="input-wrapper">
+                                    <div class="field">
+                                        <label>Proxy Password</label>
+                                        <input type="password" autocomplete="off" pInputText id="password"
+                                            name="customername">
+                                        <ng-container
+                                            *ngIf="!form.get('password')?.valid && form.get('password')?.touched">
+                                            <small *ngIf="form.get('password')?.errors?.['required']"
+                                                id="customername-help" class="p-error block">
+                                                Please enter valid password name.
+                                            </small>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4"></div>
+                            <div class="col-12 md:col-12 flex" style="justify-content: end;">
+                                <ng-container>
+                                    <p-toolbar>
+                                        <div class="p-toolbar-group-left">
+                                            <button pButton pRipple label="Reset" icon="pi pi-refresh"
+                                                class="p-button-secondary p-mr-2" (click)="reset()"></button>
+                                            <span>&nbsp;</span>
+                                            <button pButton pRipple label="Save" icon="pi pi-save"
+                                                class="p-button-primary p-mr-2" (click)="save()"></button>
+
+                                            <span>&nbsp;</span>
+                                        </div>
+                                    </p-toolbar>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </p-accordionTab>
+                </p-accordion>
+            </div>
+        </div>
+        <ng-template pTemplate="footer">
+            <p-toolbar class="p-card-footer-toolbar">
+                <div class="p-toolbar-group-left ">
+                    <button pButton pRipple icon="pi pi-arrow-left" class="p-button-secondary p-mr-2"
+                        (click)="navigateToPartnerList()"></button>
+
+                </div>
+                <div class="p-toolbar-group-right">
+                    <button pButton pRipple label="Reset" icon="pi pi-refresh" class="p-button-secondary p-mr-2"
+                        (click)="reset()"></button>
+                    <span>&nbsp;</span>
+                    <button pButton pRipple label="Save" icon="pi pi-save" class="p-button-primary p-mr-2"
+                        (click)="save()"></button>
+
+                    <span>&nbsp;</span>
+                    <button pButton pRipple label="Previous" icon="fa fa-arrow-left" class="p-button-primary p-ml-3"
+                        (click)="openPrev()"></button>
+
+                </div>
+            </p-toolbar>
+        </ng-template>
+        <div class="col-12 md:col-12">
+            <div class="card">
+                <p-toolbar styleClass="mb-4">
+                    <ng-template pTemplate="left">
+                        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2"
+                            (click)="openNew()"></button>
+                        <button pButton pRipple [label]="Delete" icon="pi pi-trash" class="p-button-danger"
+                            (click)="deleteSelectedProducts()"
+                            [disabled]="!selectedProducts || !selectedProducts.length"></button>
+                    </ng-template>
+                </p-toolbar>
+                <p-table #dt1 [columns]="selectedColumns" [value]="importedDevices" [rows]="10" [paginator]="true"
+                    responsiveLayout="scroll" [(selection)]="selectedProducts" [rowHover]="true" dataKey="id"
+                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                    [showCurrentPageReport]="true" scrollHeight="200px" [resizableColumns]="true"
+                    styleClass="p-datatable-gridlines p-datatable-sm" [globalFilterFields]="['deviceName']">
+                    
+                    <ng-template pTemplate="caption">
+                        <div class="flex align-items-center justify-content-between">
+                            <h5 class="m-0">Imported Devices</h5>
+                        </div>
+                        <br>
+                        <div class="field">
+                            <div class="flex align-items-center justify-content-between">
+                                <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash"
+                                (click)="clear(dt1)" style="flex-basis: content;"></button>
+
+                                <p-multiSelect [options]="cols" [(ngModel)]="SelectedColumns" optionLabel="header"
+                                    selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}"
+                                    placeholder="Choose Columns"></p-multiSelect>
+                                <span class="p-input-icon-left p-ml-auto">
+                                    <i class="pi pi-search"></i>
+                                    <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+                                        placeholder="Search keyword" />
+                                </span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th style="width: 3rem">
+                                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                            </th>
+                            <ng-container *ngFor="let col of columns">
+                                <th [pSortableColumn]="col.field" pResizableColumn>
+                                    {{col.header}} 
+                                    <ng-template [ngIf]="!(col.field ==='password' || col.field ==='enablepassword')">
+                                        <p-columnFilter type="text" [field]="col.field"
+                                            [matchModeOptions]="matchModeOptions" [matchMode]="'custom-equals'"
+                                            display="menu"></p-columnFilter>
+                                        <p-sortIcon [field]="col.field"></p-sortIcon>
+                                    </ng-template>
+                                </th>
+                            </ng-container>
+                            <th>Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-device  let-columns="columns">
+                        <tr>
+                            <td>
+                                <p-tableCheckbox [value]="device"></p-tableCheckbox>
+                            </td>
+                            <td *ngFor="let col of columns">
+                                {{device[col.field]}}
+                            </td>
+                            <td>
+                                <button pButton pRipple icon="pi pi-pencil" class="p-button-text p-button-success mr-2"
+                                    (click)="editProduct(device)"></button>
+                                <button pButton pRipple icon="pi pi-trash" class="p-button-text p-button-warning"
+                                    (click)="deleteProduct(device)"></button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="summary">
+                        <div class="flex align-items-center justify-content-between">
+                            In total there are {{importedDevices ? importedDevices.length : 0 }} devices.
+                        </div>
+                    </ng-template>
+                </p-table>
+            </div>
+
+        </div>
+        <p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Device Details" [modal]="true"
+            styleClass="p-fluid">
+            <ng-template pTemplate="content">
+
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" pInputText id="name" required autofocus />
+                    <!-- <small class="p-error" >Name is required.</small> -->
+                </div>
+                <div class="field">
+                    <label for="name">IP Host Name</label>
+                    <input type="text" pInputText id="iphostname" required autofocus />
+                    <!-- <small class="p-error" >IP Host Name is required.</small> -->
+                </div>
+                <div class="field">
+                    <label for="name">Device Type</label>
+                    <input type="text" pInputText id="deviceType" required autofocus />
+                    <!-- <small class="p-error" >Device Type is required.</small> -->
+                </div>
+
+                <div class="field">
+                    <label>Product Type </label>
+                    <select type="text" class="form-control">
+                        <option *ngFor="let node of productType" [value]="node.primaryId">{{node.primaryDisplay}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="name">User Name</label>
+                    <input type="text" pInputText id="username" required autofocus />
+                    <!-- <small class="p-error" >Name is required.</small> -->
+                </div>
+                <div class="field">
+                    <label for="name">Password</label>
+                    <input type="text" pInputText id="Password" required autofocus />
+                    <!-- <small class="p-error" >Password is required.</small> -->
+                </div>
+                <div class="field">
+                    <label for="name">Enable Password</label>
+                    <input type="text" pInputText id="enabalepassword" required autofocus />
+                    <!-- <small class="p-error" >Enable password is required.</small> -->
+                </div>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer">
+                <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text"
+                    (click)="hideDialog()"></button>
+                <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text"
+                    (click)="saveProduct()"></button>
+            </ng-template>
+        </p-dialog>
+        <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+    </p-tabPanel>
+</p-tabView>

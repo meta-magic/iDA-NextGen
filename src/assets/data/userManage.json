@@ -1,0 +1,58 @@
+{
+    "success":true,
+    "message":"User Management data Fetched Successfully",
+    "data":[
+        {
+            "username":"philip@Florida",
+            "fname":"Philip",
+            "mname":"Philip",
+            "lname":"Root",
+            "role":"admin",
+            "timezone":"EDT",
+            "email":"Florida",
+            "city":"Miami",
+            "action":""
+        },
+        {
+            "username":"John@Pueblo",
+            "fname":"John",
+            "mname":"Harry",
+            "lname":"cena",
+            "role":"admin",
+            "timezone":"EDT",
+            "email":"Pueblo",
+            "city":"Pueblo",
+            "action":""
+        },{
+            "username":"Joe@Atlanta",
+            "fname":"Joe",
+            "mname":"Stuart",
+            "lname":"Root",
+            "role":"admin",
+            "timezone":"EDT",
+            "email":"Atlanta",
+            "city":"Atlanta",
+            "action":""
+        },{
+            "username":"Roger@ny",
+            "fname":"Roger",
+            "mname":"Joseph",
+            "lname":"Binny",
+            "role":"admin",
+            "timezone":"EDT",
+            "email":"New York",
+            "city":"New Jersey",
+            "action":""
+        },{
+            "username":"Travis@Florida",
+            "fname":"Travis",
+            "mname":"Stuart",
+            "lname":"Lily",
+            "role":"admin",
+            "timezone":"EDT",
+            "email":"Florida",
+            "city":"Miami",
+            "action":""
+        }
+    ]
+}

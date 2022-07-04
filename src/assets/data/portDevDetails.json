@@ -1,0 +1,77 @@
+{
+    "success":true,
+    "message":"Port Device Details data Fetched Successfully",
+    "data":[
+        {
+            "singleDevName": "GigabitEthernet0/1",
+            "portDVlan": "--/--",
+            "portcdpPlatform": "--",
+
+            "portDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "portDevMode": "Routed",
+            "portLldp": "--",
+
+            "portDevStatus": "Connected",
+            "portDevEndPoint": "--",
+
+
+            "dot1x": "No",
+            "mab": "No"
+
+
+        },
+        {
+            "portDevName": "GigabitEthernet0/2",
+            "portDevMode": "Access",
+            "portDevStatus": "Connected",
+            "portDVlan": "10/--",
+
+            "portDevDesc": "Description Test",
+            "portDevEndPoint": "--",
+            "portcdpPlatform": "--",
+            "portLldp": "--",
+
+            "portConfigStatus": "Assigned",
+            "portServiceTemplate": "Test"
+        },{
+            "portDevName": "GigabitEthernet0/3",
+            "portDevMode": "Routed",
+            "portDevStatus": "Connected",
+            "portDVlan": "--/--",
+
+            "portDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "portDevEndPoint": "--",
+            "portcdpPlatform": "--",
+            "portLldp": "--",
+
+            "portConfigStatus": "Initial",
+            "portServiceTemplate": "--"
+        },{
+            "portDevName": "GigabitEthernet0/4",
+            "portDevMode": "Access",
+            "portDevStatus": "Connected",
+            "portDVlan": "11/--",
+
+            "portDevDesc": "Description Test",
+            "portDevEndPoint": "--",
+            "portcdpPlatform": "--",
+            "portLldp": "Test",
+
+            "portConfigStatus": "Assigned",
+            "portServiceTemplate": "--"
+        },{
+            "portDevName": "GigabitEthernet0/5",
+            "portDevMode": "Routed",
+            "portDevStatus": "Connected",
+            "portDVlan": "--/--",
+
+            "portDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "portDevEndPoint": "--",
+            "portcdpPlatform": "--",
+            "portLldp": "--",
+
+            "portConfigStatus": "Initial",
+            "portServiceTemplate": "--"
+        }
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "success": true,
+    "message": "",
+    "data": [
+        {
+
+            "title": "Setup",
+            "icon": "fa fa-university",
+            "routeLink": "",
+            "expanded":false,
+            "children": [
+                {
+                    "title": "Manage Customer",
+                    "icon": "fa fa-building",
+                    "routeLink": "/home/customer/list",
+                    "active":false,
+                    "breadCrumb":["Setup","Manage Customer"]
+                },
+                {
+                    "title": "Compatibility Guide",
+                    "icon": "fa fa-glide",
+                    "routeLink": "/home/customer/comp",
+                    "active":false,
+                    "breadCrumb":["Setup","Compatibility Guides"]
+
+                },{
+                    "title": "Network Devices",
+                    "icon": "fa fa-tablet",
+                    "routeLink": "home/devices/add",
+                    "active":false,
+                    "breadCrumb":["Setup","Network Devices"]
+                },{
+                    "title": "Location",
+                    "icon": "fa fa-tablet",
+                    "routeLink": "home/devices/location",
+                    "active":false,
+                    "breadCrumb":["Setup","Location"]
+                },
+                {
+                    "title": "Device Profiles",
+                    "icon": "fa fa-tablet",
+                    "routeLink": "home/devices/profile",
+                    "active":false,
+                    "breadCrumb":["Setup","Device Profile"]
+
+                },{
+                    "title": "License",
+                    "icon": "fa fa-id-card",
+                    "routeLink": "/home/customer/licenses",
+                    "active":false,
+                    "breadCrumb":["Setup","Licenses"]
+
+                }
+            ]
+        },
+      
+       {
+
+            "title": "Device Readiness",
+            "icon": "fa fa-book",
+            "routeLink": "",
+            "expanded":false,
+            "children": [
+                {
+                    "title": "Readiness Summary",
+                    "icon": "fa fa-book",
+                    "routeLink": "home/deviceReadiness/dReadiness",
+                    "active":false,
+                    "breadCrumb":["Device Readiness","Readiness Summary"]
+                }
+            ]
+        },
+       {
+
+            "title": "Operations",
+            "icon": "fa-pied-piper",
+            "routeLink": "",
+            "expanded":false,
+            "children": [
+                {
+                    "title": "ISE Environment Setup",
+                    "icon": "fa fa-building",
+                    "routeLink": "home/operations/iseenvsetup",
+                    "active":false,
+                    "breadCrumb":["Operations","ISE Environment Setup"]
+                },
+                {
+                    "title": "Manage Service Template",
+                    "icon": "fa fa-glide",
+                    "routeLink": "home/operations/manageServiceTemplate",
+                    "active":false,
+                    "breadCrumb":["Operations","Manage Service Template"]
+
+                },
+                
+                {
+                    "title": "Manage Device Configuration",
+                    "icon": "fa fa-glide",
+                    "routeLink": "home/push/managedeviceconfigpush",
+                    "active":false,
+                    "breadCrumb":["Operations","Manage Device Configuration"]
+
+                },
+                {
+                    "title": "Single Device",
+                    "icon": "fa fa-server",
+                    "routeLink": "home/push/singleDevice",
+                    "active":false,
+                    "breadCrumb":["Operations","Single Device"]
+                },
+                {
+                    "title": "Multiple Device",
+                    "icon": "fa fa-server",
+                    "routeLink": "home/push/multiDevice",
+                    "active":false,
+                    "breadCrumb":["Operations","Multiple Device"]
+
+                }
+            ]
+        }, 
+        {
+
+            "title": "Reports",
+            "icon": "fa fa-line-chart",
+            "routeLink": "",
+            "expanded":false,
+            "children": [
+                {
+                    "title": "Validation Report",
+                    "icon": "fa fa-line-chart",
+                    "routeLink": "home/reports/validation",
+                    "active":false,
+                    "breadCrumb":["Reports","Validation Report"]
+                },
+                {
+                    "title": "Port Summary Report",
+                    "icon": "fa fa-line-chart",
+                    "routeLink": "home/reports/postsummary",
+                    "active":false,
+                    "breadCrumb":["Reports","Port Summary Report"]
+                },{
+                    "title": "Network Device Compliance Report",
+                    "icon": "fa fa-line-chart",
+                    "routeLink": "home/reports/networkDeviceCompliance",
+                    "active":false,
+                    "breadCrumb":["Reports","Network Device Compliance Report"]
+                },{
+                    "title": "Scheduler Assistant",
+                    "icon": "fa fa-line-chart",
+                    "routeLink": "home/reports/shedulerAssistant",
+                    "active":false,
+                    "breadCrumb":["Reports","Scheduler Assistant"]
+                }
+            ]
+        },
+       {
+
+            "title": "Admin",
+            "icon": "fa fa-user",
+            "routeLink": "",
+            "expanded":false,
+            "children": [
+                {
+                    "title": "User Management",
+                    "icon": "fa fa-user",
+                    "routeLink": "home/admin/userManagment",
+                    "active":false,
+                    "breadCrumb":["User","User Management"]
+                },
+                {
+                    "title": "Email Setup",
+                    "icon": "fa fa-envelope",
+                    "routeLink": "home/admin/emailsetup",
+                    "active":false,
+                    "breadCrumb":["User","Email SetUp"]
+
+                },
+                {
+                    "title": "FTP/SFTP setup",
+                    "icon": "fa fa-cogs",
+                    "routeLink": "home/admin/ftpsetup",
+                    "active":false,
+                    "breadCrumb":["User","FTP/SFTP"]
+
+                }
+            ]
+        }
+    ]
+}

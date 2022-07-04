@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "message": "Partner details reterived successfully!",
+    "data":[{
+        "primaryId":"pu",
+        "primaryDisplay":"Pune",
+        "stateId":"mh",
+        "countryId":"ind"
+    },{
+        "primaryId":"mu",
+        "primaryDisplay":"Mumbai",
+        "stateId":"mh",
+        "countryId":"ind"
+    }]
+}

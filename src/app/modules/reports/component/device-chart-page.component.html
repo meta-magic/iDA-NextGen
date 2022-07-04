@@ -1,0 +1,113 @@
+<div class="grid p-fluid">
+  <div class="col-12 md:col-12">
+
+    <p-card>
+
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+
+          <i class="pi pi-book" style="font-size: 17px;"></i>
+          <label for="NCRD" icon="pi pi-book" class="p-button-text mr-2 ml-2" style="font-size: 20px;">CR1</label>
+          <i class="pi pi-question-circle" style="color: #0071bc;font-weight: bold;font-size: 17px;"></i>
+
+        </ng-template>
+      </p-toolbar>
+
+
+      <p-toolbar>
+        <div class="p-toolbar-group-left">
+          <label for="" class="ml-1">cr1</label>
+
+          <i class="pi pi-tags" style="margin-left: 15px;"></i>
+
+          <div
+            style="background-color: #9c27b0;color: white;padding: 5px;width: fit-content;border-radius: 4px;font-size: 11px;height: 25px;margin-left: 15px;">
+            Scheduled
+          </div>
+
+          <div>
+            <i class="pi pi-clock" style="margin-left: 15px;"></i>
+            Jun 26 2022 06:06:00 AM EDT
+          </div>
+
+        </div>
+
+        <div class="p-toolbar-group-right">
+          <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-outlined" (click)="cancel1()"></button>
+          <button pButton pRipple label="Next" icon="pi pi-angle-double-right" class="p-button-outlined ml-1"></button>
+        </div>
+      </p-toolbar>
+
+      <div class="flex" class="pb-4">
+        <div style="border: 1px yellow; width: 45%;">
+          <div class="chartBox flex">
+            <div class="m-2" style="
+            font-size: 20px;
+            font-weight: 400;
+        ">Interactive Compliance Chart</div>
+            <button pButton pRipple type="button" label="Instruction" class="p-button-rounded p-button-info"
+              style="height: 30px;padding: 15px;margin-top: 5px;"></button>
+          </div>
+
+          <div class="totalDevicesBox m-2 mt-4 pb-4" style="
+          font-size: 20px;
+          font-weight: 300;
+          border-bottom: 1px solid #f0f0f0;
+      ">
+            Total Devices<br>
+            Count : 6
+          </div>
+
+          <div class="totalDevicesBox m-2 mt-3 pb-8" style="
+          font-size: 15px;
+          font-weight: 300;
+      ">
+            Non-compliant: 06
+          </div>
+
+          <div class="totalDevicesBox m-2 pb-2" style="
+          font-size: 15px;
+          font-weight: 300;
+      ">
+            Assignment Criteria:
+          </div>
+
+
+        </div>
+
+        <div class="chartBox" style="border: 1px pink; width: 45%;">
+
+          <!-- <canvas baseChart
+          data="ganeshMulti",
+          labels="ganesh1",
+          chartType="ganeshChartType"
+          > -->
+
+          <!-- </canvas> -->
+
+        </div>
+
+      </div>
+
+      <p-tabView>
+        <p-tabPanel header="Device Summary">
+          <!-- <button pButton pRipple label="ShowDetails" icon="pi pi-clone"
+           class="p-button-outlined" (click)="showPositionDialog('right')"></button> -->
+          <app-ndcr-Dev-Sum></app-ndcr-Dev-Sum>
+        </p-tabPanel>
+      </p-tabView>
+      <!-- <div class="grid">
+        <div class="col-6">
+            <p-dialog header="" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+            [draggable]="true" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
+            [transitionOptions]="'1000ms'"
+            >
+            <ng-template pTemplate>
+                <app-network-device-details-overlay></app-network-device-details-overlay>
+            </ng-template>
+            </p-dialog>    
+        </div>
+    </div> -->
+    </p-card>
+  </div>
+</div>

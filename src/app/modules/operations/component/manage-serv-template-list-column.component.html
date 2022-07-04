@@ -1,0 +1,46 @@
+
+
+<div class="p-card-content" style="height: 100vh;">
+  <div class="flex leftSidePortCol">
+      <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input type="text" pInputText placeholder="Search" />
+      </span>
+      <span>
+          <i class="pi pi-book m-2" style="cursor: pointer;" (click)="mstSelection()"></i>
+      </span>
+  </div>
+
+<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="manservDeviceList" [rows]="5"
+  [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  paginatorPosition="top">
+
+  <ng-template pTemplate="body" let-entity>
+    <tr>
+
+      <td>
+        <div class="field grid">
+          <div class="iTable" style="padding: 10px;">
+            <i class="pi pi-book" style="cursor: pointer;" (click)="openDeviceInfo()"></i>
+          </div>
+          
+          <div class="iTable">
+            <div class="" style="font-weight:bold;">{{entity.listTitle}}</div>
+            <div class="" style="font-style: italic; font-size:small;"><a>{{entity.listTemplate}}</a></div>
+
+          </div>
+        </div>
+      </td>
+
+    </tr>
+  </ng-template>
+
+    <ng-template [ngIf]="isMstDeviceScreen2">
+      Hi
+    </ng-template>
+
+</p-table>
+
+</div>
+

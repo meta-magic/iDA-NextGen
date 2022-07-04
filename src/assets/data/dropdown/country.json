@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Country reterived successfully!",
+    "data":[{
+        "primaryId":"ind",
+        "primaryDisplay":"India"
+    },{
+        "primaryId":"jap",
+        "primaryDisplay":"Japan"
+    }]
+}

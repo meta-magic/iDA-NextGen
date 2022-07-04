@@ -1,0 +1,74 @@
+{
+    "success":true,
+    "message":"Multiple Device data Fetched Successfully",
+    "data":[
+        {
+            "multipleDevName": "GigabitEthernet0/1",
+            "multipleDevMode": "Routed",
+            "multipleDevStatus": "Connected",
+            "multipleDVlan": "--/--",
+
+            "multipleDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "multipleDevEndPoint": "--",
+            "multiplecdpPlatform": "--",
+            "multipleLldp": "--",
+
+            "multipleConfigStatus": "Initial",
+            "multipleServiceTemplate": "--"
+
+        },
+        {
+            "multipleDevName": "GigabitEthernet0/2",
+            "multipleDevMode": "Access",
+            "multipleDevStatus": "Connected",
+            "multipleDVlan": "10/--",
+
+            "multipleDevDesc": "Description Test",
+            "multipleDevEndPoint": "--",
+            "multiplecdpPlatform": "--",
+            "multipleLldp": "--",
+
+            "multipleConfigStatus": "Assigned",
+            "multipleServiceTemplate": "Test"
+        },{
+            "multipleDevName": "GigabitEthernet0/3",
+            "multipleDevMode": "Routed",
+            "multipleDevStatus": "Connected",
+            "multipleDVlan": "--/--",
+
+            "multipleDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "multipleDevEndPoint": "--",
+            "multiplecdpPlatform": "--",
+            "multipleLldp": "--",
+
+            "multipleConfigStatus": "Initial",
+            "multipleServiceTemplate": "--"
+        },{
+            "multipleDevName": "GigabitEthernet0/4",
+            "multipleDevMode": "Access",
+            "multipleDevStatus": "Connected",
+            "multipleDVlan": "11/--",
+
+            "multipleDevDesc": "Description Test",
+            "multipleDevEndPoint": "--",
+            "multiplecdpPlatform": "--",
+            "multipleLldp": "Test",
+
+            "multipleConfigStatus": "Assigned",
+            "multipleServiceTemplate": "--"
+        },{
+            "multipleDevName": "GigabitEthernet0/5",
+            "multipleDevMode": "Routed",
+            "multipleDevStatus": "Connected",
+            "multipleDVlan": "--/--",
+
+            "multipleDevDesc": "L3 # Link To 3750-X G0/2 # connection to 3750-X",
+            "multipleDevEndPoint": "--",
+            "multiplecdpPlatform": "--",
+            "multipleLldp": "--",
+
+            "multipleConfigStatus": "Initial",
+            "multipleServiceTemplate": "--"
+        }
+    ]
+}

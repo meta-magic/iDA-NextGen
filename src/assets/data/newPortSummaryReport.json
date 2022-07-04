@@ -1,0 +1,53 @@
+{
+    "success":true,
+    "message":"Validate Report data Fetched Successfully",
+    "data":[
+        {
+            "dName":"Device_6(10.254.4.6)",
+            "pType" : "Catalyst 3560-C",
+
+            "osType" : "IOS",
+
+            "osVersion":"15.3(2)E9",
+            
+            "location" : "All Locations"
+        },
+        {
+            "dName":"Device_6(10.254.4.6)",
+            "pType" : "Catalyst 3560-C",
+
+            "osType" : "IOS",
+
+            "osVersion":"15.3(2)E9",
+            
+            "location" : "All Locations"
+        },{
+            "dName":"Device_6(10.254.4.6)",
+            "pType" : "Catalyst 3560-C",
+
+            "osType" : "IOS",
+
+            "osVersion":"15.3(2)E9",
+            
+            "location" : "All Locations"
+        },{
+            "dName":"Device_6(10.254.4.6)",
+            "pType" : "Catalyst 3560-C",
+
+            "osType" : "IOS",
+
+            "osVersion":"15.3(2)E9",
+            
+            "location" : "All Locations"
+        },{
+            "dName":"Device_6(10.254.4.6)",
+            "pType" : "Catalyst 3560-C",
+
+            "osType" : "IOS",
+
+            "osVersion":"15.3(2)E9",
+            
+            "location" : "All Locations"
+        }
+    ]
+}

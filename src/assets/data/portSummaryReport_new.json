@@ -1,0 +1,24 @@
+
+{
+    "success":true,
+    "message":"Device List in Port Summary page data Fetched Successfully",
+    "data":[
+        {
+            "dName":"Pr1_Test",
+            "dSpec":"Wired WS-C3560CG-8PC-S"
+        },
+        {
+            "dName":"Report_19June",
+            "dSpec":"Wired WS-C2560CG-2PDC-S"
+        },{
+            "dName":"Tech Report",
+            "dSpec":"Wired WS-P2560CG-2PC-S"
+        },{
+            "dName":"Ellen_Report",
+            "dSpec":"Wired WS-K2560CG-8PDA-S"
+        },{
+            "dName":"Tech_19June",
+            "dSpec":"Wired WS-C2560CG-10CPA-SA"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+<div class="grid p-fluid">
+    <!-- <div class="md:col-2">
+        <app-manage-serv-template-list-column></app-manage-serv-template-list-column>
+    </div> -->
+
+    <div class="col-3">
+        <!-- <p-card> -->
+            <!-- <div class="p-card-content" style="height: 100vh;"> -->
+  
+                <!-- <app-port-device-list-column></app-port-device-list-column> -->
+                <p-accordion>
+                    <p-accordionTab header="Active Templates">
+                            <app-manage-serv-template-list-column></app-manage-serv-template-list-column>
+                    </p-accordionTab>
+                    <p-accordionTab header="Archieved Templates">
+                        Work In progrss
+                    </p-accordionTab>
+                    <p-accordionTab header="Auto Created Templates">
+                        Work In Progress..
+                    </p-accordionTab>
+                </p-accordion>
+            <!-- </div> -->
+        <!-- </p-card> -->
+  
+    </div>
+
+    <div class="col-9">
+
+        <!-- New Service Template Page  -->
+
+        <ng-template [ngIf]="!isMstDeviceScreen">
+        <app-new-service-template></app-new-service-template>
+            </ng-template>
+
+        <!-- Network Device Profile Description Page  -->
+
+        <ng-template [ngIf]="isMstDeviceScreen">
+        <app-mst-device-description></app-mst-device-description>
+        </ng-template>
+
+        <!-- <ng-template [ngIf]="">
+          <app-mst-device-description></app-mst-device-description>
+          </ng-template> -->
+
+
+
+    </div>
+
+</div>

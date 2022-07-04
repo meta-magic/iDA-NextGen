@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Guide details reterived successfully!",
+    "data":[{
+        "primaryId":"anansa",
+        "primaryDisplay":"Guid Mar 2022",
+        "customerId":""
+    },{
+        "primaryId":"sadsads",
+        "primaryDisplay":"Guid May 2022",
+        "customerId":""
+    }]
+}

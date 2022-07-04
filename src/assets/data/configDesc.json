@@ -1,0 +1,68 @@
+{
+    "success":true,
+    "message":"Device data Fetched Successfully",
+    "data":[
+        {
+            "devID":"14(10.254.4.14)",
+            "prodID":"Catalyst 3750-X (WS-C3750X-24P-E)",
+            "location":"All Locations",
+
+            "pName" : "Cisco", "osType" : "IOS", "osVersion" : "15.2(4)E5",
+
+            "cStatus" : "Assigned", "tName" : "asg (G)",
+
+            "selInterface" : "0/25", "intAssign" : "0/25",
+
+            "lastRefresh" : "05 Dec 2021 , 03:46:18 AM CST", "refreshLogs": ""
+        },
+        {
+            "devID":"26(10.254.4.26)",
+            "prodID":"Catalyst 2960-X (WS-C3750X-24PD-L)",
+            "location":"All Locations",
+
+            "pName" : "Cisco", "osType" : "IOS", "osVersion" : "15.2(4)E4",
+
+            "cStatus" : "Assigned", "tName" : "asg (G)",
+
+            "selInterface" : "0/25", "intAssign" : "0/25",
+
+            "lastRefresh" : "05 Dec 2021 , 03:46:18 AM CST", "refreshLogs": ""
+        },{
+            "devID":"22(10.255.4.26)",
+            "prodID":"Catalyst 3750-X (WS-C3750X-24P-E)",
+            "location":"All Locations",
+
+            "pName" : "Cisco", "osType" : "IOS", "osVersion" : "15.2(4)E5",
+
+            "cStatus" : "Assigned", "tName" : "asg (G)",
+
+            "selInterface" : "0/25", "intAssign" : "0/25",
+
+            "lastRefresh" : "05 Dec 2021 , 03:46:18 AM CST", "refreshLogs": ""
+        },{
+            "devID":"20(11.256.4.26)",
+            "prodID":"Catalyst 2960-X (WS-C3750X-24PD-L)    ",
+            "location":"All Locations",
+
+            "pName" : "Cisco", "osType" : "IOS", "osVersion" : "15.2(4)E4",
+
+            "cStatus" : "Assigned", "tName" : "asg (G)",
+
+            "selInterface" : "0/25", "intAssign" : "0/25",
+
+            "lastRefresh" : "05 Dec 2021 , 03:46:18 AM CST", "refreshLogs": ""
+        },{
+            "devID":"16(10.254.4.32)",
+            "prodID":"Catalyst 3750-X (WS-C3750X-24P-E)",
+            "location":"All Locations",
+
+            "pName" : "Cisco", "osType" : "IOS", "osVersion" : "15.2(4)E5",
+
+            "cStatus" : "Assigned", "tName" : "asg (G)",
+
+            "selInterface" : "0/25", "intAssign" : "0/25",
+
+            "lastRefresh" : "05 Dec 2021 , 03:46:18 AM CST", "refreshLogs": ""
+        }
+    ]
+}
