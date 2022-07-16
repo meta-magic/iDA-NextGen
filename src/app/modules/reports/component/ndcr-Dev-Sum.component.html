@@ -1,3 +1,4 @@
+<p-card>
 <span class="p-input-icon-left">
   <i class="pi pi-search"></i>
   <input type="text" pInputText placeholder="Search"  style="width: 25%;"/>
@@ -33,25 +34,17 @@
 
     </tr>
 
-    <div class="grid">
-      <div class="col-6">
-          <p-dialog header="" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
-          [draggable]="true" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
-          [transitionOptions]="'1000ms'"
-          >
-          <ng-template pTemplate>
-              <app-network-device-details-overlay></app-network-device-details-overlay>
-          </ng-template>
-          </p-dialog>    
-      </div>
-  </div>
 
   </ng-template>
   
 
 </p-table>
 
-<p-dialog header="Ganesh" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+
+<div class="grid">
+  <div class="col-6">
+<p-dialog header="" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}"
+ [baseZIndex]="10000"
 [draggable]="false" [resizable]="true" [maximizable]="true" [dismissableMask]="true"
 [transitionOptions]="'1000ms'"
 >
@@ -59,3 +52,6 @@
     <app-network-device-details-overlay></app-network-device-details-overlay>
 </ng-template>
 </p-dialog> 
+</div>
+</div>
+</p-card>

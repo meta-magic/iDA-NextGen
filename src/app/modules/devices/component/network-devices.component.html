@@ -130,9 +130,7 @@
                     <!-- [paginator]="true" -->
                     <ng-template pTemplate="paginatorleft" let-importedDevices>
                         <div>
-                            Showing {{(importedDevices.page * importedDevices.rows) + 1}} to {{importedDevices.rows *
-                            (importedDevices.page + 1)}} of {{importedDevices.totalRecords}} entries
-
+                            Total Selected: {{selectedProducts.length}} out of {{importedDevices.totalRecords}}
                         </div>
 
                         <!-- Showing {{(state.page  * state.rows) + 1}} to {{state.rows * (state.page + 1)}} of {{state.totalRecords}} entries -->

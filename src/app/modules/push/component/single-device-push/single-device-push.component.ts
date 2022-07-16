@@ -38,6 +38,21 @@ export class SingleDevicePushComponent implements OnInit {
     this.messageService.add({severity:severity, summary:'Success', detail:'Data Saved'});
 }
 
+// Single Device Table Search 
+displayPositionSTable: boolean;
+positionSTable: string;
+
+searchSingleDeviceTable(){
+  this.showPositionDialogForSTable('top')
+}
+showPositionDialogForSTable(position: string) {
+  this.positionSTable = position;
+  this.displayPositionSTable = true;
+}
+closeSearchSTable(){
+  this.displayPositionSTable = false;
+}
+
 
 }
 

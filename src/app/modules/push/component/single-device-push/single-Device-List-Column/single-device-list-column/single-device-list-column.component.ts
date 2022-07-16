@@ -20,12 +20,12 @@ export class SingleDeviceListColumnComponent implements OnInit {
   displayedColumns: string[] = [];
 
   constructor(private singledevicelistservice: singleDeviceListColumnService, private messageService: MessageService,
-    private cookiservice: CookieService, private confirmationservice: ConfirmationService,private router:Router,private sharedSvc:SharedService) { }
+    private cookiservice: CookieService, private confirmationservice: ConfirmationService, private router: Router, private sharedSvc: SharedService) { }
 
   // ngOnInit() {
   // }
 
-  
+
   displayPosition: boolean;
 
   position: string;
@@ -60,73 +60,73 @@ export class SingleDeviceListColumnComponent implements OnInit {
 
   }
 
-  singleDeviceSearch(){
+  singleDeviceSearch() {
     this.showPositionDialog('top')
   }
 
   showPositionDialog(position: string) {
     this.position = position;
     this.displayPosition = true;
-}
+  }
 
-onDeviceSelect(ss:any){
+  onDeviceSelect(ss: any) {
 
-}
+  }
 
-loder:boolean = false;
-deviceType:any;
-osVersions:any;
+  loder: boolean = false;
+  deviceType: any;
+  osVersions: any;
 
-fetechDeviceType() {
-  this.loder = true;
-  let response: any;
-  this.deviceType = [];
+  fetechDeviceType() {
+    this.loder = true;
+    let response: any;
+    this.deviceType = [];
 
-  this.sharedSvc.fetechDeviceType()
+    this.sharedSvc.fetechDeviceType()
       .subscribe((resp: any) => {
-          response = resp;
+        response = resp;
       }, (error: any) => {
-          this.loder = false;
-          this.messageService.add({ key: 'bc', severity: 'error', summary: 'Error', detail: 'Unable to fetch countries, if problem persist please connect with admin!' });
+        this.loder = false;
+        this.messageService.add({ key: 'bc', severity: 'error', summary: 'Error', detail: 'Unable to fetch countries, if problem persist please connect with admin!' });
       }, () => {
-          if (response.success) {
-              this.deviceType = response.data;
-          }
-          this.loder = false;
-          // if (this.country[0].primaryId && this.country[0].primaryId > 0) {
-          //     this.onCountrySelect(this.country[0].primaryId);
-          // }
+        if (response.success) {
+          this.deviceType = response.data;
+        }
+        this.loder = false;
+        // if (this.country[0].primaryId && this.country[0].primaryId > 0) {
+        //     this.onCountrySelect(this.country[0].primaryId);
+        // }
       });
-}
+  }
 
-fetechOsVersionList() {
-  this.loder = true;
-  let response: any;
-  this.osVersions = [];
+  fetechOsVersionList() {
+    this.loder = true;
+    let response: any;
+    this.osVersions = [];
 
-  this.sharedSvc.fetechOsVersionList()
+    this.sharedSvc.fetechOsVersionList()
       .subscribe((resp: any) => {
-          response = resp;
+        response = resp;
       }, (error: any) => {
-          this.loder = false;
-          this.messageService.add({ key: 'bc', severity: 'error', summary: 'Error', detail: 'Unable to fetch countries, if problem persist please connect with admin!' });
+        this.loder = false;
+        this.messageService.add({ key: 'bc', severity: 'error', summary: 'Error', detail: 'Unable to fetch countries, if problem persist please connect with admin!' });
       }, () => {
-          if (response.success) {
-              this.osVersions = response.data;
-          }
-          this.loder = false;
-          // if (this.country[0].primaryId && this.country[0].primaryId > 0) {
-          //     this.onCountrySelect(this.country[0].primaryId);
-          // }
+        if (response.success) {
+          this.osVersions = response.data;
+        }
+        this.loder = false;
+        // if (this.country[0].primaryId && this.country[0].primaryId > 0) {
+        //     this.onCountrySelect(this.country[0].primaryId);
+        // }
       });
-}
+  }
 
-closeSearch(){
-  this.displayPosition = false;
-}
+  closeSearch() {
+    this.displayPosition = false;
+  }
 
-searchSingleDevice(){
-  
-}
+  searchSingleDevice() {
+
+  }
 
 }

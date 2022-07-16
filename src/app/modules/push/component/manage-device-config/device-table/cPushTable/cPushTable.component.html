@@ -1,33 +1,29 @@
 <p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="configDevice" [rows]="10"
   [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
-  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" paginatorPosition="top"
+  [resizableColumns]="true" [reorderableColumns]="true" class="layout-news-active" [resizableColumns]="true">
 
-  <!-- <ng-template pTemplate="header">
+  <ng-template pTemplate="header">
     <tr>
 
       <th style="width: 3rem">
         <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
       </th>
 
-      <th pSortableColumn="name">Customer Name <p-sortIcon field="customername"></p-sortIcon>
+      <th pSortableColumn="dName" class="layout-news-active" pResizableColumn >Device
       </th>
 
-      <th pSortableColumn="country">Country <p-sortIcon field="country"></p-sortIcon>
+      <th pSortableColumn="pName" class="layout-news-active" pResizableColumn >Profile
       </th>
 
-      <th pSortableColumn="state">State<p-sortIcon field="state"></p-sortIcon>
+      <th pSortableColumn="owner" class="layout-news-active" pResizableColumn >Owner
       </th>
 
-      <th pSortableColumn="city">City<p-sortIcon field="city"></p-sortIcon>
-      </th>
-
-      <th pSortableColumn="group">ISE Software <p-sortIcon field="ise"></p-sortIcon>
-      </th>
-      <th pSortableColumn="group">Action <p-sortIcon field="group"></p-sortIcon>
+      <th pSortableColumn="globalId" class="layout-news-active" pResizableColumn >Assigned Template
       </th>
 
     </tr>
-  </ng-template> -->
+  </ng-template>
 
   <ng-template pTemplate="body" let-entity>
     <tr>
@@ -36,7 +32,7 @@
       </td>
       <td>
         <div class="devSearchItemValue"><i class="pi pi-server" style="cursor: pointer;"></i>
-         &nbsp; <a>{{entity.dName}}</a></div>
+          &nbsp; <a><b>{{entity.dName}}</b></a></div>
         <div class="devSearchItemValue">{{entity.dSpec}}
         </div>
         <div class="devSearchItemValue">OS Version :
@@ -58,10 +54,11 @@
 
         <div class="devSearchItemValue">Location:
           {{entity.location}}</div>
-          
-        </td>
-        <td>
-        <div class="devSearchItemValue"><div style="font-weight: bold;" >Assigned Template</div> Global: {{entity.globalId}}
+
+      </td>
+      <td>
+        <div class="devSearchItemValue">
+          <div style="font-weight: bold;">Assigned Template</div> Global: {{entity.globalId}}
         </div>
         <div class="devSearchItemValue">No. Of Interface:
           {{entity.noOfInterfaces}}</div>

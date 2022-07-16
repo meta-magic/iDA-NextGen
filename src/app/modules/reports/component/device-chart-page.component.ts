@@ -28,10 +28,10 @@ cancel1(){
   this.ncrdservice.reportDetailsShowService.next('hi');
 }
 
-showPositionDialog(position: string) {
-  this.position = position;
-  this.displayPosition = true;
-}
+// showPositionDialog(position: string) {
+//   this.position = position;
+//   this.displayPosition = true;
+// }
 
 // public ganesh1:any[]=['Download Sales','In-store Sales','Mail order sales'];
 

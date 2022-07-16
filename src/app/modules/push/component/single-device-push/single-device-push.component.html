@@ -1,48 +1,6 @@
 <div class="grid singleDeviceContainer">
     <div class="col-3 singleDev deviceListBar md:col-3">
         <p-card class="grid m-0 deviceListBarStyle">
-<!-- 
-            <div class="devListItem">
-                <div class="input-wrapper">
-                    <div class="field">
-                        <div class="deviceListSearch">
-                            <span class="p-input-icon-left">
-                                <i class="pi pi-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="devListItem">
-                <p-paginator [rows]="5" [totalRecords]="10" [rowsPerPageOptions]="[5,10,15]" [style]=""></p-paginator>
-            </div> -->
-
-            <!-- <div class="flex">
-
-                <div class="singleDeviceNameList">
-
-                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-1</div>
-                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-2</div>
-                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-3</div>
-                    <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-4</div>
-                </div>
-
-            </div> -->
-
-            <!-- <div class="devicePanel">
-                <p-panel class="devListItem listOfDevices" header="&nbsp;&nbsp;Device List" [toggleable]="true" >
-    
-                    <div class="grid p-fluid">
-                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-1</div>
-                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-2</div>
-                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-3</div>
-                        <div class="singleDeviceItem">&nbsp;&nbsp;<i class="pi pi-bars"></i>&nbsp;&nbsp;Device-4</div>
-                    </div>
-    
-                </p-panel>
-            </div> -->
-
 
             <app-single-device-list-column></app-single-device-list-column>
 
@@ -77,7 +35,9 @@
                         Analysis</span>
                 </div>
 
-                <div class="deviceDescItem col-2"><p-splitButton label="Configuration Menu" (onClick)="config('info')" [model]="items"></p-splitButton>
+                <div class="deviceDescItem col-2">
+                    <p-splitButton label="Configuration Menu" (onClick)="config('info')" [model]="items">
+                    </p-splitButton>
                 </div>
 
             </div>
@@ -95,13 +55,13 @@
             </ng-template>
             <ng-template pTemplate="body">
 
-                    <p-checkbox name="gConfigCheckBox" value=""></p-checkbox>
+                <p-checkbox name="gConfigCheckBox" value=""></p-checkbox>
 
                 <span id="confStatus"> Config Status :
                     <span id="confStatusValue">Assigned</span></span>
 
-                <span id="serviceTamplate" class="ml-4">Service Template : <span
-                        id="serviceTamplateValue"><a class="servTempVal">asd:(G)</a></span></span>
+                <span id="serviceTamplate" class="ml-4">Service Template : <span id="serviceTamplateValue"><a
+                            class="servTempVal">asd:(G)</a></span></span>
 
             </ng-template>
         </p-card>
@@ -129,78 +89,28 @@
                                 <i class="pi pi-search"></i>
                                 <input type="deviceSearch" id="searchDeviceTabs_btn" pInputText placeholder="Search">
                             </span> -->
-                            <button class="pi-button-text" icon="pi pi-search" pButton type="button" label="Search"></button>
+                            <!-- <button class="pi-button-text" icon="pi pi-search" pButton type="button" label="Search"></button> -->
+                            <button pButton pRipple label="Search" icon="pi pi-search" class="p-button-text"
+                                (click)="searchSingleDeviceTable()" ></button>
                         </div>
 
                         <div class="searchDevTabs">
-                            <span class="selInterfacesLink">&nbsp;&nbsp;&nbsp;&nbsp;<a>Select All Interfaces</a></span>
+                            <span class="selInterfacesLink"><a>Select All Interfaces</a></span>
                         </div>
 
                         <div class="searchDevTabs">
-                            <span class="totalSelInterfaces">&nbsp;&nbsp;&nbsp;&nbsp;Total Selected Interfaces : <span
+                            <span class="totalSelInterfaces">Total Selected Interfaces : <span
                                     class="seletedInterfaces"> 0 out of 10 on the device </span> </span>
                         </div>
 
-                        <!-- <div class="searchDevTabs">
-                            <p-paginator [rows]="10" [totalRecords]="120" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
-                        </div> -->
+
 
                     </div>
 
 
-                    <!-- <div class="col intrfaceConfigResult-Table">
-
-
-                        <div class="intDeviceConfig">
-
-
-                            <p-listbox [options]="configDesc" [multiple]="true" optionLabel="name"
-                                [listStyle]="{'max-height':'250px'}">
-
-                                <ng-template let-configDesc pTemplate="item">
-                                    <div class="country-item">
-
-                                        <div class="flex intDeviceConfigList" id="intDeviceConfigList">
-
-                                            <div #devlistCheckBox class="ml-2">
-                                                <p-checkbox name="groupname" label="" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
-                                            </div>
-
-                                            <div id="devListName" class="ml-4" >
-                                                <div class="devSearchItemValue">Name : {{configDesc.devName}}</div>
-                                                <div class="devSearchItemValue">Mode : {{configDesc.devMode}}</div>
-                                                <div class="devSearchItemValue">Status : {{configDesc.devStatus}}</div>
-                                                <div class="devSearchItemValue">Data/Voice Vlan : {{configDesc.dvVlan}}
-                                                </div>
-                                            </div>
-
-                                            <div id="devListDesc" class="ml-8">
-                                                <div class="devSearchItemValue">Description : </div>
-                                                <div class="devSearchItemValue">Endpoints (Vlan) : </div>
-                                                <div class="devSearchItemValue">CDP Platform : </div>
-                                                <div class="devSearchItemValue">Data/Voice Vlan : </div>
-                                            </div>
-
-                                            <div id="devListConfigStat">
-                                                <div class="devSearchItemValue">Coding Status : </div>
-                                                <div class="devSearchItemValue">Service Template : </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </ng-template>
-
-                            </p-listbox>
-
-
-                        </div>
-
-                    </div> -->
 
                     <app-singleDevicePushTable></app-singleDevicePushTable>
-                    
+
                     <div class="footerBtnList">
                         <button class="footerBtn" pButton type="button" label="Push Configuration"></button>
                         <button class="footerBtn" pButton type="button" label="Manual Update"></button>
@@ -214,6 +124,229 @@
             </ng-template>
 
         </p-card>
+
+        <p-dialog header="Search Device" [(visible)]="displayPositionSTable" [position]="positionSTable" [modal]="true"
+            [style]="{width: '50vw'}" [baseZIndex]="10000" [draggable]="true" [resizable]="false">
+
+            <p-tabView>
+
+                <p-tabPanel header="Network Device Selection">
+                    <p-card>
+
+
+                        <div class="grid">
+                            <!-- Name -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Name</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <div class="inputText ml-2" style="width: 100%;"><input type="text" pInputText>
+                                        </div>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- IP/HostName  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">IP/HostName</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <div class="inputText ml-2" style="width: 100%;"><input type="text" pInputText>
+                                        </div>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Description  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Description</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <div class="inputText ml-2" style="width: 100%;"><input type="text" pInputText>
+                                        </div>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Mode  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Mode</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <select class="ml-2" type="text" style="width: 35%;">
+                                            <option>Select</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Data Vlan  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Data Vlan</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <select class="ml-2" type="text" style="width: 35%;">
+                                            <option>Select</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Status  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Status</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <select class="ml-2" type="text" style="width: 35%;">
+                                            <option>Select</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Config Status  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Config Status</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <select class="ml-2" type="text" style="width: 35%;">
+                                            <option>Select</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Service Template -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Service Template</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <select class="ml-2" type="text" style="width: 35%;">
+                                            <option>Select</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                            <!-- Template Status  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Template Status</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <select class="ml-2" type="text" style="width: 35%;">
+                                            <option>Select</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+
+
+                            <!-- Interface Configuration  -->
+                            <div class="col-12">
+                                <div class="input-wrapper">
+                                    <!-- <div class="field col-12"> -->
+                                    <label class="" htmlFor="devicename">Interface Configuration</label>
+                                    <div class="flex">
+
+                                        <select class="" type="text" style="width: 35%;">
+                                            <option>Equals</option>
+                                        </select>
+                                        <div class="inputText ml-2" style="width: 100%;"><input type="text" pInputText>
+                                        </div>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <p-toolbar>
+
+
+                                    <div class="p-toolbar-group-right">
+                                        <p-button label="Search" icon="pi pi-search" styleClass=" p-button-text"
+                                            class="mr-2"></p-button>
+                                        <p-button label="Close" icon="pi pi-times"
+                                            styleClass="p-button-danger p-button-text" (onClick)="closeSearchSTable()">
+                                        </p-button>
+                                    </div>
+                                </p-toolbar>
+                            </div>
+
+
+                        </div>
+
+                    </p-card>
+                </p-tabPanel>
+
+            </p-tabView>
+        </p-dialog>
     </div>
 
 </div>

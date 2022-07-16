@@ -1,6 +1,49 @@
-<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="commit" [rows]="10"
+<p-table #ct styleClass="" [value]="commit" [rows]="10"
   [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
-  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+ paginatorPosition="top"
+  [resizableColumns]="true" [reorderableColumns]="true" class="layout-news-active" [resizableColumns]="true">
+
+
+  <ng-template pTemplate="paginatorleft" let-commit>
+    <div>
+        Showing {{(commit.page * commit.rows) + 1}} to {{commit.rows *
+        (commit.page + 1)}} of {{commit.totalRecords}} entries
+
+    </div>
+
+    <!-- Showing {{(state.page  * state.rows) + 1}} to {{state.rows * (state.page + 1)}} of {{state.totalRecords}} entries -->
+
+</ng-template>
+
+<ng-template pTemplate="paginatorright" let-device>
+  <!-- <div>
+      Showing {{(device.page * device.rows) + 1}} to {{device.rows *
+      (device.page + 1)}} of {{device.totalRecords}} entriesaaaaaaaaaaaaaaa
+
+  </div> -->
+
+  <!-- Showing {{(state.page  * state.rows) + 1}} to {{state.rows * (state.page + 1)}} of {{state.totalRecords}} entries -->
+
+</ng-template>
+
+  <ng-template pTemplate="header">
+    <tr>
+
+      <th style="width: 3rem">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+
+      <th pSortableColumn="dName" class="layout-news-active" pResizableColumn >Device
+      </th>
+
+      <th pSortableColumn="pName" class="layout-news-active" pResizableColumn >Profile
+      </th>
+
+      <th pSortableColumn="owner" class="layout-news-active" pResizableColumn >Owner
+      </th>
+
+    </tr>
+  </ng-template>
 
   <ng-template pTemplate="body" let-entity>
     <tr>
@@ -9,7 +52,7 @@
       </td>
       <td>
         <div class="devSearchItemValue"><i class="pi pi-server" style="cursor: pointer;"></i>
-          &nbsp; <a>{{entity.dName}}</a></div>
+          &nbsp; <a><b>{{entity.dName}}</b></a></div>
         <div class="devSearchItemValue">{{entity.dSpec}}
         </div>
         <div class="devSearchItemValue">OS Version :

@@ -16,6 +16,9 @@ export class NdcrDevSumComponent implements OnInit {
   loader: boolean = false;
   ndcrDevSumData: ndcrDevSumModel[] = [];
 
+  
+  displayPosition: boolean;
+  position:string;
   constructor(private ndcrdevsumservice: ndcrDevSumService, private messageService: MessageService,
     private cookiservice: CookieService, private confirmationservice: ConfirmationService,private router:Router) { }
 
@@ -48,8 +51,6 @@ export class NdcrDevSumComponent implements OnInit {
         })
   
     }
-    displayPosition: boolean;
-    position:string;
     showPositionDialog(position: string) {
       this.position = position;
       this.displayPosition = true;

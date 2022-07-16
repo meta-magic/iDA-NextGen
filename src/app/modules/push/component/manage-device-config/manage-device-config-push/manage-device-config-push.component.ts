@@ -79,6 +79,68 @@ export class ManageDeviceConfigPushComponent implements OnInit {
   ngOnInit (): void {
   }
 
+  // To Search Devices in Assign Template
+
+  displayPosition: boolean;
+  position: string;
+
+  searchDeviceForAssignTemp(){
+    this.showPositionDialog('top')
+  }
+
+  showPositionDialog(position: string) {
+    this.position = position;
+    this.displayPosition = true;
+}
+closeSearch(){
+  this.displayPosition = false;
+}
+//  Config Push Device Search 
+displayPositionCPush: boolean;
+positionCPush: string;
+
+cPushDeviceSearch(){
+  this.showPositionDialogForCPush('top')
+}
+showPositionDialogForCPush(position: string) {
+  this.positionCPush = position;
+  this.displayPositionCPush = true;
+}
+closeSearchCPush(){
+  this.displayPositionCPush = false;
+}
+
+
+//  Validate Device Search 
+displayPositionValidate: boolean;
+positionValidate: string;
+
+validateDeviceSearch(){
+  this.showPositionDialogForValidate('top')
+}
+showPositionDialogForValidate(position: string) {
+  this.positionValidate = position;
+  this.displayPositionValidate = true;
+}
+closeSearchValidate(){
+  this.displayPositionValidate = false;
+}
+
+//  Commit Device Search 
+displayPositionCommit: boolean;
+positionCommit: string;
+
+commitDeviceSearch(){
+  this.showPositionDialogForCommit('top')
+}
+showPositionDialogForCommit(position: string) {
+  this.positionCommit = position;
+  this.displayPositionCommit = true;
+}
+closeSearchCommit(){
+  this.displayPositionCommit = false;
+}
+
 }
 
 export class ModelComponent {

@@ -120,7 +120,7 @@
 }
 
 .subMenuIseBtnItem {
-    margin: 4px;
+    margin: 3px;
 }
 
 // Hardware and Software Chart Items 
@@ -147,15 +147,20 @@
 
 
 .product-item {
+  
+    display: flex;
 
     .product-item-content {
-        border: 1px solid #dee2e6;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid #dee2e6;
         border-radius: 3px;
-        margin: 2px;
+        margin: 0px 4px 0px 4px;
         padding: 0.5rem 0;
-        width: 220px;
-        height: 220px;
+        width: 150px;
+        height: 170px;
         text-align: center;
+        border: 1px solid #cfecff;
     }
 }
 
@@ -167,19 +172,20 @@
     
 }
 
-.box{
- 
 
-}
-
-.boxHead{
+#boxHead{
     height: 20%;
+    margin-top: 0px;
+
 }
 #boxBody{
     height: 60%;
+
 }
 #boxFooter{
     height: 20%;
+    margin-bottom: 0px;
+
 }
 #boxTitle {
     height: 38px;
@@ -202,3 +208,20 @@
     font-weight: 500;
 }
 
+.iseClass{
+    border: 1px solid gray;
+    max-width: fit-content;
+    border-radius: 5px;
+}
+
+.custom-bullet li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #CCCCCC;
+}

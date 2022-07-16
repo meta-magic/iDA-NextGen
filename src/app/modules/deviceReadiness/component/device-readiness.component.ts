@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Table } from 'primeng/table';
 import * as c3 from 'c3';
 import { CookieService } from 'ngx-cookie-service';
-import { ConfirmationService, FilterMatchMode, FilterService, MessageService, PrimeNGConfig, SelectItem } from 'primeng/api';
+import { ConfirmationService, FilterMatchMode, FilterService, MenuItem, MessageService, PrimeNGConfig, SelectItem } from 'primeng/api';
 import { SharedService } from '../../common/service/shared.service';
 import { CustomerService } from '../../customer/service/customer.service';
 import { aType, cGuide, Device, deviceDescriptionBox } from '../model/deviceReadiness.model';
@@ -16,6 +16,7 @@ import { DeviceReadinessService } from '../service/device-readiness.service';
   styleUrls: ['./device-readiness.component.scss']
 })
 export class DeviceReadinessComponent implements OnInit {
+
 
   isMasterSel: boolean;
   index: number = 0;
@@ -60,11 +61,17 @@ export class DeviceReadinessComponent implements OnInit {
   columns: any[] = [];
   loder: boolean = false;
 
+  // ISE Services Mullti Select
+  selectedColumnsIse: any;
+  columnsIse: any[] = [];
+
   ref: any;
   dialogService: any;
 
 
+  exportItems:MenuItem[];
 
+  items: MenuItem[];
 
   constructor(private customerService: CustomerService, private primengConfig: PrimeNGConfig,
     private msgSvc: MessageService, private cookieService: CookieService,
@@ -113,6 +120,10 @@ export class DeviceReadinessComponent implements OnInit {
 
     ];
 
+    this.items = [
+      {label: 'Export to PDF', icon: 'fa fa-file-pdf-o'},
+      {label: 'Export to CSV', icon: 'fa fa-file-excel-o'}
+  ]
 
 
   }
@@ -133,7 +144,7 @@ export class DeviceReadinessComponent implements OnInit {
       },
       donut: { 
         title: "100%",
-        width:25,
+        width:15,
         label: {
           format: function(value, ratio, id) {
             return "";
@@ -181,7 +192,24 @@ export class DeviceReadinessComponent implements OnInit {
       { field: 'enablepassword', header: 'Recommanded OS' },
       { field: 'compguid', header: 'Compatibility Guid' },
     ];
+
+    // ISE Services 
+    this.columnsIse = [
+      { field: 'aaa', header: 'AAA' },
+            
+      { field: 'byod', header: 'BYOD' },
+      { field: 'guestauth', header: 'Guest (with Web Auth)' },
+      { field: 'guesturl', header: 'Guest Originating URL' },
+      { field: 'mdm', header: 'MDM' },
+      { field: 'posture', header: 'Posture' },
+      { field: 'profiling', header: 'Profiling' },
+      { field: 'trustsec', header: 'TrustSec' }
+    ];
+
     this.selectedColumns = this.columns;
+    // ISE Services 
+    this.selectedColumnsIse = this.columnsIse;
+
     this.representatives = [
       { name: "Amy Elsner", image: 'amyelsner.png' },
       { name: "Anna Fali", image: 'annafali.png' },
@@ -210,6 +238,33 @@ export class DeviceReadinessComponent implements OnInit {
       { label: "End With", value: FilterMatchMode.ENDS_WITH },
       { label: "Contains", value: FilterMatchMode.CONTAINS }
     ];
+
+    this.exportItems = [{
+      label: 'Options',
+      items: [{
+          label: 'Update',
+          icon: 'pi pi-refresh'
+      },
+      {
+          label: 'Delete',
+          icon: 'pi pi-times'
+      }
+      ]},
+      {
+          label: 'Navigate',
+          items: [{
+              label: 'Angular',
+              icon: 'pi pi-external-link',
+              url: 'http://angular.io'
+          },
+          {
+              label: 'Router',
+              icon: 'pi pi-upload',
+              routerLink: '/fileupload'
+          }
+      ]}
+  ];
+
   }
 
   checkUncheckAll() {
@@ -298,12 +353,29 @@ export class DeviceReadinessComponent implements OnInit {
     return this.selectedColumns;
   }
 
+  // Ise services 
+
+  
+
+  @Input() get iseSelectedColumns(): any[] {
+    return this.selectedColumnsIse;
+  }
+
+
 
 
   set SelectedColumns(val: any[]) {
     //restore original order
     this.selectedColumns = this.columns.filter(col => val.includes(col));
   }
+
+  // ISE services 
+  set iseSelectedColumns(val: any[]) {
+    //restore original order
+    this.selectedColumnsIse = this.columnsIse.filter(col => val.includes(col));
+  }
+  // ise Services
+
 
   deleteProduct(d: any) { }
 
@@ -336,5 +408,16 @@ export class DeviceReadinessComponent implements OnInit {
   positionRight = '30px'
   positionTop = '10px';
   marginStyle = { 'margin-left': this.positionLeft, 'margin-top': this.positionTop, 'margin-right': this.positionRight };
+
+  ganesh1(){
+    this.redSer.maximizepop.next("Max Popup Open");
+  }
+
+
+  sorti = false ;
+  ganesh12(){
+
+    this.sorti = true;
+  }
 
 }

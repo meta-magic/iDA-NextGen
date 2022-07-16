@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -8,6 +9,8 @@ import { environment } from 'src/environments/environment';
 })
 export class DeviceReadinessService {
   constructor(private httpClient:HttpClient,private cookiservice:CookieService) { }
+  maximizepop = new Subject<String>(); 
+
 
   fetchNetworkDevices(){
     const url = environment.deviceReadiness;

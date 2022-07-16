@@ -1,6 +1,40 @@
-<p-table #ct styleClass="p-datatable-gridlines p-datatable-striped" [value]="validate" [rows]="10"
-  [globalFilterFields]="['name']" [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
-  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+<p-table #ct styleClass="" [value]="validate" [rows]="10"
+  [rowHover]="true" [paginator]="true" [showCurrentPageReport]="true" dataKey="id"
+  paginatorPosition="top"
+  [resizableColumns]="true" [reorderableColumns]="true" class="layout-news-active" [resizableColumns]="true">
+
+  <ng-template pTemplate="header">
+    <tr>
+
+      <th style="width: 3rem">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+
+      <th pSortableColumn="dName" class="layout-news-active" pResizableColumn >Device
+      </th>
+
+      <th pSortableColumn="pName" class="layout-news-active" pResizableColumn >Profile 
+      </th>
+
+      <th pSortableColumn="owner" class="layout-news-active" pResizableColumn >Owner
+      </th>
+
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="paginatorleft" let-validate>
+    <div>
+        Showing {{(validate.page * validate.rows) + 1}} to {{validate.rows *
+        (validate.page + 1)}} of {{validate.totalRecords}} entries
+
+    </div>
+
+
+</ng-template>
+
+<ng-template pTemplate="paginatorright" let-device>
+
+
+</ng-template>
 
   <ng-template pTemplate="body" let-entity>
     <tr>
@@ -9,7 +43,7 @@
       </td>
       <td>
         <div class="devSearchItemValue"><i class="pi pi-server" style="cursor: pointer;"></i>
-          &nbsp; <a>{{entity.dName}}</a></div>
+          &nbsp; <a><b>{{entity.dName}}</b></a></div>
         <div class="devSearchItemValue">{{entity.dSpec}}
         </div>
         <div class="devSearchItemValue">OS Version :
